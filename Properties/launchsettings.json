@@ -1,0 +1,10 @@
+﻿{
+    "profiles": {
+      "Nitro Downloader (Package)": {
+        "commandName": "MsixPackage"
+      },
+      "Nitro Downloader (Unpackaged)": {
+        "commandName": "Project"
+      }
+    }
+}
