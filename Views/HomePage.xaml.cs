@@ -1,4 +1,6 @@
 ﻿using System.Diagnostics;
+using System.Runtime.Intrinsics.Arm;
+using System.Text;
 using Microsoft.UI.Xaml.Controls;
 
 using Nitro_Downloader.ViewModels;
@@ -19,7 +21,7 @@ public sealed partial class HomePage : Page
         InitializeComponent();
     }
 
-    private void DownloadButton_Click(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
+    private async void DownloadButton_Click(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
     {
         var link = Link_TextBox.Text;
 
@@ -56,23 +58,67 @@ public sealed partial class HomePage : Page
 
         if (link != null)
         {
+
+
             Process process = new Process();
             process.StartInfo.FileName = path;
             process.StartInfo.Arguments = arguments;
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.RedirectStandardOutput = true;
             process.StartInfo.CreateNoWindow = false;
+            //process.OutputDataReceived += Process_OutputDataReceived;
+
+            StringBuilder outputBuilder = new StringBuilder();
+
+            process.OutputDataReceived += (sender, e) =>
+            {
+                if (!string.IsNullOrEmpty(e.Data))
+                {
+                    Debug.WriteLine("Output: " + e.Data);
+
+                    outputBuilder.AppendLine(e.Data);
+                }
+            };
+
             process.Start();
+
+            process.BeginOutputReadLine();
 
             Debug.WriteLine("Download Started");
 
-            var output = process.StandardOutput.ReadToEnd();
+            await Task.Run(() =>
+            {
+                process.WaitForExit();
+            });
 
-            process.WaitForExit();
-
-
-            Debug.WriteLine(output);
+            Debug.WriteLine("Download Completed");
 
         }
     }
+
+    private void Process_OutputDataReceived(object sender, DataReceivedEventArgs e)
+    {
+        // This method is called when new data is received on the standard output
+        if (!string.IsNullOrEmpty(e.Data))
+        {
+            // Assuming the download percentage appears in the output, you can parse it here
+            // Example: Check if the line contains "[download]" and extract the percentage
+            if (e.Data.Contains("[download]"))
+            {
+                var startIndex = e.Data.IndexOf("[download]") + "[download]".Length;
+                var endIndex = e.Data.IndexOf("%", startIndex);
+                if (startIndex >= 0 && endIndex >= 0)
+                {
+                    var percentageString = e.Data.Substring(startIndex, endIndex - startIndex).Trim();
+                    if (int.TryParse(percentageString, out var percentage))
+                    {
+                        // Update your UI with the download percentage
+                        // You can use Dispatcher to update UI elements if needed
+                        Debug.WriteLine("Download Percentage: " + percentage + "%");
+                    }
+                }
+            }
+        }
+    }
+
 }

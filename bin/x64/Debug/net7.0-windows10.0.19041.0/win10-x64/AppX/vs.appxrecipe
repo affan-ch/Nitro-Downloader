@@ -29,13 +29,13 @@
     <AppXManifest Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-09-25T18:15:03.037</Modified>
+      <Modified>2023-09-26T14:08:07.723</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-09-25T18:06:05.096</Modified>
+      <Modified>2023-09-26T14:08:06.932</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Nitro Downloader.runtimeconfig.json">
       <PackagePath>Nitro Downloader.runtimeconfig.json</PackagePath>
@@ -43,7 +43,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Nitro Downloader.dll">
       <PackagePath>Nitro Downloader.dll</PackagePath>
-      <Modified>2023-09-25T18:15:01.785</Modified>
+      <Modified>2023-09-26T14:08:06.280</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\appsettings.json">
       <PackagePath>appsettings.json</PackagePath>
@@ -51,7 +51,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Nitro Downloader.exe</PackagePath>
-      <Modified>2023-09-25T18:15:01.965</Modified>
+      <Modified>2023-09-26T14:08:06.335</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Nitro Downloader.deps.json">
       <PackagePath>Nitro Downloader.deps.json</PackagePath>
