@@ -224,7 +224,7 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[62];
+            _typeNameTable = new string[73];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
@@ -246,49 +246,60 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
             _typeNameTable[18] = "Nitro_Downloader.MainWindow";
             _typeNameTable[19] = "Microsoft.UI.Xaml.Thickness";
             _typeNameTable[20] = "Microsoft.UI.Xaml.CornerRadius";
-            _typeNameTable[21] = "Nitro_Downloader.Views.HomePage";
+            _typeNameTable[21] = "Nitro_Downloader.Views.AllDownloadsPage";
             _typeNameTable[22] = "Microsoft.UI.Xaml.Controls.Page";
             _typeNameTable[23] = "Microsoft.UI.Xaml.Controls.UserControl";
-            _typeNameTable[24] = "Nitro_Downloader.ViewModels.HomeViewModel";
+            _typeNameTable[24] = "Nitro_Downloader.ViewModels.AllDownloadsViewModel";
             _typeNameTable[25] = "CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient";
             _typeNameTable[26] = "CommunityToolkit.Mvvm.ComponentModel.ObservableObject";
-            _typeNameTable[27] = "Nitro_Downloader.Helpers.EnumToBooleanConverter";
-            _typeNameTable[28] = "Nitro_Downloader.Views.SettingsPage";
-            _typeNameTable[29] = "Nitro_Downloader.ViewModels.SettingsViewModel";
-            _typeNameTable[30] = "Microsoft.UI.Xaml.Controls.NavigationView";
-            _typeNameTable[31] = "Microsoft.UI.Xaml.Controls.ContentControl";
-            _typeNameTable[32] = "Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible";
-            _typeNameTable[33] = "System.Collections.Generic.IList`1<Object>";
-            _typeNameTable[34] = "Microsoft.UI.Xaml.DataTemplate";
-            _typeNameTable[35] = "Microsoft.UI.Xaml.Controls.AutoSuggestBox";
-            _typeNameTable[36] = "Microsoft.UI.Xaml.UIElement";
-            _typeNameTable[37] = "Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode";
-            _typeNameTable[38] = "Microsoft.UI.Xaml.Style";
-            _typeNameTable[39] = "Microsoft.UI.Xaml.Controls.StyleSelector";
-            _typeNameTable[40] = "Microsoft.UI.Xaml.Controls.DataTemplateSelector";
-            _typeNameTable[41] = "Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode";
-            _typeNameTable[42] = "Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode";
-            _typeNameTable[43] = "Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus";
-            _typeNameTable[44] = "Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled";
-            _typeNameTable[45] = "Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings";
-            _typeNameTable[46] = "Microsoft.UI.Xaml.DependencyObject";
-            _typeNameTable[47] = "Microsoft.Xaml.Interactivity.Interaction";
-            _typeNameTable[48] = "Microsoft.Xaml.Interactivity.BehaviorCollection";
-            _typeNameTable[49] = "Microsoft.UI.Xaml.DependencyObjectCollection";
-            _typeNameTable[50] = "Microsoft.UI.Xaml.Controls.NavigationViewItem";
-            _typeNameTable[51] = "Microsoft.UI.Xaml.Controls.NavigationViewItemBase";
-            _typeNameTable[52] = "Microsoft.UI.Xaml.Controls.IconElement";
-            _typeNameTable[53] = "Microsoft.UI.Xaml.Controls.InfoBadge";
-            _typeNameTable[54] = "Microsoft.UI.Xaml.Controls.Control";
-            _typeNameTable[55] = "Nitro_Downloader.Helpers.NavigationHelper";
-            _typeNameTable[56] = "Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior";
-            _typeNameTable[57] = "Microsoft.Xaml.Interactivity.Behavior`1<Microsoft.UI.Xaml.Controls.NavigationView>";
-            _typeNameTable[58] = "Microsoft.Xaml.Interactivity.Behavior";
-            _typeNameTable[59] = "Nitro_Downloader.Behaviors.NavigationViewHeaderMode";
-            _typeNameTable[60] = "Nitro_Downloader.Views.ShellPage";
-            _typeNameTable[61] = "Nitro_Downloader.ViewModels.ShellViewModel";
+            _typeNameTable[27] = "Microsoft.UI.Xaml.Controls.Expander";
+            _typeNameTable[28] = "Microsoft.UI.Xaml.Controls.ContentControl";
+            _typeNameTable[29] = "Microsoft.UI.Xaml.Controls.ExpandDirection";
+            _typeNameTable[30] = "Microsoft.UI.Xaml.DataTemplate";
+            _typeNameTable[31] = "Microsoft.UI.Xaml.Controls.DataTemplateSelector";
+            _typeNameTable[32] = "Microsoft.UI.Xaml.Controls.ExpanderTemplateSettings";
+            _typeNameTable[33] = "Microsoft.UI.Xaml.DependencyObject";
+            _typeNameTable[34] = "CommunityToolkit.WinUI.UI.Controls.WrapPanel";
+            _typeNameTable[35] = "Microsoft.UI.Xaml.Controls.Panel";
+            _typeNameTable[36] = "Microsoft.UI.Xaml.Controls.Orientation";
+            _typeNameTable[37] = "CommunityToolkit.WinUI.UI.Controls.StretchChild";
+            _typeNameTable[38] = "Microsoft.UI.Xaml.Controls.ProgressRing";
+            _typeNameTable[39] = "Microsoft.UI.Xaml.Controls.Control";
+            _typeNameTable[40] = "Microsoft.UI.Xaml.Controls.ProgressRingTemplateSettings";
+            _typeNameTable[41] = "Nitro_Downloader.Views.HomePage";
+            _typeNameTable[42] = "Nitro_Downloader.ViewModels.HomeViewModel";
+            _typeNameTable[43] = "Nitro_Downloader.Helpers.EnumToBooleanConverter";
+            _typeNameTable[44] = "Nitro_Downloader.Views.SettingsPage";
+            _typeNameTable[45] = "Nitro_Downloader.ViewModels.SettingsViewModel";
+            _typeNameTable[46] = "Microsoft.UI.Xaml.Controls.NavigationView";
+            _typeNameTable[47] = "Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible";
+            _typeNameTable[48] = "System.Collections.Generic.IList`1<Object>";
+            _typeNameTable[49] = "Microsoft.UI.Xaml.Controls.AutoSuggestBox";
+            _typeNameTable[50] = "Microsoft.UI.Xaml.UIElement";
+            _typeNameTable[51] = "Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode";
+            _typeNameTable[52] = "Microsoft.UI.Xaml.Style";
+            _typeNameTable[53] = "Microsoft.UI.Xaml.Controls.StyleSelector";
+            _typeNameTable[54] = "Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode";
+            _typeNameTable[55] = "Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode";
+            _typeNameTable[56] = "Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus";
+            _typeNameTable[57] = "Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled";
+            _typeNameTable[58] = "Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings";
+            _typeNameTable[59] = "Microsoft.Xaml.Interactivity.Interaction";
+            _typeNameTable[60] = "Microsoft.Xaml.Interactivity.BehaviorCollection";
+            _typeNameTable[61] = "Microsoft.UI.Xaml.DependencyObjectCollection";
+            _typeNameTable[62] = "Microsoft.UI.Xaml.Controls.NavigationViewItem";
+            _typeNameTable[63] = "Microsoft.UI.Xaml.Controls.NavigationViewItemBase";
+            _typeNameTable[64] = "Microsoft.UI.Xaml.Controls.IconElement";
+            _typeNameTable[65] = "Microsoft.UI.Xaml.Controls.InfoBadge";
+            _typeNameTable[66] = "Nitro_Downloader.Helpers.NavigationHelper";
+            _typeNameTable[67] = "Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior";
+            _typeNameTable[68] = "Microsoft.Xaml.Interactivity.Behavior`1<Microsoft.UI.Xaml.Controls.NavigationView>";
+            _typeNameTable[69] = "Microsoft.Xaml.Interactivity.Behavior";
+            _typeNameTable[70] = "Nitro_Downloader.Behaviors.NavigationViewHeaderMode";
+            _typeNameTable[71] = "Nitro_Downloader.Views.ShellPage";
+            _typeNameTable[72] = "Nitro_Downloader.ViewModels.ShellViewModel";
 
-            _typeTable = new global::System.Type[62];
+            _typeTable = new global::System.Type[73];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
@@ -312,47 +323,58 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
             _typeTable[18] = typeof(global::Nitro_Downloader.MainWindow);
             _typeTable[19] = typeof(global::Microsoft.UI.Xaml.Thickness);
             _typeTable[20] = typeof(global::Microsoft.UI.Xaml.CornerRadius);
-            _typeTable[21] = typeof(global::Nitro_Downloader.Views.HomePage);
+            _typeTable[21] = typeof(global::Nitro_Downloader.Views.AllDownloadsPage);
             _typeTable[22] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
             _typeTable[23] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
-            _typeTable[24] = typeof(global::Nitro_Downloader.ViewModels.HomeViewModel);
+            _typeTable[24] = typeof(global::Nitro_Downloader.ViewModels.AllDownloadsViewModel);
             _typeTable[25] = typeof(global::CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient);
             _typeTable[26] = typeof(global::CommunityToolkit.Mvvm.ComponentModel.ObservableObject);
-            _typeTable[27] = typeof(global::Nitro_Downloader.Helpers.EnumToBooleanConverter);
-            _typeTable[28] = typeof(global::Nitro_Downloader.Views.SettingsPage);
-            _typeTable[29] = typeof(global::Nitro_Downloader.ViewModels.SettingsViewModel);
-            _typeTable[30] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationView);
-            _typeTable[31] = typeof(global::Microsoft.UI.Xaml.Controls.ContentControl);
-            _typeTable[32] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible);
-            _typeTable[33] = typeof(global::System.Collections.Generic.IList<global::System.Object>);
-            _typeTable[34] = typeof(global::Microsoft.UI.Xaml.DataTemplate);
-            _typeTable[35] = typeof(global::Microsoft.UI.Xaml.Controls.AutoSuggestBox);
-            _typeTable[36] = typeof(global::Microsoft.UI.Xaml.UIElement);
-            _typeTable[37] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode);
-            _typeTable[38] = typeof(global::Microsoft.UI.Xaml.Style);
-            _typeTable[39] = typeof(global::Microsoft.UI.Xaml.Controls.StyleSelector);
-            _typeTable[40] = typeof(global::Microsoft.UI.Xaml.Controls.DataTemplateSelector);
-            _typeTable[41] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode);
-            _typeTable[42] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode);
-            _typeTable[43] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus);
-            _typeTable[44] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled);
-            _typeTable[45] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings);
-            _typeTable[46] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
-            _typeTable[47] = typeof(global::Microsoft.Xaml.Interactivity.Interaction);
-            _typeTable[48] = typeof(global::Microsoft.Xaml.Interactivity.BehaviorCollection);
-            _typeTable[49] = typeof(global::Microsoft.UI.Xaml.DependencyObjectCollection);
-            _typeTable[50] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewItem);
-            _typeTable[51] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewItemBase);
-            _typeTable[52] = typeof(global::Microsoft.UI.Xaml.Controls.IconElement);
-            _typeTable[53] = typeof(global::Microsoft.UI.Xaml.Controls.InfoBadge);
-            _typeTable[54] = typeof(global::Microsoft.UI.Xaml.Controls.Control);
-            _typeTable[55] = typeof(global::Nitro_Downloader.Helpers.NavigationHelper);
-            _typeTable[56] = typeof(global::Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior);
-            _typeTable[57] = typeof(global::Microsoft.Xaml.Interactivity.Behavior<global::Microsoft.UI.Xaml.Controls.NavigationView>);
-            _typeTable[58] = typeof(global::Microsoft.Xaml.Interactivity.Behavior);
-            _typeTable[59] = typeof(global::Nitro_Downloader.Behaviors.NavigationViewHeaderMode);
-            _typeTable[60] = typeof(global::Nitro_Downloader.Views.ShellPage);
-            _typeTable[61] = typeof(global::Nitro_Downloader.ViewModels.ShellViewModel);
+            _typeTable[27] = typeof(global::Microsoft.UI.Xaml.Controls.Expander);
+            _typeTable[28] = typeof(global::Microsoft.UI.Xaml.Controls.ContentControl);
+            _typeTable[29] = typeof(global::Microsoft.UI.Xaml.Controls.ExpandDirection);
+            _typeTable[30] = typeof(global::Microsoft.UI.Xaml.DataTemplate);
+            _typeTable[31] = typeof(global::Microsoft.UI.Xaml.Controls.DataTemplateSelector);
+            _typeTable[32] = typeof(global::Microsoft.UI.Xaml.Controls.ExpanderTemplateSettings);
+            _typeTable[33] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
+            _typeTable[34] = typeof(global::CommunityToolkit.WinUI.UI.Controls.WrapPanel);
+            _typeTable[35] = typeof(global::Microsoft.UI.Xaml.Controls.Panel);
+            _typeTable[36] = typeof(global::Microsoft.UI.Xaml.Controls.Orientation);
+            _typeTable[37] = typeof(global::CommunityToolkit.WinUI.UI.Controls.StretchChild);
+            _typeTable[38] = typeof(global::Microsoft.UI.Xaml.Controls.ProgressRing);
+            _typeTable[39] = typeof(global::Microsoft.UI.Xaml.Controls.Control);
+            _typeTable[40] = typeof(global::Microsoft.UI.Xaml.Controls.ProgressRingTemplateSettings);
+            _typeTable[41] = typeof(global::Nitro_Downloader.Views.HomePage);
+            _typeTable[42] = typeof(global::Nitro_Downloader.ViewModels.HomeViewModel);
+            _typeTable[43] = typeof(global::Nitro_Downloader.Helpers.EnumToBooleanConverter);
+            _typeTable[44] = typeof(global::Nitro_Downloader.Views.SettingsPage);
+            _typeTable[45] = typeof(global::Nitro_Downloader.ViewModels.SettingsViewModel);
+            _typeTable[46] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationView);
+            _typeTable[47] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible);
+            _typeTable[48] = typeof(global::System.Collections.Generic.IList<global::System.Object>);
+            _typeTable[49] = typeof(global::Microsoft.UI.Xaml.Controls.AutoSuggestBox);
+            _typeTable[50] = typeof(global::Microsoft.UI.Xaml.UIElement);
+            _typeTable[51] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode);
+            _typeTable[52] = typeof(global::Microsoft.UI.Xaml.Style);
+            _typeTable[53] = typeof(global::Microsoft.UI.Xaml.Controls.StyleSelector);
+            _typeTable[54] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode);
+            _typeTable[55] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode);
+            _typeTable[56] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus);
+            _typeTable[57] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled);
+            _typeTable[58] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings);
+            _typeTable[59] = typeof(global::Microsoft.Xaml.Interactivity.Interaction);
+            _typeTable[60] = typeof(global::Microsoft.Xaml.Interactivity.BehaviorCollection);
+            _typeTable[61] = typeof(global::Microsoft.UI.Xaml.DependencyObjectCollection);
+            _typeTable[62] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewItem);
+            _typeTable[63] = typeof(global::Microsoft.UI.Xaml.Controls.NavigationViewItemBase);
+            _typeTable[64] = typeof(global::Microsoft.UI.Xaml.Controls.IconElement);
+            _typeTable[65] = typeof(global::Microsoft.UI.Xaml.Controls.InfoBadge);
+            _typeTable[66] = typeof(global::Nitro_Downloader.Helpers.NavigationHelper);
+            _typeTable[67] = typeof(global::Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior);
+            _typeTable[68] = typeof(global::Microsoft.Xaml.Interactivity.Behavior<global::Microsoft.UI.Xaml.Controls.NavigationView>);
+            _typeTable[69] = typeof(global::Microsoft.Xaml.Interactivity.Behavior);
+            _typeTable[70] = typeof(global::Nitro_Downloader.Behaviors.NavigationViewHeaderMode);
+            _typeTable[71] = typeof(global::Nitro_Downloader.Views.ShellPage);
+            _typeTable[72] = typeof(global::Nitro_Downloader.ViewModels.ShellViewModel);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -391,17 +413,22 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
         private object Activate_4_WindowEx() { return new global::WinUIEx.WindowEx(); }
         private object Activate_15_MicaBackdrop() { return new global::Microsoft.UI.Xaml.Media.MicaBackdrop(); }
         private object Activate_18_MainWindow() { return new global::Nitro_Downloader.MainWindow(); }
-        private object Activate_21_HomePage() { return new global::Nitro_Downloader.Views.HomePage(); }
-        private object Activate_24_HomeViewModel() { return new global::Nitro_Downloader.ViewModels.HomeViewModel(); }
-        private object Activate_27_EnumToBooleanConverter() { return new global::Nitro_Downloader.Helpers.EnumToBooleanConverter(); }
-        private object Activate_28_SettingsPage() { return new global::Nitro_Downloader.Views.SettingsPage(); }
-        private object Activate_30_NavigationView() { return new global::Microsoft.UI.Xaml.Controls.NavigationView(); }
-        private object Activate_45_NavigationViewTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings(); }
-        private object Activate_48_BehaviorCollection() { return new global::Microsoft.Xaml.Interactivity.BehaviorCollection(); }
-        private object Activate_50_NavigationViewItem() { return new global::Microsoft.UI.Xaml.Controls.NavigationViewItem(); }
-        private object Activate_53_InfoBadge() { return new global::Microsoft.UI.Xaml.Controls.InfoBadge(); }
-        private object Activate_55_NavigationHelper() { return new global::Nitro_Downloader.Helpers.NavigationHelper(); }
-        private object Activate_56_NavigationViewHeaderBehavior() { return new global::Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior(); }
+        private object Activate_21_AllDownloadsPage() { return new global::Nitro_Downloader.Views.AllDownloadsPage(); }
+        private object Activate_24_AllDownloadsViewModel() { return new global::Nitro_Downloader.ViewModels.AllDownloadsViewModel(); }
+        private object Activate_27_Expander() { return new global::Microsoft.UI.Xaml.Controls.Expander(); }
+        private object Activate_34_WrapPanel() { return new global::CommunityToolkit.WinUI.UI.Controls.WrapPanel(); }
+        private object Activate_38_ProgressRing() { return new global::Microsoft.UI.Xaml.Controls.ProgressRing(); }
+        private object Activate_41_HomePage() { return new global::Nitro_Downloader.Views.HomePage(); }
+        private object Activate_42_HomeViewModel() { return new global::Nitro_Downloader.ViewModels.HomeViewModel(); }
+        private object Activate_43_EnumToBooleanConverter() { return new global::Nitro_Downloader.Helpers.EnumToBooleanConverter(); }
+        private object Activate_44_SettingsPage() { return new global::Nitro_Downloader.Views.SettingsPage(); }
+        private object Activate_46_NavigationView() { return new global::Microsoft.UI.Xaml.Controls.NavigationView(); }
+        private object Activate_58_NavigationViewTemplateSettings() { return new global::Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings(); }
+        private object Activate_60_BehaviorCollection() { return new global::Microsoft.Xaml.Interactivity.BehaviorCollection(); }
+        private object Activate_62_NavigationViewItem() { return new global::Microsoft.UI.Xaml.Controls.NavigationViewItem(); }
+        private object Activate_65_InfoBadge() { return new global::Microsoft.UI.Xaml.Controls.InfoBadge(); }
+        private object Activate_66_NavigationHelper() { return new global::Nitro_Downloader.Helpers.NavigationHelper(); }
+        private object Activate_67_NavigationViewHeaderBehavior() { return new global::Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior(); }
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -409,13 +436,13 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
             var newItem = (global::System.Object)item;
             collection.Add(newKey, newItem);
         }
-        private void VectorAdd_33_IList(object instance, object item)
+        private void VectorAdd_48_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::System.Object>)instance;
             var newItem = (global::System.Object)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_48_BehaviorCollection(object instance, object item)
+        private void VectorAdd_60_BehaviorCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.DependencyObject>)instance;
             var newItem = (global::Microsoft.UI.Xaml.DependencyObject)item;
@@ -579,9 +606,9 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 21:   //  Nitro_Downloader.Views.HomePage
+            case 21:   //  Nitro_Downloader.Views.AllDownloadsPage
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_21_HomePage;
+                userType.Activator = Activate_21_AllDownloadsPage;
                 userType.AddMemberName("ViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -595,7 +622,7 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 24:   //  Nitro_Downloader.ViewModels.HomeViewModel
+            case 24:   //  Nitro_Downloader.ViewModels.AllDownloadsViewModel
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
@@ -612,31 +639,135 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 27:   //  Nitro_Downloader.Helpers.EnumToBooleanConverter
-                userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_27_EnumToBooleanConverter;
-                userType.SetIsLocalType();
+            case 27:   //  Microsoft.UI.Xaml.Controls.Expander
+                userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ContentControl"));
+                userType.Activator = Activate_27_Expander;
+                userType.AddMemberName("Header");
+                userType.AddMemberName("ExpandDirection");
+                userType.AddMemberName("HeaderTemplate");
+                userType.AddMemberName("HeaderTemplateSelector");
+                userType.AddMemberName("IsExpanded");
+                userType.AddMemberName("TemplateSettings");
                 xamlType = userType;
                 break;
 
-            case 28:   //  Nitro_Downloader.Views.SettingsPage
+            case 28:   //  Microsoft.UI.Xaml.Controls.ContentControl
+                xamlType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 29:   //  Microsoft.UI.Xaml.Controls.ExpandDirection
+                userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Down", global::Microsoft.UI.Xaml.Controls.ExpandDirection.Down);
+                userType.AddEnumValue("Up", global::Microsoft.UI.Xaml.Controls.ExpandDirection.Up);
+                xamlType = userType;
+                break;
+
+            case 30:   //  Microsoft.UI.Xaml.DataTemplate
+                xamlType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 31:   //  Microsoft.UI.Xaml.Controls.DataTemplateSelector
+                xamlType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 32:   //  Microsoft.UI.Xaml.Controls.ExpanderTemplateSettings
+                userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 33:   //  Microsoft.UI.Xaml.DependencyObject
+                xamlType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 34:   //  CommunityToolkit.WinUI.UI.Controls.WrapPanel
+                userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Panel"));
+                userType.Activator = Activate_34_WrapPanel;
+                userType.AddMemberName("Orientation");
+                userType.AddMemberName("HorizontalSpacing");
+                userType.AddMemberName("VerticalSpacing");
+                userType.AddMemberName("Padding");
+                userType.AddMemberName("StretchChild");
+                xamlType = userType;
+                break;
+
+            case 35:   //  Microsoft.UI.Xaml.Controls.Panel
+                xamlType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 36:   //  Microsoft.UI.Xaml.Controls.Orientation
+                xamlType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 37:   //  CommunityToolkit.WinUI.UI.Controls.StretchChild
+                userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("None", global::CommunityToolkit.WinUI.UI.Controls.StretchChild.None);
+                userType.AddEnumValue("Last", global::CommunityToolkit.WinUI.UI.Controls.StretchChild.Last);
+                xamlType = userType;
+                break;
+
+            case 38:   //  Microsoft.UI.Xaml.Controls.ProgressRing
+                userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
+                userType.Activator = Activate_38_ProgressRing;
+                userType.AddMemberName("IsActive");
+                userType.AddMemberName("IsIndeterminate");
+                userType.AddMemberName("Maximum");
+                userType.AddMemberName("Minimum");
+                userType.AddMemberName("TemplateSettings");
+                userType.AddMemberName("Value");
+                xamlType = userType;
+                break;
+
+            case 39:   //  Microsoft.UI.Xaml.Controls.Control
+                xamlType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 40:   //  Microsoft.UI.Xaml.Controls.ProgressRingTemplateSettings
+                userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 41:   //  Nitro_Downloader.Views.HomePage
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_28_SettingsPage;
+                userType.Activator = Activate_41_HomePage;
                 userType.AddMemberName("ViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 29:   //  Nitro_Downloader.ViewModels.SettingsViewModel
+            case 42:   //  Nitro_Downloader.ViewModels.HomeViewModel
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 30:   //  Microsoft.UI.Xaml.Controls.NavigationView
+            case 43:   //  Nitro_Downloader.Helpers.EnumToBooleanConverter
+                userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_43_EnumToBooleanConverter;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 44:   //  Nitro_Downloader.Views.SettingsPage
+                userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_44_SettingsPage;
+                userType.AddMemberName("ViewModel");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 45:   //  Nitro_Downloader.ViewModels.SettingsViewModel
+                userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 46:   //  Microsoft.UI.Xaml.Controls.NavigationView
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ContentControl"));
-                userType.Activator = Activate_30_NavigationView;
+                userType.Activator = Activate_46_NavigationView;
                 userType.AddMemberName("IsBackButtonVisible");
                 userType.AddMemberName("IsBackEnabled");
                 userType.AddMemberName("SelectedItem");
@@ -677,11 +808,7 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 31:   //  Microsoft.UI.Xaml.Controls.ContentControl
-                xamlType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 32:   //  Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible
+            case 47:   //  Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Collapsed", global::Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible.Collapsed);
                 userType.AddEnumValue("Visible", global::Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible.Visible);
@@ -689,26 +816,22 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 33:   //  System.Collections.Generic.IList`1<Object>
+            case 48:   //  System.Collections.Generic.IList`1<Object>
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_33_IList;
+                userType.CollectionAdd = VectorAdd_48_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 34:   //  Microsoft.UI.Xaml.DataTemplate
+            case 49:   //  Microsoft.UI.Xaml.Controls.AutoSuggestBox
                 xamlType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 35:   //  Microsoft.UI.Xaml.Controls.AutoSuggestBox
+            case 50:   //  Microsoft.UI.Xaml.UIElement
                 xamlType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 36:   //  Microsoft.UI.Xaml.UIElement
-                xamlType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 37:   //  Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode
+            case 51:   //  Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Minimal", global::Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode.Minimal);
                 userType.AddEnumValue("Compact", global::Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode.Compact);
@@ -716,26 +839,22 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 38:   //  Microsoft.UI.Xaml.Style
+            case 52:   //  Microsoft.UI.Xaml.Style
                 xamlType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 39:   //  Microsoft.UI.Xaml.Controls.StyleSelector
+            case 53:   //  Microsoft.UI.Xaml.Controls.StyleSelector
                 xamlType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 40:   //  Microsoft.UI.Xaml.Controls.DataTemplateSelector
-                xamlType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 41:   //  Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode
+            case 54:   //  Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("MoreLabel", global::Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode.MoreLabel);
                 userType.AddEnumValue("NoLabel", global::Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode.NoLabel);
                 xamlType = userType;
                 break;
 
-            case 42:   //  Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode
+            case 55:   //  Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Auto", global::Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode.Auto);
                 userType.AddEnumValue("Left", global::Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode.Left);
@@ -745,14 +864,14 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 43:   //  Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus
+            case 56:   //  Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Disabled", global::Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus.Disabled);
                 userType.AddEnumValue("Enabled", global::Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus.Enabled);
                 xamlType = userType;
                 break;
 
-            case 44:   //  Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled
+            case 57:   //  Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("WhenSelectionFollowsFocus", global::Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled.WhenSelectionFollowsFocus);
                 userType.AddEnumValue("Always", global::Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled.Always);
@@ -760,36 +879,32 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 45:   //  Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings
+            case 58:   //  Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 46:   //  Microsoft.UI.Xaml.DependencyObject
-                xamlType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 47:   //  Microsoft.Xaml.Interactivity.Interaction
+            case 59:   //  Microsoft.Xaml.Interactivity.Interaction
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.AddMemberName("Behaviors");
                 xamlType = userType;
                 break;
 
-            case 48:   //  Microsoft.Xaml.Interactivity.BehaviorCollection
+            case 60:   //  Microsoft.Xaml.Interactivity.BehaviorCollection
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObjectCollection"));
-                userType.CollectionAdd = VectorAdd_48_BehaviorCollection;
+                userType.CollectionAdd = VectorAdd_60_BehaviorCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 49:   //  Microsoft.UI.Xaml.DependencyObjectCollection
+            case 61:   //  Microsoft.UI.Xaml.DependencyObjectCollection
                 xamlType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 50:   //  Microsoft.UI.Xaml.Controls.NavigationViewItem
+            case 62:   //  Microsoft.UI.Xaml.Controls.NavigationViewItem
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationViewItemBase"));
-                userType.Activator = Activate_50_NavigationViewItem;
+                userType.Activator = Activate_62_NavigationViewItem;
                 userType.AddMemberName("Icon");
                 userType.AddMemberName("CompactPaneLength");
                 userType.AddMemberName("HasUnrealizedChildren");
@@ -802,37 +917,33 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 51:   //  Microsoft.UI.Xaml.Controls.NavigationViewItemBase
+            case 63:   //  Microsoft.UI.Xaml.Controls.NavigationViewItemBase
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ContentControl"));
                 userType.AddMemberName("IsSelected");
                 xamlType = userType;
                 break;
 
-            case 52:   //  Microsoft.UI.Xaml.Controls.IconElement
+            case 64:   //  Microsoft.UI.Xaml.Controls.IconElement
                 xamlType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 53:   //  Microsoft.UI.Xaml.Controls.InfoBadge
+            case 65:   //  Microsoft.UI.Xaml.Controls.InfoBadge
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 54:   //  Microsoft.UI.Xaml.Controls.Control
-                xamlType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 55:   //  Nitro_Downloader.Helpers.NavigationHelper
+            case 66:   //  Nitro_Downloader.Helpers.NavigationHelper
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_55_NavigationHelper;
+                userType.Activator = Activate_66_NavigationHelper;
                 userType.AddMemberName("NavigateTo");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 56:   //  Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior
+            case 67:   //  Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Xaml.Interactivity.Behavior`1<Microsoft.UI.Xaml.Controls.NavigationView>"));
-                userType.Activator = Activate_56_NavigationViewHeaderBehavior;
+                userType.Activator = Activate_67_NavigationViewHeaderBehavior;
                 userType.AddMemberName("DefaultHeader");
                 userType.AddMemberName("DefaultHeaderTemplate");
                 userType.AddMemberName("HeaderMode");
@@ -842,18 +953,18 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 57:   //  Microsoft.Xaml.Interactivity.Behavior`1<Microsoft.UI.Xaml.Controls.NavigationView>
+            case 68:   //  Microsoft.Xaml.Interactivity.Behavior`1<Microsoft.UI.Xaml.Controls.NavigationView>
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Xaml.Interactivity.Behavior"));
                 userType.AddMemberName("AssociatedObject");
                 xamlType = userType;
                 break;
 
-            case 58:   //  Microsoft.Xaml.Interactivity.Behavior
+            case 69:   //  Microsoft.Xaml.Interactivity.Behavior
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 xamlType = userType;
                 break;
 
-            case 59:   //  Nitro_Downloader.Behaviors.NavigationViewHeaderMode
+            case 70:   //  Nitro_Downloader.Behaviors.NavigationViewHeaderMode
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Always", global::Nitro_Downloader.Behaviors.NavigationViewHeaderMode.Always);
                 userType.AddEnumValue("Never", global::Nitro_Downloader.Behaviors.NavigationViewHeaderMode.Never);
@@ -862,14 +973,14 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 60:   //  Nitro_Downloader.Views.ShellPage
+            case 71:   //  Nitro_Downloader.Views.ShellPage
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
                 userType.AddMemberName("ViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 61:   //  Nitro_Downloader.ViewModels.ShellViewModel
+            case 72:   //  Nitro_Downloader.ViewModels.ShellViewModel
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
@@ -889,6 +1000,8 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                     var otherProviders = new global::System.Collections.Generic.List<global::Microsoft.UI.Xaml.Markup.IXamlMetadataProvider>();
                     global::Microsoft.UI.Xaml.Markup.IXamlMetadataProvider provider;
                     provider = new global::Microsoft.UI.Xaml.XamlTypeInfo.XamlControlsXamlMetaDataProvider() as global::Microsoft.UI.Xaml.Markup.IXamlMetadataProvider;
+                    otherProviders.Add(provider); 
+                    provider = new global::Uno.UI.Toolkit.Uno_UI_Toolkit_XamlTypeInfo.XamlMetaDataProvider() as global::Microsoft.UI.Xaml.Markup.IXamlMetadataProvider;
                     otherProviders.Add(provider); 
                     _otherProviders = otherProviders;
                 }
@@ -1226,517 +1339,682 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
             var that = (global::Microsoft.UI.Xaml.CornerRadius)instance;
             that.BottomLeft = (global::System.Double)Value;
         }
-        private object get_30_HomePage_ViewModel(object instance)
+        private object get_30_AllDownloadsPage_ViewModel(object instance)
+        {
+            var that = (global::Nitro_Downloader.Views.AllDownloadsPage)instance;
+            return that.ViewModel;
+        }
+        private object get_31_Expander_Header(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            return that.Header;
+        }
+        private void set_31_Expander_Header(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            that.Header = (global::System.Object)Value;
+        }
+        private object get_32_Expander_ExpandDirection(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            return that.ExpandDirection;
+        }
+        private void set_32_Expander_ExpandDirection(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            that.ExpandDirection = (global::Microsoft.UI.Xaml.Controls.ExpandDirection)Value;
+        }
+        private object get_33_Expander_HeaderTemplate(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            return that.HeaderTemplate;
+        }
+        private void set_33_Expander_HeaderTemplate(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            that.HeaderTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
+        }
+        private object get_34_Expander_HeaderTemplateSelector(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            return that.HeaderTemplateSelector;
+        }
+        private void set_34_Expander_HeaderTemplateSelector(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            that.HeaderTemplateSelector = (global::Microsoft.UI.Xaml.Controls.DataTemplateSelector)Value;
+        }
+        private object get_35_Expander_IsExpanded(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            return that.IsExpanded;
+        }
+        private void set_35_Expander_IsExpanded(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            that.IsExpanded = (global::System.Boolean)Value;
+        }
+        private object get_36_Expander_TemplateSettings(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Expander)instance;
+            return that.TemplateSettings;
+        }
+        private object get_37_WrapPanel_Orientation(object instance)
+        {
+            var that = (global::CommunityToolkit.WinUI.UI.Controls.WrapPanel)instance;
+            return that.Orientation;
+        }
+        private void set_37_WrapPanel_Orientation(object instance, object Value)
+        {
+            var that = (global::CommunityToolkit.WinUI.UI.Controls.WrapPanel)instance;
+            that.Orientation = (global::Microsoft.UI.Xaml.Controls.Orientation)Value;
+        }
+        private object get_38_WrapPanel_HorizontalSpacing(object instance)
+        {
+            var that = (global::CommunityToolkit.WinUI.UI.Controls.WrapPanel)instance;
+            return that.HorizontalSpacing;
+        }
+        private void set_38_WrapPanel_HorizontalSpacing(object instance, object Value)
+        {
+            var that = (global::CommunityToolkit.WinUI.UI.Controls.WrapPanel)instance;
+            that.HorizontalSpacing = (global::System.Double)Value;
+        }
+        private object get_39_WrapPanel_VerticalSpacing(object instance)
+        {
+            var that = (global::CommunityToolkit.WinUI.UI.Controls.WrapPanel)instance;
+            return that.VerticalSpacing;
+        }
+        private void set_39_WrapPanel_VerticalSpacing(object instance, object Value)
+        {
+            var that = (global::CommunityToolkit.WinUI.UI.Controls.WrapPanel)instance;
+            that.VerticalSpacing = (global::System.Double)Value;
+        }
+        private object get_40_WrapPanel_Padding(object instance)
+        {
+            var that = (global::CommunityToolkit.WinUI.UI.Controls.WrapPanel)instance;
+            return that.Padding;
+        }
+        private void set_40_WrapPanel_Padding(object instance, object Value)
+        {
+            var that = (global::CommunityToolkit.WinUI.UI.Controls.WrapPanel)instance;
+            that.Padding = (global::Microsoft.UI.Xaml.Thickness)Value;
+        }
+        private object get_41_WrapPanel_StretchChild(object instance)
+        {
+            var that = (global::CommunityToolkit.WinUI.UI.Controls.WrapPanel)instance;
+            return that.StretchChild;
+        }
+        private void set_41_WrapPanel_StretchChild(object instance, object Value)
+        {
+            var that = (global::CommunityToolkit.WinUI.UI.Controls.WrapPanel)instance;
+            that.StretchChild = (global::CommunityToolkit.WinUI.UI.Controls.StretchChild)Value;
+        }
+        private object get_42_ProgressRing_IsActive(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
+            return that.IsActive;
+        }
+        private void set_42_ProgressRing_IsActive(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
+            that.IsActive = (global::System.Boolean)Value;
+        }
+        private object get_43_ProgressRing_IsIndeterminate(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
+            return that.IsIndeterminate;
+        }
+        private void set_43_ProgressRing_IsIndeterminate(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
+            that.IsIndeterminate = (global::System.Boolean)Value;
+        }
+        private object get_44_ProgressRing_Maximum(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
+            return that.Maximum;
+        }
+        private void set_44_ProgressRing_Maximum(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
+            that.Maximum = (global::System.Double)Value;
+        }
+        private object get_45_ProgressRing_Minimum(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
+            return that.Minimum;
+        }
+        private void set_45_ProgressRing_Minimum(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
+            that.Minimum = (global::System.Double)Value;
+        }
+        private object get_46_ProgressRing_TemplateSettings(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
+            return that.TemplateSettings;
+        }
+        private object get_47_ProgressRing_Value(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
+            return that.Value;
+        }
+        private void set_47_ProgressRing_Value(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ProgressRing)instance;
+            that.Value = (global::System.Double)Value;
+        }
+        private object get_48_HomePage_ViewModel(object instance)
         {
             var that = (global::Nitro_Downloader.Views.HomePage)instance;
             return that.ViewModel;
         }
-        private object get_31_SettingsPage_ViewModel(object instance)
+        private object get_49_SettingsPage_ViewModel(object instance)
         {
             var that = (global::Nitro_Downloader.Views.SettingsPage)instance;
             return that.ViewModel;
         }
-        private object get_32_NavigationView_IsBackButtonVisible(object instance)
+        private object get_50_NavigationView_IsBackButtonVisible(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.IsBackButtonVisible;
         }
-        private void set_32_NavigationView_IsBackButtonVisible(object instance, object Value)
+        private void set_50_NavigationView_IsBackButtonVisible(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.IsBackButtonVisible = (global::Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible)Value;
         }
-        private object get_33_NavigationView_IsBackEnabled(object instance)
+        private object get_51_NavigationView_IsBackEnabled(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.IsBackEnabled;
         }
-        private void set_33_NavigationView_IsBackEnabled(object instance, object Value)
+        private void set_51_NavigationView_IsBackEnabled(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.IsBackEnabled = (global::System.Boolean)Value;
         }
-        private object get_34_NavigationView_SelectedItem(object instance)
+        private object get_52_NavigationView_SelectedItem(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.SelectedItem;
         }
-        private void set_34_NavigationView_SelectedItem(object instance, object Value)
+        private void set_52_NavigationView_SelectedItem(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.SelectedItem = (global::System.Object)Value;
         }
-        private object get_35_NavigationView_IsSettingsVisible(object instance)
+        private object get_53_NavigationView_IsSettingsVisible(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.IsSettingsVisible;
         }
-        private void set_35_NavigationView_IsSettingsVisible(object instance, object Value)
+        private void set_53_NavigationView_IsSettingsVisible(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.IsSettingsVisible = (global::System.Boolean)Value;
         }
-        private object get_36_NavigationView_ExpandedModeThresholdWidth(object instance)
+        private object get_54_NavigationView_ExpandedModeThresholdWidth(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.ExpandedModeThresholdWidth;
         }
-        private void set_36_NavigationView_ExpandedModeThresholdWidth(object instance, object Value)
+        private void set_54_NavigationView_ExpandedModeThresholdWidth(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.ExpandedModeThresholdWidth = (global::System.Double)Value;
         }
-        private object get_37_NavigationView_Header(object instance)
+        private object get_55_NavigationView_Header(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.Header;
         }
-        private void set_37_NavigationView_Header(object instance, object Value)
+        private void set_55_NavigationView_Header(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.Header = (global::System.Object)Value;
         }
-        private object get_38_NavigationView_MenuItems(object instance)
+        private object get_56_NavigationView_MenuItems(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.MenuItems;
         }
-        private object get_39_NavigationView_HeaderTemplate(object instance)
+        private object get_57_NavigationView_HeaderTemplate(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.HeaderTemplate;
         }
-        private void set_39_NavigationView_HeaderTemplate(object instance, object Value)
+        private void set_57_NavigationView_HeaderTemplate(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.HeaderTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
         }
-        private object get_40_NavigationView_AlwaysShowHeader(object instance)
+        private object get_58_NavigationView_AlwaysShowHeader(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.AlwaysShowHeader;
         }
-        private void set_40_NavigationView_AlwaysShowHeader(object instance, object Value)
+        private void set_58_NavigationView_AlwaysShowHeader(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.AlwaysShowHeader = (global::System.Boolean)Value;
         }
-        private object get_41_NavigationView_AutoSuggestBox(object instance)
+        private object get_59_NavigationView_AutoSuggestBox(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.AutoSuggestBox;
         }
-        private void set_41_NavigationView_AutoSuggestBox(object instance, object Value)
+        private void set_59_NavigationView_AutoSuggestBox(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.AutoSuggestBox = (global::Microsoft.UI.Xaml.Controls.AutoSuggestBox)Value;
         }
-        private object get_42_NavigationView_CompactModeThresholdWidth(object instance)
+        private object get_60_NavigationView_CompactModeThresholdWidth(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.CompactModeThresholdWidth;
         }
-        private void set_42_NavigationView_CompactModeThresholdWidth(object instance, object Value)
+        private void set_60_NavigationView_CompactModeThresholdWidth(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.CompactModeThresholdWidth = (global::System.Double)Value;
         }
-        private object get_43_NavigationView_CompactPaneLength(object instance)
+        private object get_61_NavigationView_CompactPaneLength(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.CompactPaneLength;
         }
-        private void set_43_NavigationView_CompactPaneLength(object instance, object Value)
+        private void set_61_NavigationView_CompactPaneLength(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.CompactPaneLength = (global::System.Double)Value;
         }
-        private object get_44_NavigationView_ContentOverlay(object instance)
+        private object get_62_NavigationView_ContentOverlay(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.ContentOverlay;
         }
-        private void set_44_NavigationView_ContentOverlay(object instance, object Value)
+        private void set_62_NavigationView_ContentOverlay(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.ContentOverlay = (global::Microsoft.UI.Xaml.UIElement)Value;
         }
-        private object get_45_NavigationView_DisplayMode(object instance)
+        private object get_63_NavigationView_DisplayMode(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.DisplayMode;
         }
-        private object get_46_NavigationView_FooterMenuItems(object instance)
+        private object get_64_NavigationView_FooterMenuItems(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.FooterMenuItems;
         }
-        private object get_47_NavigationView_FooterMenuItemsSource(object instance)
+        private object get_65_NavigationView_FooterMenuItemsSource(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.FooterMenuItemsSource;
         }
-        private void set_47_NavigationView_FooterMenuItemsSource(object instance, object Value)
+        private void set_65_NavigationView_FooterMenuItemsSource(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.FooterMenuItemsSource = (global::System.Object)Value;
         }
-        private object get_48_NavigationView_IsPaneOpen(object instance)
+        private object get_66_NavigationView_IsPaneOpen(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.IsPaneOpen;
         }
-        private void set_48_NavigationView_IsPaneOpen(object instance, object Value)
+        private void set_66_NavigationView_IsPaneOpen(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.IsPaneOpen = (global::System.Boolean)Value;
         }
-        private object get_49_NavigationView_IsPaneToggleButtonVisible(object instance)
+        private object get_67_NavigationView_IsPaneToggleButtonVisible(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.IsPaneToggleButtonVisible;
         }
-        private void set_49_NavigationView_IsPaneToggleButtonVisible(object instance, object Value)
+        private void set_67_NavigationView_IsPaneToggleButtonVisible(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.IsPaneToggleButtonVisible = (global::System.Boolean)Value;
         }
-        private object get_50_NavigationView_IsPaneVisible(object instance)
+        private object get_68_NavigationView_IsPaneVisible(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.IsPaneVisible;
         }
-        private void set_50_NavigationView_IsPaneVisible(object instance, object Value)
+        private void set_68_NavigationView_IsPaneVisible(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.IsPaneVisible = (global::System.Boolean)Value;
         }
-        private object get_51_NavigationView_IsTitleBarAutoPaddingEnabled(object instance)
+        private object get_69_NavigationView_IsTitleBarAutoPaddingEnabled(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.IsTitleBarAutoPaddingEnabled;
         }
-        private void set_51_NavigationView_IsTitleBarAutoPaddingEnabled(object instance, object Value)
+        private void set_69_NavigationView_IsTitleBarAutoPaddingEnabled(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.IsTitleBarAutoPaddingEnabled = (global::System.Boolean)Value;
         }
-        private object get_52_NavigationView_MenuItemContainerStyle(object instance)
+        private object get_70_NavigationView_MenuItemContainerStyle(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.MenuItemContainerStyle;
         }
-        private void set_52_NavigationView_MenuItemContainerStyle(object instance, object Value)
+        private void set_70_NavigationView_MenuItemContainerStyle(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.MenuItemContainerStyle = (global::Microsoft.UI.Xaml.Style)Value;
         }
-        private object get_53_NavigationView_MenuItemContainerStyleSelector(object instance)
+        private object get_71_NavigationView_MenuItemContainerStyleSelector(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.MenuItemContainerStyleSelector;
         }
-        private void set_53_NavigationView_MenuItemContainerStyleSelector(object instance, object Value)
+        private void set_71_NavigationView_MenuItemContainerStyleSelector(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.MenuItemContainerStyleSelector = (global::Microsoft.UI.Xaml.Controls.StyleSelector)Value;
         }
-        private object get_54_NavigationView_MenuItemTemplate(object instance)
+        private object get_72_NavigationView_MenuItemTemplate(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.MenuItemTemplate;
         }
-        private void set_54_NavigationView_MenuItemTemplate(object instance, object Value)
+        private void set_72_NavigationView_MenuItemTemplate(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.MenuItemTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
         }
-        private object get_55_NavigationView_MenuItemTemplateSelector(object instance)
+        private object get_73_NavigationView_MenuItemTemplateSelector(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.MenuItemTemplateSelector;
         }
-        private void set_55_NavigationView_MenuItemTemplateSelector(object instance, object Value)
+        private void set_73_NavigationView_MenuItemTemplateSelector(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.MenuItemTemplateSelector = (global::Microsoft.UI.Xaml.Controls.DataTemplateSelector)Value;
         }
-        private object get_56_NavigationView_MenuItemsSource(object instance)
+        private object get_74_NavigationView_MenuItemsSource(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.MenuItemsSource;
         }
-        private void set_56_NavigationView_MenuItemsSource(object instance, object Value)
+        private void set_74_NavigationView_MenuItemsSource(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.MenuItemsSource = (global::System.Object)Value;
         }
-        private object get_57_NavigationView_OpenPaneLength(object instance)
+        private object get_75_NavigationView_OpenPaneLength(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.OpenPaneLength;
         }
-        private void set_57_NavigationView_OpenPaneLength(object instance, object Value)
+        private void set_75_NavigationView_OpenPaneLength(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.OpenPaneLength = (global::System.Double)Value;
         }
-        private object get_58_NavigationView_OverflowLabelMode(object instance)
+        private object get_76_NavigationView_OverflowLabelMode(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.OverflowLabelMode;
         }
-        private void set_58_NavigationView_OverflowLabelMode(object instance, object Value)
+        private void set_76_NavigationView_OverflowLabelMode(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.OverflowLabelMode = (global::Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode)Value;
         }
-        private object get_59_NavigationView_PaneCustomContent(object instance)
+        private object get_77_NavigationView_PaneCustomContent(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.PaneCustomContent;
         }
-        private void set_59_NavigationView_PaneCustomContent(object instance, object Value)
+        private void set_77_NavigationView_PaneCustomContent(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.PaneCustomContent = (global::Microsoft.UI.Xaml.UIElement)Value;
         }
-        private object get_60_NavigationView_PaneDisplayMode(object instance)
+        private object get_78_NavigationView_PaneDisplayMode(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.PaneDisplayMode;
         }
-        private void set_60_NavigationView_PaneDisplayMode(object instance, object Value)
+        private void set_78_NavigationView_PaneDisplayMode(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.PaneDisplayMode = (global::Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode)Value;
         }
-        private object get_61_NavigationView_PaneFooter(object instance)
+        private object get_79_NavigationView_PaneFooter(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.PaneFooter;
         }
-        private void set_61_NavigationView_PaneFooter(object instance, object Value)
+        private void set_79_NavigationView_PaneFooter(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.PaneFooter = (global::Microsoft.UI.Xaml.UIElement)Value;
         }
-        private object get_62_NavigationView_PaneHeader(object instance)
+        private object get_80_NavigationView_PaneHeader(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.PaneHeader;
         }
-        private void set_62_NavigationView_PaneHeader(object instance, object Value)
+        private void set_80_NavigationView_PaneHeader(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.PaneHeader = (global::Microsoft.UI.Xaml.UIElement)Value;
         }
-        private object get_63_NavigationView_PaneTitle(object instance)
+        private object get_81_NavigationView_PaneTitle(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.PaneTitle;
         }
-        private void set_63_NavigationView_PaneTitle(object instance, object Value)
+        private void set_81_NavigationView_PaneTitle(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.PaneTitle = (global::System.String)Value;
         }
-        private object get_64_NavigationView_PaneToggleButtonStyle(object instance)
+        private object get_82_NavigationView_PaneToggleButtonStyle(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.PaneToggleButtonStyle;
         }
-        private void set_64_NavigationView_PaneToggleButtonStyle(object instance, object Value)
+        private void set_82_NavigationView_PaneToggleButtonStyle(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.PaneToggleButtonStyle = (global::Microsoft.UI.Xaml.Style)Value;
         }
-        private object get_65_NavigationView_SelectionFollowsFocus(object instance)
+        private object get_83_NavigationView_SelectionFollowsFocus(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.SelectionFollowsFocus;
         }
-        private void set_65_NavigationView_SelectionFollowsFocus(object instance, object Value)
+        private void set_83_NavigationView_SelectionFollowsFocus(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.SelectionFollowsFocus = (global::Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus)Value;
         }
-        private object get_66_NavigationView_SettingsItem(object instance)
+        private object get_84_NavigationView_SettingsItem(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.SettingsItem;
         }
-        private object get_67_NavigationView_ShoulderNavigationEnabled(object instance)
+        private object get_85_NavigationView_ShoulderNavigationEnabled(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.ShoulderNavigationEnabled;
         }
-        private void set_67_NavigationView_ShoulderNavigationEnabled(object instance, object Value)
+        private void set_85_NavigationView_ShoulderNavigationEnabled(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             that.ShoulderNavigationEnabled = (global::Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled)Value;
         }
-        private object get_68_NavigationView_TemplateSettings(object instance)
+        private object get_86_NavigationView_TemplateSettings(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationView)instance;
             return that.TemplateSettings;
         }
-        private object get_69_Interaction_Behaviors(object instance)
+        private object get_87_Interaction_Behaviors(object instance)
         {
             return global::Microsoft.Xaml.Interactivity.Interaction.GetBehaviors((global::Microsoft.UI.Xaml.DependencyObject)instance);
         }
-        private void set_69_Interaction_Behaviors(object instance, object Value)
+        private void set_87_Interaction_Behaviors(object instance, object Value)
         {
             global::Microsoft.Xaml.Interactivity.Interaction.SetBehaviors((global::Microsoft.UI.Xaml.DependencyObject)instance, (global::Microsoft.Xaml.Interactivity.BehaviorCollection)Value);
         }
-        private object get_70_NavigationViewItem_Icon(object instance)
+        private object get_88_NavigationViewItem_Icon(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationViewItem)instance;
             return that.Icon;
         }
-        private void set_70_NavigationViewItem_Icon(object instance, object Value)
+        private void set_88_NavigationViewItem_Icon(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationViewItem)instance;
             that.Icon = (global::Microsoft.UI.Xaml.Controls.IconElement)Value;
         }
-        private object get_71_NavigationViewItem_CompactPaneLength(object instance)
+        private object get_89_NavigationViewItem_CompactPaneLength(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationViewItem)instance;
             return that.CompactPaneLength;
         }
-        private object get_72_NavigationViewItem_HasUnrealizedChildren(object instance)
+        private object get_90_NavigationViewItem_HasUnrealizedChildren(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationViewItem)instance;
             return that.HasUnrealizedChildren;
         }
-        private void set_72_NavigationViewItem_HasUnrealizedChildren(object instance, object Value)
+        private void set_90_NavigationViewItem_HasUnrealizedChildren(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationViewItem)instance;
             that.HasUnrealizedChildren = (global::System.Boolean)Value;
         }
-        private object get_73_NavigationViewItem_InfoBadge(object instance)
+        private object get_91_NavigationViewItem_InfoBadge(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationViewItem)instance;
             return that.InfoBadge;
         }
-        private void set_73_NavigationViewItem_InfoBadge(object instance, object Value)
+        private void set_91_NavigationViewItem_InfoBadge(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationViewItem)instance;
             that.InfoBadge = (global::Microsoft.UI.Xaml.Controls.InfoBadge)Value;
         }
-        private object get_74_NavigationViewItem_IsChildSelected(object instance)
+        private object get_92_NavigationViewItem_IsChildSelected(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationViewItem)instance;
             return that.IsChildSelected;
         }
-        private void set_74_NavigationViewItem_IsChildSelected(object instance, object Value)
+        private void set_92_NavigationViewItem_IsChildSelected(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationViewItem)instance;
             that.IsChildSelected = (global::System.Boolean)Value;
         }
-        private object get_75_NavigationViewItem_IsExpanded(object instance)
+        private object get_93_NavigationViewItem_IsExpanded(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationViewItem)instance;
             return that.IsExpanded;
         }
-        private void set_75_NavigationViewItem_IsExpanded(object instance, object Value)
+        private void set_93_NavigationViewItem_IsExpanded(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationViewItem)instance;
             that.IsExpanded = (global::System.Boolean)Value;
         }
-        private object get_76_NavigationViewItem_MenuItems(object instance)
+        private object get_94_NavigationViewItem_MenuItems(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationViewItem)instance;
             return that.MenuItems;
         }
-        private object get_77_NavigationViewItem_MenuItemsSource(object instance)
+        private object get_95_NavigationViewItem_MenuItemsSource(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationViewItem)instance;
             return that.MenuItemsSource;
         }
-        private void set_77_NavigationViewItem_MenuItemsSource(object instance, object Value)
+        private void set_95_NavigationViewItem_MenuItemsSource(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationViewItem)instance;
             that.MenuItemsSource = (global::System.Object)Value;
         }
-        private object get_78_NavigationViewItem_SelectsOnInvoked(object instance)
+        private object get_96_NavigationViewItem_SelectsOnInvoked(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationViewItem)instance;
             return that.SelectsOnInvoked;
         }
-        private void set_78_NavigationViewItem_SelectsOnInvoked(object instance, object Value)
+        private void set_96_NavigationViewItem_SelectsOnInvoked(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationViewItem)instance;
             that.SelectsOnInvoked = (global::System.Boolean)Value;
         }
-        private object get_79_NavigationViewItemBase_IsSelected(object instance)
+        private object get_97_NavigationViewItemBase_IsSelected(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationViewItemBase)instance;
             return that.IsSelected;
         }
-        private void set_79_NavigationViewItemBase_IsSelected(object instance, object Value)
+        private void set_97_NavigationViewItemBase_IsSelected(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.NavigationViewItemBase)instance;
             that.IsSelected = (global::System.Boolean)Value;
         }
-        private object get_80_NavigationHelper_NavigateTo(object instance)
+        private object get_98_NavigationHelper_NavigateTo(object instance)
         {
             return global::Nitro_Downloader.Helpers.NavigationHelper.GetNavigateTo((global::Microsoft.UI.Xaml.Controls.NavigationViewItem)instance);
         }
-        private void set_80_NavigationHelper_NavigateTo(object instance, object Value)
+        private void set_98_NavigationHelper_NavigateTo(object instance, object Value)
         {
             global::Nitro_Downloader.Helpers.NavigationHelper.SetNavigateTo((global::Microsoft.UI.Xaml.Controls.NavigationViewItem)instance, (global::System.String)Value);
         }
-        private object get_81_NavigationViewHeaderBehavior_DefaultHeader(object instance)
+        private object get_99_NavigationViewHeaderBehavior_DefaultHeader(object instance)
         {
             var that = (global::Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior)instance;
             return that.DefaultHeader;
         }
-        private void set_81_NavigationViewHeaderBehavior_DefaultHeader(object instance, object Value)
+        private void set_99_NavigationViewHeaderBehavior_DefaultHeader(object instance, object Value)
         {
             var that = (global::Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior)instance;
             that.DefaultHeader = (global::System.Object)Value;
         }
-        private object get_82_NavigationViewHeaderBehavior_DefaultHeaderTemplate(object instance)
+        private object get_100_NavigationViewHeaderBehavior_DefaultHeaderTemplate(object instance)
         {
             var that = (global::Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior)instance;
             return that.DefaultHeaderTemplate;
         }
-        private void set_82_NavigationViewHeaderBehavior_DefaultHeaderTemplate(object instance, object Value)
+        private void set_100_NavigationViewHeaderBehavior_DefaultHeaderTemplate(object instance, object Value)
         {
             var that = (global::Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior)instance;
             that.DefaultHeaderTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
         }
-        private object get_83_Behavior_AssociatedObject(object instance)
+        private object get_101_Behavior_AssociatedObject(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactivity.Behavior<global::Microsoft.UI.Xaml.Controls.NavigationView>)instance;
             return that.AssociatedObject;
         }
-        private object get_84_NavigationViewHeaderBehavior_HeaderMode(object instance)
+        private object get_102_NavigationViewHeaderBehavior_HeaderMode(object instance)
         {
             return global::Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior.GetHeaderMode((global::Microsoft.UI.Xaml.Controls.Page)instance);
         }
-        private void set_84_NavigationViewHeaderBehavior_HeaderMode(object instance, object Value)
+        private void set_102_NavigationViewHeaderBehavior_HeaderMode(object instance, object Value)
         {
             global::Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior.SetHeaderMode((global::Microsoft.UI.Xaml.Controls.Page)instance, (global::Nitro_Downloader.Behaviors.NavigationViewHeaderMode)Value);
         }
-        private object get_85_NavigationViewHeaderBehavior_HeaderContext(object instance)
+        private object get_103_NavigationViewHeaderBehavior_HeaderContext(object instance)
         {
             return global::Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior.GetHeaderContext((global::Microsoft.UI.Xaml.Controls.Page)instance);
         }
-        private void set_85_NavigationViewHeaderBehavior_HeaderContext(object instance, object Value)
+        private void set_103_NavigationViewHeaderBehavior_HeaderContext(object instance, object Value)
         {
             global::Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior.SetHeaderContext((global::Microsoft.UI.Xaml.Controls.Page)instance, (global::System.Object)Value);
         }
-        private object get_86_NavigationViewHeaderBehavior_HeaderTemplate(object instance)
+        private object get_104_NavigationViewHeaderBehavior_HeaderTemplate(object instance)
         {
             return global::Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior.GetHeaderTemplate((global::Microsoft.UI.Xaml.Controls.Page)instance);
         }
-        private void set_86_NavigationViewHeaderBehavior_HeaderTemplate(object instance, object Value)
+        private void set_104_NavigationViewHeaderBehavior_HeaderTemplate(object instance, object Value)
         {
             global::Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior.SetHeaderTemplate((global::Microsoft.UI.Xaml.Controls.Page)instance, (global::Microsoft.UI.Xaml.DataTemplate)Value);
         }
-        private object get_87_ShellPage_ViewModel(object instance)
+        private object get_105_ShellPage_ViewModel(object instance)
         {
             var that = (global::Nitro_Downloader.Views.ShellPage)instance;
             return that.ViewModel;
@@ -1931,275 +2209,398 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlMember.Getter = get_29_CornerRadius_BottomLeft;
                 xamlMember.Setter = set_29_CornerRadius_BottomLeft;
                 break;
+            case "Nitro_Downloader.Views.AllDownloadsPage.ViewModel":
+                userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Nitro_Downloader.Views.AllDownloadsPage");
+                xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "ViewModel", "Nitro_Downloader.ViewModels.AllDownloadsViewModel");
+                xamlMember.Getter = get_30_AllDownloadsPage_ViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.Expander.Header":
+                userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Expander");
+                xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "Header", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_31_Expander_Header;
+                xamlMember.Setter = set_31_Expander_Header;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Expander.ExpandDirection":
+                userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Expander");
+                xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "ExpandDirection", "Microsoft.UI.Xaml.Controls.ExpandDirection");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_32_Expander_ExpandDirection;
+                xamlMember.Setter = set_32_Expander_ExpandDirection;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Expander.HeaderTemplate":
+                userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Expander");
+                xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "HeaderTemplate", "Microsoft.UI.Xaml.DataTemplate");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_33_Expander_HeaderTemplate;
+                xamlMember.Setter = set_33_Expander_HeaderTemplate;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Expander.HeaderTemplateSelector":
+                userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Expander");
+                xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "HeaderTemplateSelector", "Microsoft.UI.Xaml.Controls.DataTemplateSelector");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_34_Expander_HeaderTemplateSelector;
+                xamlMember.Setter = set_34_Expander_HeaderTemplateSelector;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Expander.IsExpanded":
+                userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Expander");
+                xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "IsExpanded", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_35_Expander_IsExpanded;
+                xamlMember.Setter = set_35_Expander_IsExpanded;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Expander.TemplateSettings":
+                userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Expander");
+                xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "TemplateSettings", "Microsoft.UI.Xaml.Controls.ExpanderTemplateSettings");
+                xamlMember.Getter = get_36_Expander_TemplateSettings;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "CommunityToolkit.WinUI.UI.Controls.WrapPanel.Orientation":
+                userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CommunityToolkit.WinUI.UI.Controls.WrapPanel");
+                xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "Orientation", "Microsoft.UI.Xaml.Controls.Orientation");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_37_WrapPanel_Orientation;
+                xamlMember.Setter = set_37_WrapPanel_Orientation;
+                break;
+            case "CommunityToolkit.WinUI.UI.Controls.WrapPanel.HorizontalSpacing":
+                userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CommunityToolkit.WinUI.UI.Controls.WrapPanel");
+                xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "HorizontalSpacing", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_38_WrapPanel_HorizontalSpacing;
+                xamlMember.Setter = set_38_WrapPanel_HorizontalSpacing;
+                break;
+            case "CommunityToolkit.WinUI.UI.Controls.WrapPanel.VerticalSpacing":
+                userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CommunityToolkit.WinUI.UI.Controls.WrapPanel");
+                xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "VerticalSpacing", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_39_WrapPanel_VerticalSpacing;
+                xamlMember.Setter = set_39_WrapPanel_VerticalSpacing;
+                break;
+            case "CommunityToolkit.WinUI.UI.Controls.WrapPanel.Padding":
+                userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CommunityToolkit.WinUI.UI.Controls.WrapPanel");
+                xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "Padding", "Microsoft.UI.Xaml.Thickness");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_40_WrapPanel_Padding;
+                xamlMember.Setter = set_40_WrapPanel_Padding;
+                break;
+            case "CommunityToolkit.WinUI.UI.Controls.WrapPanel.StretchChild":
+                userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CommunityToolkit.WinUI.UI.Controls.WrapPanel");
+                xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "StretchChild", "CommunityToolkit.WinUI.UI.Controls.StretchChild");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_41_WrapPanel_StretchChild;
+                xamlMember.Setter = set_41_WrapPanel_StretchChild;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ProgressRing.IsActive":
+                userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressRing");
+                xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "IsActive", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_42_ProgressRing_IsActive;
+                xamlMember.Setter = set_42_ProgressRing_IsActive;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ProgressRing.IsIndeterminate":
+                userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressRing");
+                xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "IsIndeterminate", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_43_ProgressRing_IsIndeterminate;
+                xamlMember.Setter = set_43_ProgressRing_IsIndeterminate;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ProgressRing.Maximum":
+                userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressRing");
+                xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "Maximum", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_44_ProgressRing_Maximum;
+                xamlMember.Setter = set_44_ProgressRing_Maximum;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ProgressRing.Minimum":
+                userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressRing");
+                xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "Minimum", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_45_ProgressRing_Minimum;
+                xamlMember.Setter = set_45_ProgressRing_Minimum;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ProgressRing.TemplateSettings":
+                userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressRing");
+                xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "TemplateSettings", "Microsoft.UI.Xaml.Controls.ProgressRingTemplateSettings");
+                xamlMember.Getter = get_46_ProgressRing_TemplateSettings;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ProgressRing.Value":
+                userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ProgressRing");
+                xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "Value", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_47_ProgressRing_Value;
+                xamlMember.Setter = set_47_ProgressRing_Value;
+                break;
             case "Nitro_Downloader.Views.HomePage.ViewModel":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Nitro_Downloader.Views.HomePage");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "ViewModel", "Nitro_Downloader.ViewModels.HomeViewModel");
-                xamlMember.Getter = get_30_HomePage_ViewModel;
+                xamlMember.Getter = get_48_HomePage_ViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Nitro_Downloader.Views.SettingsPage.ViewModel":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Nitro_Downloader.Views.SettingsPage");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "ViewModel", "Nitro_Downloader.ViewModels.SettingsViewModel");
-                xamlMember.Getter = get_31_SettingsPage_ViewModel;
+                xamlMember.Getter = get_49_SettingsPage_ViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.IsBackButtonVisible":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "IsBackButtonVisible", "Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_32_NavigationView_IsBackButtonVisible;
-                xamlMember.Setter = set_32_NavigationView_IsBackButtonVisible;
+                xamlMember.Getter = get_50_NavigationView_IsBackButtonVisible;
+                xamlMember.Setter = set_50_NavigationView_IsBackButtonVisible;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.IsBackEnabled":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "IsBackEnabled", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_33_NavigationView_IsBackEnabled;
-                xamlMember.Setter = set_33_NavigationView_IsBackEnabled;
+                xamlMember.Getter = get_51_NavigationView_IsBackEnabled;
+                xamlMember.Setter = set_51_NavigationView_IsBackEnabled;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.SelectedItem":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "SelectedItem", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_34_NavigationView_SelectedItem;
-                xamlMember.Setter = set_34_NavigationView_SelectedItem;
+                xamlMember.Getter = get_52_NavigationView_SelectedItem;
+                xamlMember.Setter = set_52_NavigationView_SelectedItem;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.IsSettingsVisible":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "IsSettingsVisible", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_35_NavigationView_IsSettingsVisible;
-                xamlMember.Setter = set_35_NavigationView_IsSettingsVisible;
+                xamlMember.Getter = get_53_NavigationView_IsSettingsVisible;
+                xamlMember.Setter = set_53_NavigationView_IsSettingsVisible;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.ExpandedModeThresholdWidth":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "ExpandedModeThresholdWidth", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_36_NavigationView_ExpandedModeThresholdWidth;
-                xamlMember.Setter = set_36_NavigationView_ExpandedModeThresholdWidth;
+                xamlMember.Getter = get_54_NavigationView_ExpandedModeThresholdWidth;
+                xamlMember.Setter = set_54_NavigationView_ExpandedModeThresholdWidth;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.Header":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "Header", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_37_NavigationView_Header;
-                xamlMember.Setter = set_37_NavigationView_Header;
+                xamlMember.Getter = get_55_NavigationView_Header;
+                xamlMember.Setter = set_55_NavigationView_Header;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.MenuItems":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "MenuItems", "System.Collections.Generic.IList`1<Object>");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_38_NavigationView_MenuItems;
+                xamlMember.Getter = get_56_NavigationView_MenuItems;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.HeaderTemplate":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "HeaderTemplate", "Microsoft.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_39_NavigationView_HeaderTemplate;
-                xamlMember.Setter = set_39_NavigationView_HeaderTemplate;
+                xamlMember.Getter = get_57_NavigationView_HeaderTemplate;
+                xamlMember.Setter = set_57_NavigationView_HeaderTemplate;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.AlwaysShowHeader":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "AlwaysShowHeader", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_40_NavigationView_AlwaysShowHeader;
-                xamlMember.Setter = set_40_NavigationView_AlwaysShowHeader;
+                xamlMember.Getter = get_58_NavigationView_AlwaysShowHeader;
+                xamlMember.Setter = set_58_NavigationView_AlwaysShowHeader;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.AutoSuggestBox":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "AutoSuggestBox", "Microsoft.UI.Xaml.Controls.AutoSuggestBox");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_41_NavigationView_AutoSuggestBox;
-                xamlMember.Setter = set_41_NavigationView_AutoSuggestBox;
+                xamlMember.Getter = get_59_NavigationView_AutoSuggestBox;
+                xamlMember.Setter = set_59_NavigationView_AutoSuggestBox;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.CompactModeThresholdWidth":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "CompactModeThresholdWidth", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_42_NavigationView_CompactModeThresholdWidth;
-                xamlMember.Setter = set_42_NavigationView_CompactModeThresholdWidth;
+                xamlMember.Getter = get_60_NavigationView_CompactModeThresholdWidth;
+                xamlMember.Setter = set_60_NavigationView_CompactModeThresholdWidth;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.CompactPaneLength":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "CompactPaneLength", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_43_NavigationView_CompactPaneLength;
-                xamlMember.Setter = set_43_NavigationView_CompactPaneLength;
+                xamlMember.Getter = get_61_NavigationView_CompactPaneLength;
+                xamlMember.Setter = set_61_NavigationView_CompactPaneLength;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.ContentOverlay":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "ContentOverlay", "Microsoft.UI.Xaml.UIElement");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_44_NavigationView_ContentOverlay;
-                xamlMember.Setter = set_44_NavigationView_ContentOverlay;
+                xamlMember.Getter = get_62_NavigationView_ContentOverlay;
+                xamlMember.Setter = set_62_NavigationView_ContentOverlay;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.DisplayMode":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "DisplayMode", "Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_45_NavigationView_DisplayMode;
+                xamlMember.Getter = get_63_NavigationView_DisplayMode;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.FooterMenuItems":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "FooterMenuItems", "System.Collections.Generic.IList`1<Object>");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_46_NavigationView_FooterMenuItems;
+                xamlMember.Getter = get_64_NavigationView_FooterMenuItems;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.FooterMenuItemsSource":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "FooterMenuItemsSource", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_47_NavigationView_FooterMenuItemsSource;
-                xamlMember.Setter = set_47_NavigationView_FooterMenuItemsSource;
+                xamlMember.Getter = get_65_NavigationView_FooterMenuItemsSource;
+                xamlMember.Setter = set_65_NavigationView_FooterMenuItemsSource;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.IsPaneOpen":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "IsPaneOpen", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_48_NavigationView_IsPaneOpen;
-                xamlMember.Setter = set_48_NavigationView_IsPaneOpen;
+                xamlMember.Getter = get_66_NavigationView_IsPaneOpen;
+                xamlMember.Setter = set_66_NavigationView_IsPaneOpen;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.IsPaneToggleButtonVisible":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "IsPaneToggleButtonVisible", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_49_NavigationView_IsPaneToggleButtonVisible;
-                xamlMember.Setter = set_49_NavigationView_IsPaneToggleButtonVisible;
+                xamlMember.Getter = get_67_NavigationView_IsPaneToggleButtonVisible;
+                xamlMember.Setter = set_67_NavigationView_IsPaneToggleButtonVisible;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.IsPaneVisible":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "IsPaneVisible", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_50_NavigationView_IsPaneVisible;
-                xamlMember.Setter = set_50_NavigationView_IsPaneVisible;
+                xamlMember.Getter = get_68_NavigationView_IsPaneVisible;
+                xamlMember.Setter = set_68_NavigationView_IsPaneVisible;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.IsTitleBarAutoPaddingEnabled":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "IsTitleBarAutoPaddingEnabled", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_51_NavigationView_IsTitleBarAutoPaddingEnabled;
-                xamlMember.Setter = set_51_NavigationView_IsTitleBarAutoPaddingEnabled;
+                xamlMember.Getter = get_69_NavigationView_IsTitleBarAutoPaddingEnabled;
+                xamlMember.Setter = set_69_NavigationView_IsTitleBarAutoPaddingEnabled;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.MenuItemContainerStyle":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "MenuItemContainerStyle", "Microsoft.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_52_NavigationView_MenuItemContainerStyle;
-                xamlMember.Setter = set_52_NavigationView_MenuItemContainerStyle;
+                xamlMember.Getter = get_70_NavigationView_MenuItemContainerStyle;
+                xamlMember.Setter = set_70_NavigationView_MenuItemContainerStyle;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.MenuItemContainerStyleSelector":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "MenuItemContainerStyleSelector", "Microsoft.UI.Xaml.Controls.StyleSelector");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_53_NavigationView_MenuItemContainerStyleSelector;
-                xamlMember.Setter = set_53_NavigationView_MenuItemContainerStyleSelector;
+                xamlMember.Getter = get_71_NavigationView_MenuItemContainerStyleSelector;
+                xamlMember.Setter = set_71_NavigationView_MenuItemContainerStyleSelector;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.MenuItemTemplate":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "MenuItemTemplate", "Microsoft.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_54_NavigationView_MenuItemTemplate;
-                xamlMember.Setter = set_54_NavigationView_MenuItemTemplate;
+                xamlMember.Getter = get_72_NavigationView_MenuItemTemplate;
+                xamlMember.Setter = set_72_NavigationView_MenuItemTemplate;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.MenuItemTemplateSelector":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "MenuItemTemplateSelector", "Microsoft.UI.Xaml.Controls.DataTemplateSelector");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_55_NavigationView_MenuItemTemplateSelector;
-                xamlMember.Setter = set_55_NavigationView_MenuItemTemplateSelector;
+                xamlMember.Getter = get_73_NavigationView_MenuItemTemplateSelector;
+                xamlMember.Setter = set_73_NavigationView_MenuItemTemplateSelector;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.MenuItemsSource":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "MenuItemsSource", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_56_NavigationView_MenuItemsSource;
-                xamlMember.Setter = set_56_NavigationView_MenuItemsSource;
+                xamlMember.Getter = get_74_NavigationView_MenuItemsSource;
+                xamlMember.Setter = set_74_NavigationView_MenuItemsSource;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.OpenPaneLength":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "OpenPaneLength", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_57_NavigationView_OpenPaneLength;
-                xamlMember.Setter = set_57_NavigationView_OpenPaneLength;
+                xamlMember.Getter = get_75_NavigationView_OpenPaneLength;
+                xamlMember.Setter = set_75_NavigationView_OpenPaneLength;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.OverflowLabelMode":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "OverflowLabelMode", "Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_58_NavigationView_OverflowLabelMode;
-                xamlMember.Setter = set_58_NavigationView_OverflowLabelMode;
+                xamlMember.Getter = get_76_NavigationView_OverflowLabelMode;
+                xamlMember.Setter = set_76_NavigationView_OverflowLabelMode;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.PaneCustomContent":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "PaneCustomContent", "Microsoft.UI.Xaml.UIElement");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_59_NavigationView_PaneCustomContent;
-                xamlMember.Setter = set_59_NavigationView_PaneCustomContent;
+                xamlMember.Getter = get_77_NavigationView_PaneCustomContent;
+                xamlMember.Setter = set_77_NavigationView_PaneCustomContent;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.PaneDisplayMode":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "PaneDisplayMode", "Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_60_NavigationView_PaneDisplayMode;
-                xamlMember.Setter = set_60_NavigationView_PaneDisplayMode;
+                xamlMember.Getter = get_78_NavigationView_PaneDisplayMode;
+                xamlMember.Setter = set_78_NavigationView_PaneDisplayMode;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.PaneFooter":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "PaneFooter", "Microsoft.UI.Xaml.UIElement");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_61_NavigationView_PaneFooter;
-                xamlMember.Setter = set_61_NavigationView_PaneFooter;
+                xamlMember.Getter = get_79_NavigationView_PaneFooter;
+                xamlMember.Setter = set_79_NavigationView_PaneFooter;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.PaneHeader":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "PaneHeader", "Microsoft.UI.Xaml.UIElement");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_62_NavigationView_PaneHeader;
-                xamlMember.Setter = set_62_NavigationView_PaneHeader;
+                xamlMember.Getter = get_80_NavigationView_PaneHeader;
+                xamlMember.Setter = set_80_NavigationView_PaneHeader;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.PaneTitle":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "PaneTitle", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_63_NavigationView_PaneTitle;
-                xamlMember.Setter = set_63_NavigationView_PaneTitle;
+                xamlMember.Getter = get_81_NavigationView_PaneTitle;
+                xamlMember.Setter = set_81_NavigationView_PaneTitle;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.PaneToggleButtonStyle":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "PaneToggleButtonStyle", "Microsoft.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_64_NavigationView_PaneToggleButtonStyle;
-                xamlMember.Setter = set_64_NavigationView_PaneToggleButtonStyle;
+                xamlMember.Getter = get_82_NavigationView_PaneToggleButtonStyle;
+                xamlMember.Setter = set_82_NavigationView_PaneToggleButtonStyle;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.SelectionFollowsFocus":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "SelectionFollowsFocus", "Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_65_NavigationView_SelectionFollowsFocus;
-                xamlMember.Setter = set_65_NavigationView_SelectionFollowsFocus;
+                xamlMember.Getter = get_83_NavigationView_SelectionFollowsFocus;
+                xamlMember.Setter = set_83_NavigationView_SelectionFollowsFocus;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.SettingsItem":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "SettingsItem", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_66_NavigationView_SettingsItem;
+                xamlMember.Getter = get_84_NavigationView_SettingsItem;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.ShoulderNavigationEnabled":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "ShoulderNavigationEnabled", "Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_67_NavigationView_ShoulderNavigationEnabled;
-                xamlMember.Setter = set_67_NavigationView_ShoulderNavigationEnabled;
+                xamlMember.Getter = get_85_NavigationView_ShoulderNavigationEnabled;
+                xamlMember.Setter = set_85_NavigationView_ShoulderNavigationEnabled;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.TemplateSettings":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "TemplateSettings", "Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_68_NavigationView_TemplateSettings;
+                xamlMember.Getter = get_86_NavigationView_TemplateSettings;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Xaml.Interactivity.Interaction.Behaviors":
@@ -2207,104 +2608,104 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "Behaviors", "Microsoft.Xaml.Interactivity.BehaviorCollection");
                 xamlMember.SetTargetTypeName("Microsoft.UI.Xaml.DependencyObject");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_69_Interaction_Behaviors;
-                xamlMember.Setter = set_69_Interaction_Behaviors;
+                xamlMember.Getter = get_87_Interaction_Behaviors;
+                xamlMember.Setter = set_87_Interaction_Behaviors;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationViewItem.Icon":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationViewItem");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "Icon", "Microsoft.UI.Xaml.Controls.IconElement");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_70_NavigationViewItem_Icon;
-                xamlMember.Setter = set_70_NavigationViewItem_Icon;
+                xamlMember.Getter = get_88_NavigationViewItem_Icon;
+                xamlMember.Setter = set_88_NavigationViewItem_Icon;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationViewItem.CompactPaneLength":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationViewItem");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "CompactPaneLength", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_71_NavigationViewItem_CompactPaneLength;
+                xamlMember.Getter = get_89_NavigationViewItem_CompactPaneLength;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationViewItem.HasUnrealizedChildren":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationViewItem");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "HasUnrealizedChildren", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_72_NavigationViewItem_HasUnrealizedChildren;
-                xamlMember.Setter = set_72_NavigationViewItem_HasUnrealizedChildren;
+                xamlMember.Getter = get_90_NavigationViewItem_HasUnrealizedChildren;
+                xamlMember.Setter = set_90_NavigationViewItem_HasUnrealizedChildren;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationViewItem.InfoBadge":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationViewItem");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "InfoBadge", "Microsoft.UI.Xaml.Controls.InfoBadge");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_73_NavigationViewItem_InfoBadge;
-                xamlMember.Setter = set_73_NavigationViewItem_InfoBadge;
+                xamlMember.Getter = get_91_NavigationViewItem_InfoBadge;
+                xamlMember.Setter = set_91_NavigationViewItem_InfoBadge;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationViewItem.IsChildSelected":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationViewItem");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "IsChildSelected", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_74_NavigationViewItem_IsChildSelected;
-                xamlMember.Setter = set_74_NavigationViewItem_IsChildSelected;
+                xamlMember.Getter = get_92_NavigationViewItem_IsChildSelected;
+                xamlMember.Setter = set_92_NavigationViewItem_IsChildSelected;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationViewItem.IsExpanded":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationViewItem");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "IsExpanded", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_75_NavigationViewItem_IsExpanded;
-                xamlMember.Setter = set_75_NavigationViewItem_IsExpanded;
+                xamlMember.Getter = get_93_NavigationViewItem_IsExpanded;
+                xamlMember.Setter = set_93_NavigationViewItem_IsExpanded;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationViewItem.MenuItems":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationViewItem");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "MenuItems", "System.Collections.Generic.IList`1<Object>");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_76_NavigationViewItem_MenuItems;
+                xamlMember.Getter = get_94_NavigationViewItem_MenuItems;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationViewItem.MenuItemsSource":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationViewItem");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "MenuItemsSource", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_77_NavigationViewItem_MenuItemsSource;
-                xamlMember.Setter = set_77_NavigationViewItem_MenuItemsSource;
+                xamlMember.Getter = get_95_NavigationViewItem_MenuItemsSource;
+                xamlMember.Setter = set_95_NavigationViewItem_MenuItemsSource;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationViewItem.SelectsOnInvoked":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationViewItem");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "SelectsOnInvoked", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_78_NavigationViewItem_SelectsOnInvoked;
-                xamlMember.Setter = set_78_NavigationViewItem_SelectsOnInvoked;
+                xamlMember.Getter = get_96_NavigationViewItem_SelectsOnInvoked;
+                xamlMember.Setter = set_96_NavigationViewItem_SelectsOnInvoked;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationViewItemBase.IsSelected":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationViewItemBase");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "IsSelected", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_79_NavigationViewItemBase_IsSelected;
-                xamlMember.Setter = set_79_NavigationViewItemBase_IsSelected;
+                xamlMember.Getter = get_97_NavigationViewItemBase_IsSelected;
+                xamlMember.Setter = set_97_NavigationViewItemBase_IsSelected;
                 break;
             case "Nitro_Downloader.Helpers.NavigationHelper.NavigateTo":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Nitro_Downloader.Helpers.NavigationHelper");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "NavigateTo", "String");
                 xamlMember.SetTargetTypeName("Microsoft.UI.Xaml.Controls.NavigationViewItem");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_80_NavigationHelper_NavigateTo;
-                xamlMember.Setter = set_80_NavigationHelper_NavigateTo;
+                xamlMember.Getter = get_98_NavigationHelper_NavigateTo;
+                xamlMember.Setter = set_98_NavigationHelper_NavigateTo;
                 break;
             case "Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior.DefaultHeader":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "DefaultHeader", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_81_NavigationViewHeaderBehavior_DefaultHeader;
-                xamlMember.Setter = set_81_NavigationViewHeaderBehavior_DefaultHeader;
+                xamlMember.Getter = get_99_NavigationViewHeaderBehavior_DefaultHeader;
+                xamlMember.Setter = set_99_NavigationViewHeaderBehavior_DefaultHeader;
                 break;
             case "Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior.DefaultHeaderTemplate":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "DefaultHeaderTemplate", "Microsoft.UI.Xaml.DataTemplate");
-                xamlMember.Getter = get_82_NavigationViewHeaderBehavior_DefaultHeaderTemplate;
-                xamlMember.Setter = set_82_NavigationViewHeaderBehavior_DefaultHeaderTemplate;
+                xamlMember.Getter = get_100_NavigationViewHeaderBehavior_DefaultHeaderTemplate;
+                xamlMember.Setter = set_100_NavigationViewHeaderBehavior_DefaultHeaderTemplate;
                 break;
             case "Microsoft.Xaml.Interactivity.Behavior`1<Microsoft.UI.Xaml.Controls.NavigationView>.AssociatedObject":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactivity.Behavior`1<Microsoft.UI.Xaml.Controls.NavigationView>");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "AssociatedObject", "Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember.Getter = get_83_Behavior_AssociatedObject;
+                xamlMember.Getter = get_101_Behavior_AssociatedObject;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior.HeaderMode":
@@ -2313,8 +2714,8 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlMember.SetTargetTypeName("Microsoft.UI.Xaml.Controls.Page");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_84_NavigationViewHeaderBehavior_HeaderMode;
-                xamlMember.Setter = set_84_NavigationViewHeaderBehavior_HeaderMode;
+                xamlMember.Getter = get_102_NavigationViewHeaderBehavior_HeaderMode;
+                xamlMember.Setter = set_102_NavigationViewHeaderBehavior_HeaderMode;
                 break;
             case "Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior.HeaderContext":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior");
@@ -2322,8 +2723,8 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlMember.SetTargetTypeName("Microsoft.UI.Xaml.Controls.Page");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_85_NavigationViewHeaderBehavior_HeaderContext;
-                xamlMember.Setter = set_85_NavigationViewHeaderBehavior_HeaderContext;
+                xamlMember.Getter = get_103_NavigationViewHeaderBehavior_HeaderContext;
+                xamlMember.Setter = set_103_NavigationViewHeaderBehavior_HeaderContext;
                 break;
             case "Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior.HeaderTemplate":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior");
@@ -2331,13 +2732,13 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlMember.SetTargetTypeName("Microsoft.UI.Xaml.Controls.Page");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_86_NavigationViewHeaderBehavior_HeaderTemplate;
-                xamlMember.Setter = set_86_NavigationViewHeaderBehavior_HeaderTemplate;
+                xamlMember.Getter = get_104_NavigationViewHeaderBehavior_HeaderTemplate;
+                xamlMember.Setter = set_104_NavigationViewHeaderBehavior_HeaderTemplate;
                 break;
             case "Nitro_Downloader.Views.ShellPage.ViewModel":
                 userType = (global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Nitro_Downloader.Views.ShellPage");
                 xamlMember = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlMember(this, "ViewModel", "Nitro_Downloader.ViewModels.ShellViewModel");
-                xamlMember.Getter = get_87_ShellPage_ViewModel;
+                xamlMember.Getter = get_105_ShellPage_ViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             }

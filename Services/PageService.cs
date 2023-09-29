@@ -16,6 +16,7 @@ public class PageService : IPageService
     {
         Configure<HomeViewModel, HomePage>();
         Configure<SettingsViewModel, SettingsPage>();
+        Configure<AllDownloadsViewModel, AllDownloadsPage>();
     }
 
     public Type GetPageType(string key)

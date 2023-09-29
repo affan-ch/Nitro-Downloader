@@ -117,6 +117,14 @@
               "target": "Package",
               "version": "[8.1.0, )"
             },
+            "CommunityToolkit.WinUI.UI.Controls.Primitives": {
+              "target": "Package",
+              "version": "[7.1.2, )"
+            },
+            "H.NotifyIcon.Uno.WinUI": {
+              "target": "Package",
+              "version": "[2.0.118, )"
+            },
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
               "version": "[6.0.1, )"

@@ -8,7 +8,8 @@
   xmlns:genTemplate="http://schemas.microsoft.com/appx/developer/templatestudio"
   xmlns:com="http://schemas.microsoft.com/appx/manifest/com/windows10"
   xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10"
-  IgnorableNamespaces="uap rescap genTemplate">
+  xmlns:iot="http://schemas.microsoft.com/appx/manifest/iot/windows10"
+  IgnorableNamespaces="uap rescap genTemplate iot">
 
   <Identity
     Name="3fad94ff-a6f6-4111-935f-1233ede93540"
@@ -64,6 +65,7 @@
   <Capabilities>
     <rescap:Capability Name="runFullTrust" />
     <uap:Capability Name="videosLibrary"/>
+    <iot:Capability Name="systemManagement"/>
   </Capabilities>
 
   <genTemplate:Metadata>
