@@ -51,6 +51,15 @@
                 </StackPanel>
             </StackPanel>
 
+            <TextBlock Text="Default Download Location" Style="{ThemeResource SubtitleTextBlockStyle}"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 20">
+                <TextBox Width="350" Margin="0 11 0 0" IsReadOnly="True"/>
+                <Button x:Name="ChangeLocationButton" Margin="10 0 0 0" VerticalAlignment="Bottom">
+                    <FontIcon Glyph="&#xE8DA;"/>
+                </Button>
+            </StackPanel>
+
             <TextBlock x:Uid="Settings_About" Style="{ThemeResource SubtitleTextBlockStyle}" />
 
             <StackPanel Margin="{StaticResource XSmallTopMargin}">

@@ -11,6 +11,15 @@ using Windows.UI.Shell;
 using Windows.UI.ViewManagement;
 using Microsoft.UI.Xaml.Media.Imaging;
 using System.Globalization;
+using Windows.Storage.AccessCache;
+using Windows.Storage.Pickers;
+using Windows.Storage;
+using Nitro_Downloader.Helpers;
+using WinRT.Interop;
+using Windows.ApplicationModel.DataTransfer;
+using Windows.Storage.Provider;
+using System.Xml.Linq;
+using Nitro_Downloader.Services;
 
 namespace Nitro_Downloader.Views;
 
@@ -87,6 +96,16 @@ public class VideoInfo
         get; set;
     }
 
+    public string? ext
+    {
+        get; set;
+    }
+
+    public long? filesize_approx
+    {
+        get; set;
+    }
+
 }
 
 
@@ -122,6 +141,29 @@ public class HelperFunctions
         }
     }
 
+    public static string FormatSize(long sizeInBytes)
+    {
+        if (sizeInBytes < 1024)
+        {
+            return $"{sizeInBytes} bytes";
+        }
+        else if (sizeInBytes < 1024 * 1024)
+        {
+            double sizeInKB = sizeInBytes / 1024.0;
+            return $"{sizeInKB:F1}KB";
+        }
+        else if (sizeInBytes < 1024 * 1024 * 1024)
+        {
+            double sizeInMB = sizeInBytes / (1024.0 * 1024.0);
+            return $"{sizeInMB:F1}MB";
+        }
+        else
+        {
+            double sizeInGB = sizeInBytes / (1024.0 * 1024.0 * 1024.0);
+            return $"{sizeInGB:F1}GB";
+        }
+    }
+
 }
 
 public sealed partial class HomePage : Page
@@ -135,7 +177,6 @@ public sealed partial class HomePage : Page
     {
         ViewModel = App.GetService<HomeViewModel>();
         InitializeComponent();
-        DescriptionTextBlock.Text = "Learn how Bard can help you do more with the Google apps and services you use every day \u2014 like Maps, YouTube, Gmail and more.\n\nSubscribe to our Channel: https://www.youtube.com/google\r\nTweet with us on Twitter: https://twitter.com/google\r\nFollow us on Instagram: https://www.instagram.com/google\r\nJoin us on Facebook: https://www.facebook.com/Google";
     }
 
 
@@ -144,6 +185,13 @@ public sealed partial class HomePage : Page
 
     private async void GetInfoButton_Click(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
     {
+        ProgressRingStackPanel.Visibility = Visibility.Visible;
+        Expander.Visibility = Visibility.Collapsed;
+        Link_TextBox.SizeChanged += (sender, e) =>
+        {
+            Expander.Width = Link_TextBox.ActualWidth;
+        };
+        GetInfoButton.Content = "Loading...";
         var link = Link_TextBox.Text;
 
         if (link.Length < 10)
@@ -173,9 +221,27 @@ public sealed partial class HomePage : Page
 
             TitleTextBlock.Text = videoInfo?.title;
 
-            Microsoft.UI.Xaml.Media.ImageSource imageSource = new BitmapImage(new Uri(videoInfo?.thumbnail ?? ""));
+            if (videoInfo?.thumbnail != null )
+            {
+                if (videoInfo?.thumbnail.Length > 10)
+                {
+                    Microsoft.UI.Xaml.Media.ImageSource imageSource = new BitmapImage(new Uri(videoInfo?.thumbnail ?? "https://www.youtube.com/"));
 
-            ThumbnailImage.Source = imageSource;
+                    ThumbnailImage.Source = imageSource;
+                }
+                else
+                {
+                    ThumbnailTextBlock.Visibility = Visibility.Collapsed;
+                    ThumbnailLink.Visibility = Visibility.Collapsed;
+                }
+            }
+            else
+            {
+                ThumbnailTextBlock.Visibility = Visibility.Collapsed;
+                ThumbnailLink.Visibility = Visibility.Collapsed;
+            }
+
+            
             DurationTextBlock.Text = videoInfo?.duration_string;
 
             var likes = HelperFunctions.FormatYouTubeCounts((long)(videoInfo?.like_count ?? 0));
@@ -201,9 +267,36 @@ public sealed partial class HomePage : Page
             ChannelNameTextBlock.Text = videoInfo?.channel;
 
             WebsiteTextBlock.Text = videoInfo?.extractor_key;
+
+            var extension = videoInfo?.ext ?? "?";
+
+            ExtensionTextBlock.Text = extension.ToUpper();
+
             Expander.Width = Link_TextBox.ActualWidth;
 
+            ProgressRingStackPanel.Visibility = Visibility.Collapsed;
+
+            
+
+            GetInfoButton.Content = "Get Info";
+
+            VideoLink.NavigateUri = new Uri(videoInfo?.webpage_url ?? "");
+            VideoLink.Content = videoInfo?.webpage_url ?? "";
+
+            ChannelLink.NavigateUri = new Uri(videoInfo?.channel_url ?? "");
+            ChannelLink.Content = videoInfo?.channel_url ?? "";
+
+            ThumbnailLink.NavigateUri = new Uri(videoInfo?.thumbnail ?? "");
+            ThumbnailLink.Content = videoInfo?.thumbnail ?? "";
+
+
+
+
+            FileSizeTextBlock.Text = HelperFunctions.FormatSize(videoInfo?.filesize_approx??0);
+
+
             Expander.Visibility = Visibility.Visible;
+
 
  
             //Console.WriteLine(jsonOutput);
@@ -243,7 +336,44 @@ public sealed partial class HomePage : Page
         }
     }
 
+    private async void ChangeLocationButton_ClickAsync(object sender, RoutedEventArgs e)
+    {
+        // Clear previous returned file name, if it exists, between iterations of this scenario
+        LocationTextBox.Text = "";
+
+        // Create a folder picker
+        var openPicker = new FolderPicker();
+
+        // Retrieve the window handle (HWND) of the current WinUI 3 window.
+        //var window = WindowHelper.GetWindowForElement(this);
+        //var windows = NavigationHelper
+
+        //var window = Window.Current;
+
+        var hWnd = WindowNative.GetWindowHandle(App.MainWindow);
+
+        // Initialize the folder picker with the window handle (HWND).
+        InitializeWithWindow.Initialize(openPicker, hWnd);
+
+        // Set options for your folder picker
+        openPicker.SuggestedStartLocation = PickerLocationId.Desktop;
+        openPicker.FileTypeFilter.Add("*");
+
+        // Open the picker for the user to pick a folder
+        var folder = await openPicker.PickSingleFolderAsync();
+        if (folder != null)
+        {
+            StorageApplicationPermissions.FutureAccessList.AddOrReplace("PickedFolderToken", folder);
+            LocationTextBox.Text = "Picked folder: " + folder.Name;
+        }
+        else
+        {
+            LocationTextBox.Text = "Operation cancelled.";
+        }
+    }
+
 }
+
 
 public static class YtDlpHelper
 {
