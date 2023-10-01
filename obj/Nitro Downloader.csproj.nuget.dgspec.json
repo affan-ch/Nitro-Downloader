@@ -137,6 +137,10 @@
               "target": "Package",
               "version": "[2.0.9, )"
             },
+            "System.Data.SQLite": {
+              "target": "Package",
+              "version": "[1.0.118, )"
+            },
             "WinUIEx": {
               "target": "Package",
               "version": "[2.2.0, )"

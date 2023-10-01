@@ -14,7 +14,7 @@ using System.Globalization;
 using Windows.Storage.AccessCache;
 using Windows.Storage.Pickers;
 using Windows.Storage;
-using Nitro_Downloader.Helpers;
+using Nitro_Downloader.DBM;
 using WinRT.Interop;
 using Windows.ApplicationModel.DataTransfer;
 using Windows.Storage.Provider;
@@ -177,6 +177,7 @@ public sealed partial class HomePage : Page
     {
         ViewModel = App.GetService<HomeViewModel>();
         InitializeComponent();
+        LocationTextBox.Text = Settings.GetDownloadLocation();
     }
 
 
@@ -185,15 +186,7 @@ public sealed partial class HomePage : Page
 
     private async void GetInfoButton_Click(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
     {
-        ProgressRingStackPanel.Visibility = Visibility.Visible;
-        Expander.Visibility = Visibility.Collapsed;
-        Link_TextBox.SizeChanged += (sender, e) =>
-        {
-            Expander.Width = Link_TextBox.ActualWidth;
-        };
-        GetInfoButton.Content = "Loading...";
         var link = Link_TextBox.Text;
-
         if (link.Length < 10)
         {
             ContentDialog dialog = new ContentDialog
@@ -210,8 +203,19 @@ public sealed partial class HomePage : Page
             await dialog.ShowAsync();
 
             return;
-
         }
+
+
+        ProgressRingStackPanel.Visibility = Visibility.Visible;
+        Expander.Visibility = Visibility.Collapsed;
+        Link_TextBox.SizeChanged += (sender, e) =>
+        {
+            Expander.Width = Link_TextBox.ActualWidth;
+        };
+        GetInfoButton.Content = "Loading...";
+
+
+        
 
         try
         {
@@ -338,37 +342,19 @@ public sealed partial class HomePage : Page
 
     private async void ChangeLocationButton_ClickAsync(object sender, RoutedEventArgs e)
     {
-        // Clear previous returned file name, if it exists, between iterations of this scenario
-        LocationTextBox.Text = "";
-
-        // Create a folder picker
         var openPicker = new FolderPicker();
-
-        // Retrieve the window handle (HWND) of the current WinUI 3 window.
-        //var window = WindowHelper.GetWindowForElement(this);
-        //var windows = NavigationHelper
-
-        //var window = Window.Current;
-
         var hWnd = WindowNative.GetWindowHandle(App.MainWindow);
-
-        // Initialize the folder picker with the window handle (HWND).
         InitializeWithWindow.Initialize(openPicker, hWnd);
-
-        // Set options for your folder picker
         openPicker.SuggestedStartLocation = PickerLocationId.Desktop;
         openPicker.FileTypeFilter.Add("*");
 
-        // Open the picker for the user to pick a folder
         var folder = await openPicker.PickSingleFolderAsync();
         if (folder != null)
         {
             StorageApplicationPermissions.FutureAccessList.AddOrReplace("PickedFolderToken", folder);
-            LocationTextBox.Text = "Picked folder: " + folder.Name;
-        }
-        else
-        {
-            LocationTextBox.Text = "Operation cancelled.";
+            LocationTextBox.Text = folder.Path;
+
+            Settings.SetDownloadLocation(folder.Path);
         }
     }
 

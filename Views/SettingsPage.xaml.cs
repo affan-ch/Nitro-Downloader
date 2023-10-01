@@ -1,6 +1,12 @@
 ﻿using Microsoft.UI.Xaml.Controls;
-
+using Nitro_Downloader.Helpers;
 using Nitro_Downloader.ViewModels;
+using Windows.Storage.AccessCache;
+using Windows.Storage.Pickers;
+using WinRT.Interop;
+using Microsoft.Windows.ApplicationModel.Resources;
+using Newtonsoft.Json.Linq;
+using Nitro_Downloader.DBM;
 
 namespace Nitro_Downloader.Views;
 
@@ -16,5 +22,30 @@ public sealed partial class SettingsPage : Page
     {
         ViewModel = App.GetService<SettingsViewModel>();
         InitializeComponent();
+
+        LocationTextBox.Text = Settings.GetDownloadLocation();
+    }
+
+    private async void ChangeLocationButton_ClickAsync(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
+    {
+        var openPicker = new FolderPicker();
+
+        var hWnd = WindowNative.GetWindowHandle(App.MainWindow);
+
+        InitializeWithWindow.Initialize(openPicker, hWnd);
+
+        openPicker.SuggestedStartLocation = PickerLocationId.Desktop;
+        openPicker.FileTypeFilter.Add("*");
+
+        var folder = await openPicker.PickSingleFolderAsync();
+        if (folder != null)
+        {
+            StorageApplicationPermissions.FutureAccessList.AddOrReplace("PickedFolderToken", folder);
+            LocationTextBox.Text = folder.Path;
+
+            
+            Settings.SetDownloadLocation(folder.Path);
+        }
+
     }
 }

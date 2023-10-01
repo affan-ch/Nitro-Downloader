@@ -29,21 +29,21 @@
     <AppXManifest Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-09-30T08:57:57.196</Modified>
+      <Modified>2023-10-01T05:23:39.584</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-09-30T08:55:25.024</Modified>
+      <Modified>2023-10-01T05:00:21.734</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Nitro Downloader.runtimeconfig.json">
       <PackagePath>Nitro Downloader.runtimeconfig.json</PackagePath>
-      <Modified>2023-09-29T07:17:22.344</Modified>
+      <Modified>2023-10-01T04:44:04.400</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Nitro Downloader.dll">
       <PackagePath>Nitro Downloader.dll</PackagePath>
-      <Modified>2023-09-30T08:57:56.000</Modified>
+      <Modified>2023-10-01T05:23:38.505</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\appsettings.json">
       <PackagePath>appsettings.json</PackagePath>
@@ -51,7 +51,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Nitro Downloader.exe</PackagePath>
-      <Modified>2023-09-30T08:57:56.051</Modified>
+      <Modified>2023-10-01T05:23:38.572</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\uno.winui\4.10.13\lib\net5.0-windows10.0.18362.0\Uno.UI.Toolkit\Themes\Generic.xbf">
       <PackagePath>Uno.UI.Toolkit/Themes\Generic.xbf</PackagePath>
@@ -59,7 +59,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Nitro Downloader.deps.json">
       <PackagePath>Nitro Downloader.deps.json</PackagePath>
-      <Modified>2023-09-30T07:16:12.530</Modified>
+      <Modified>2023-10-01T04:44:04.227</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.10\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -817,6 +817,14 @@
       <PackagePath>CommunityToolkit.WinUI.UI.Controls.Primitives.dll</PackagePath>
       <Modified>2021-11-18T21:57:02.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\entityframework\6.4.4\lib\netstandard2.1\EntityFramework.SqlServer.dll">
+      <PackagePath>EntityFramework.SqlServer.dll</PackagePath>
+      <Modified>2020-04-16T20:39:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\entityframework\6.4.4\lib\netstandard2.1\EntityFramework.dll">
+      <PackagePath>EntityFramework.dll</PackagePath>
+      <Modified>2020-04-16T20:38:44.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\h.generatedicons.system.drawing\2.0.118\lib\net7.0\H.GeneratedIcons.System.Drawing.dll">
       <PackagePath>H.GeneratedIcons.System.Drawing.dll</PackagePath>
       <Modified>2023-09-20T20:21:42.000</Modified>
@@ -1005,6 +1013,26 @@
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
       <Modified>2022-11-24T02:10:26.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\stub.system.data.sqlite.core.netstandard\1.0.118\lib\netstandard2.1\System.Data.SQLite.dll">
+      <PackagePath>System.Data.SQLite.dll</PackagePath>
+      <Modified>2023-06-10T21:02:42.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\system.codedom\4.7.0\lib\netstandard2.0\System.CodeDom.dll">
+      <PackagePath>System.CodeDom.dll</PackagePath>
+      <Modified>2019-11-15T08:36:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\system.configuration.configurationmanager\4.7.0\lib\netstandard2.0\System.Configuration.ConfigurationManager.dll">
+      <PackagePath>System.Configuration.ConfigurationManager.dll</PackagePath>
+      <Modified>2019-11-15T08:37:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\system.data.sqlclient\4.8.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll">
+      <PackagePath>System.Data.SqlClient.dll</PackagePath>
+      <Modified>2020-01-17T18:41:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\system.data.sqlite.ef6\1.0.118\lib\netstandard2.1\System.Data.SQLite.EF6.dll">
+      <PackagePath>System.Data.SQLite.EF6.dll</PackagePath>
+      <Modified>2023-06-10T21:00:54.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\system.diagnostics.eventlog\6.0.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll">
       <PackagePath>System.Diagnostics.EventLog.Messages.dll</PackagePath>
       <Modified>2021-10-22T23:47:38.000</Modified>
@@ -1020,6 +1048,18 @@
     <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\system.runtime.interopservices.windowsruntime\4.3.0\lib\netstandard1.3\System.Runtime.InteropServices.WindowsRuntime.dll">
       <PackagePath>System.Runtime.InteropServices.WindowsRuntime.dll</PackagePath>
       <Modified>2016-11-05T04:56:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\system.security.cryptography.protecteddata\4.7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll">
+      <PackagePath>System.Security.Cryptography.ProtectedData.dll</PackagePath>
+      <Modified>2019-11-15T08:53:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\system.security.permissions\4.7.0\lib\netcoreapp3.0\System.Security.Permissions.dll">
+      <PackagePath>System.Security.Permissions.dll</PackagePath>
+      <Modified>2019-11-15T08:56:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\system.windows.extensions\4.7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll">
+      <PackagePath>System.Windows.Extensions.dll</PackagePath>
+      <Modified>2019-11-15T08:54:30.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\uno.diagnostics.eventing\2.0.1\lib\net5.0\Uno.Diagnostics.Eventing.dll">
       <PackagePath>Uno.Diagnostics.Eventing.dll</PackagePath>
@@ -1076,6 +1116,14 @@
     <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\microsoft.windowsappsdk\1.3.230502000\runtimes\win10-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
       <Modified>2023-04-28T12:58:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\runtime.win-x64.runtime.native.system.data.sqlclient.sni\4.4.0\runtimes\win-x64\native\sni.dll">
+      <PackagePath>sni.dll</PackagePath>
+      <Modified>2017-07-12T11:24:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\stub.system.data.sqlite.core.netstandard\1.0.118\runtimes\win-x64\native\SQLite.Interop.dll">
+      <PackagePath>SQLite.Interop.dll</PackagePath>
+      <Modified>2023-06-10T20:57:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader.Core\bin\Debug\net7.0\Nitro Downloader.Core.dll">
       <PackagePath>Nitro Downloader.Core.dll</PackagePath>
