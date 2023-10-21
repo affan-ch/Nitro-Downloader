@@ -20,6 +20,10 @@ using Windows.ApplicationModel.DataTransfer;
 using Windows.Storage.Provider;
 using System.Xml.Linq;
 using Nitro_Downloader.Services;
+using Windows.UI.Notifications;
+using Windows.Data.Xml.Dom;
+
+using Microsoft.Toolkit.Uwp.Notifications;
 
 namespace Nitro_Downloader.Views;
 
@@ -149,19 +153,38 @@ public class HelperFunctions
         }
         else if (sizeInBytes < 1024 * 1024)
         {
-            double sizeInKB = sizeInBytes / 1024.0;
+            var sizeInKB = sizeInBytes / 1024.0;
             return $"{sizeInKB:F1}KB";
         }
         else if (sizeInBytes < 1024 * 1024 * 1024)
         {
-            double sizeInMB = sizeInBytes / (1024.0 * 1024.0);
+            var sizeInMB = sizeInBytes / (1024.0 * 1024.0);
             return $"{sizeInMB:F1}MB";
         }
         else
         {
-            double sizeInGB = sizeInBytes / (1024.0 * 1024.0 * 1024.0);
+            var sizeInGB = sizeInBytes / (1024.0 * 1024.0 * 1024.0);
             return $"{sizeInGB:F1}GB";
         }
+    }
+
+    public static void ShowDownloadCompleteNotification(string fileName, string filePath)
+    {
+        var content = new ToastContentBuilder()
+        .AddText("Download Completed")
+        .AddText($"{fileName}")
+        .AddButton(new ToastButton("Open File", $"action=openFile&filePath={filePath}")
+        {
+            ActivationType = ToastActivationType.Background,
+        })
+        .AddButton(new ToastButton("Show in Folder", $"action=showInFolder&filePath={filePath}")
+        {
+            ActivationType = ToastActivationType.Background,
+        });
+
+        var toast = new ToastNotification(content.GetXml());
+        ToastNotificationManagerCompat.CreateToastNotifier().Show(toast);
+
     }
 
 }
@@ -187,6 +210,11 @@ public sealed partial class HomePage : Page
     private async void GetInfoButton_Click(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
     {
         var link = Link_TextBox.Text;
+
+        //var fileName = "Zara Khan Dance In Dubai. Filmfare Award Dubai";
+        //var filePath = "C:\\Users\\affan\\Downloads\\Video\\Zara Khan Dance In Dubai. Filmfare Award Dubai.mp4";
+       
+
         if (link.Length < 10)
         {
             ContentDialog dialog = new ContentDialog
@@ -358,11 +386,83 @@ public sealed partial class HomePage : Page
         }
     }
 
+    private async void DownloadButton_Click(object sender, RoutedEventArgs e)
+    {
+        var link = Link_TextBox.Text;
+        var output = await YtDlpHelper.DownloadVideoAsync(link);
+
+        Debug.WriteLine("\n\n\nOutput Started");
+        Debug.WriteLine(output);
+        Debug.WriteLine("\n\n\nOutput Ended");
+
+        var title = TitleTextBlock.Text;
+
+        var downloadLocation = Settings.GetDownloadLocation();
+
+        HelperFunctions.ShowDownloadCompleteNotification(title, downloadLocation);
+
+    }
 }
 
 
 public static class YtDlpHelper
 {
+
+    public static async Task<string> DownloadVideoAsync(string link)
+    {
+        var fullPath = AppDomain.CurrentDomain.BaseDirectory.ToString();
+
+        var endIndex = fullPath.IndexOf("Nitro Downloader\\");
+        var path = fullPath[..(endIndex + "Nitro Downloader\\".Length)];
+        path += "Tools\\yt-dlp.exe";
+
+        if (!File.Exists(path))
+        {
+            throw new FileNotFoundException("yt-dlp.exe not found at the specified path.");
+        }
+
+        var downloadLocation = Settings.GetDownloadLocation();
+        var OutputFileNameTemplate = "%(title)s.%(ext)s";
+
+        var arguments = $"{link} -P {downloadLocation} -o {OutputFileNameTemplate}";
+
+        using var process = new Process();
+        process.StartInfo.FileName = path;
+        process.StartInfo.Arguments = arguments;
+        process.StartInfo.UseShellExecute = false;
+        process.StartInfo.RedirectStandardOutput = true;
+        process.StartInfo.CreateNoWindow = true;
+
+        var outputBuilder = new StringBuilder();
+
+        process.OutputDataReceived += (sender, e) =>
+        {
+            if (!string.IsNullOrEmpty(e.Data))
+            {
+                outputBuilder.AppendLine(e.Data);
+                Debug.WriteLine(e.Data);
+            }
+        };
+
+        process.Start();
+        process.BeginOutputReadLine();
+
+        await Task.Run(() =>
+        {
+            process.WaitForExit();
+        });
+
+        if (process.ExitCode == 0)
+        {
+            var jsonOutput = outputBuilder.ToString();
+            return jsonOutput;
+        }
+        else
+        {
+            throw new Exception("yt-dlp command failed.");
+        }
+    }
+
     public static async Task<string> GetVideoInfoJsonAsync(string link)
     {
         var fullPath = AppDomain.CurrentDomain.BaseDirectory.ToString();

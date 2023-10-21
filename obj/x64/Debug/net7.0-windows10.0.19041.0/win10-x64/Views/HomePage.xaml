@@ -10,11 +10,14 @@
 
 
     <StackPanel>
-
-            <TextBox x:ConnectionId='2' x:Name="Link_TextBox" AutomationProperties.Name="multi-line TextBox" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True" MinWidth="400" />
+            <!-- Link TextBox -->
+        <TextBox x:ConnectionId='2' x:Name="Link_TextBox" AutomationProperties.Name="multi-line TextBox" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True" MinWidth="400" PlaceholderText="https://www.youtube.com/watch?v=MjxGwfa5lxw" />
+            
+            
+            <!-- Get Info Button -->
             <Button x:ConnectionId='3' x:Name="GetInfoButton"                             Style="{StaticResource AccentButtonStyle}" Content="Get Info" Margin="20 20 20 20" HorizontalAlignment="Center"/>
 
-
+        <!-- Progress Ring -->
         <StackPanel x:ConnectionId='4' x:Name="ProgressRingStackPanel" HorizontalAlignment="Center" Margin="0 120 0 0" Visibility="Collapsed">
             <ProgressRing IsActive="True" Height="50" Width="50" VerticalAlignment="Center" />
         </StackPanel>
@@ -23,17 +26,17 @@
             <Expander.Header >
                 <StackPanel Margin="0 15 0 15" Orientation="Horizontal" Width="auto">
                     <Border BorderBrush="Transparent" BorderThickness="1" CornerRadius="10">
-                        <Image x:ConnectionId='19' x:Name="ThumbnailImage" Stretch="Uniform" Height="70" Width="124" />
+                        <Image x:ConnectionId='20' x:Name="ThumbnailImage" Stretch="Uniform" Height="70" Width="124" />
                     </Border>
                     <StackPanel Orientation="Vertical" >
                         
                         <!-- Title TextBlock -->
-                        <TextBlock x:ConnectionId='8' x:Name="TitleTextBlock" Margin="14 5 10 2" FontWeight="Bold">
+                        <TextBlock x:ConnectionId='9' x:Name="TitleTextBlock" Margin="14 5 10 2" FontWeight="Bold">
                             Introducing Extensions ✨ | Bard
                         </TextBlock>
 
                         <!-- Channel Name TextBlock -->
-                        <TextBlock x:ConnectionId='9' x:Name="ChannelNameTextBlock" Margin="14 0 0 10">
+                        <TextBlock x:ConnectionId='10' x:Name="ChannelNameTextBlock" Margin="14 0 0 10">
                             Google
                         </TextBlock>
 
@@ -50,7 +53,7 @@
                                 </ToolTipService.ToolTip>
                                 
                                 <FontIcon Glyph="&#xE823;" FontSize="17" Opacity="0.8"/>
-                                <TextBlock x:ConnectionId='18' x:Name="DurationTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
+                                <TextBlock x:ConnectionId='19' x:Name="DurationTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
                             </StackPanel>
 
                             <!-- Resolution StackPanel -->
@@ -61,7 +64,7 @@
                                 </ToolTipService.ToolTip>
                                 
                                 <FontIcon Glyph="&#xE799;" FontSize="17" Opacity="0.8"/>
-                                <TextBlock x:ConnectionId='17' x:Name="ResolutionTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
+                                <TextBlock x:ConnectionId='18' x:Name="ResolutionTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
                             </StackPanel>
 
                             <!-- Likes StackPanel -->
@@ -72,7 +75,7 @@
                                 </ToolTipService.ToolTip>
                                 
                                 <FontIcon Glyph="&#xE8E1;" FontSize="17" Opacity="0.8"/>
-                                <TextBlock x:ConnectionId='16' x:Name="LikesTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
+                                <TextBlock x:ConnectionId='17' x:Name="LikesTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
                             </StackPanel>
 
                             <!-- Comments StackPanel -->
@@ -83,7 +86,7 @@
                                 </ToolTipService.ToolTip>
                                 
                                 <FontIcon Glyph="&#xE90A;" FontSize="17" Opacity="0.8"/>
-                                <TextBlock x:ConnectionId='15' x:Name="CommentsTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
+                                <TextBlock x:ConnectionId='16' x:Name="CommentsTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
                             </StackPanel>
 
                             <!-- Views StackPanel -->
@@ -94,7 +97,7 @@
                                 </ToolTipService.ToolTip>
                                 
                                 <FontIcon Glyph="&#xE890;" FontSize="17" Opacity="0.8"/>
-                                <TextBlock x:ConnectionId='14' x:Name="ViewsTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
+                                <TextBlock x:ConnectionId='15' x:Name="ViewsTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
                             </StackPanel>
 
                             <!-- Date Uploaded StackPanel -->
@@ -105,7 +108,7 @@
                                 </ToolTipService.ToolTip>
                                 
                                 <FontIcon Glyph="&#xEC92;" FontSize="17" Opacity="0.8"/>
-                                <TextBlock x:ConnectionId='13' x:Name="DateUploadedTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
+                                <TextBlock x:ConnectionId='14' x:Name="DateUploadedTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
                             </StackPanel>
 
                             <!-- Website StackPanel -->
@@ -116,7 +119,7 @@
                                 </ToolTipService.ToolTip>
                                 
                                 <FontIcon Glyph="&#xE774;" FontSize="17" Opacity="0.8"/>
-                                <TextBlock x:ConnectionId='12' x:Name="WebsiteTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
+                                <TextBlock x:ConnectionId='13' x:Name="WebsiteTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
                             </StackPanel>
 
                             <!-- Extension StackPanel -->
@@ -127,7 +130,7 @@
                                 </ToolTipService.ToolTip>
                                 
                                 <FontIcon Glyph="&#xE8B2;" FontSize="17" Opacity="0.8"/>
-                                <TextBlock x:ConnectionId='11' x:Name="ExtensionTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
+                                <TextBlock x:ConnectionId='12' x:Name="ExtensionTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
                             </StackPanel>
 
                             <!-- File Size StackPanel -->
@@ -138,7 +141,7 @@
                                 </ToolTipService.ToolTip>
 
                                 <FontIcon Glyph="&#xE9F9;" FontSize="17" Opacity="0.8"/>
-                                <TextBlock x:ConnectionId='10' x:Name="FileSizeTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
+                                <TextBlock x:ConnectionId='11' x:Name="FileSizeTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
                             </StackPanel>
 
 
@@ -156,19 +159,19 @@
                     <!-- Video Link StackPanel -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="1000">
                         <TextBlock Text="Video Link: " VerticalAlignment="Center"/>
-                        <HyperlinkButton x:ConnectionId='23' x:Name="VideoLink" Content="Microsoft home page" NavigateUri="http://www.microsoft.com" Margin="5 0 0 0"/>
+                        <HyperlinkButton x:ConnectionId='24' x:Name="VideoLink" Content="Microsoft home page" NavigateUri="http://www.microsoft.com" Margin="5 0 0 0"/>
                     </StackPanel>
 
                     <!-- Channel Link StackPanel -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                         <TextBlock Text="Channel Link: " VerticalAlignment="Center"/>
-                        <HyperlinkButton x:ConnectionId='22' x:Name="ChannelLink" Content="Microsoft home page" NavigateUri="http://www.microsoft.com" Margin="5 0 0 0"/>
+                        <HyperlinkButton x:ConnectionId='23' x:Name="ChannelLink" Content="Microsoft home page" NavigateUri="http://www.microsoft.com" Margin="5 0 0 0"/>
                     </StackPanel>
 
                     <!-- Thumbnail Link StackPanel -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                        <TextBlock x:ConnectionId='20' x:Name="ThumbnailTextBlock" Text="Thumbnail Link: " VerticalAlignment="Center"/>
-                        <HyperlinkButton x:ConnectionId='21' x:Name="ThumbnailLink" Content="Microsoft home page" NavigateUri="http://www.microsoft.com" Margin="5 0 0 0"/>
+                        <TextBlock x:ConnectionId='21' x:Name="ThumbnailTextBlock" Text="Thumbnail Link: " VerticalAlignment="Center"/>
+                        <HyperlinkButton x:ConnectionId='22' x:Name="ThumbnailLink" Content="Microsoft home page" NavigateUri="http://www.microsoft.com" Margin="5 0 0 0"/>
                     </StackPanel>
 
 
@@ -177,10 +180,14 @@
         </Expander>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
-            <TextBox x:ConnectionId='6' x:Name="LocationTextBox" VerticalAlignment="Bottom" Margin="0 10 10 10" Width="350"/>
+            <!-- Location TextBox -->
+            <TextBox x:ConnectionId='6' x:Name="LocationTextBox" VerticalAlignment="Bottom" Margin="0 10 10 10" Width="350" IsReadOnly="True"/>
+            
             <Button x:ConnectionId='7' x:Name="ChangeLocationButton"                                        >
                 <FontIcon Glyph="&#xE8DA;"/>
             </Button>
+
+            <Button x:ConnectionId='8' x:Name="DownloadButton"                              Style="{StaticResource AccentButtonStyle}" Content="Download" Margin="20 0 0 0"/>
         </StackPanel>
     </StackPanel>
 </Page>

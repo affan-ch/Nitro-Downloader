@@ -1,4 +1,5 @@
-﻿using Microsoft.UI.Xaml;
+﻿using System.Diagnostics;
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 
 using Nitro_Downloader.Activation;
@@ -56,6 +57,9 @@ public class ActivationService : IActivationService
         {
             await _defaultHandler.HandleAsync(activationArgs);
         }
+
+        Debug.WriteLine($"ActivationArgs: {activationArgs}");
+        
     }
 
     private async Task InitializeAsync()

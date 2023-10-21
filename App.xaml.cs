@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using System.Diagnostics;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.UI.Xaml;
 
@@ -101,8 +102,20 @@ public partial class App : Application
     {
         base.OnLaunched(args);
 
+        
+
         //App.GetService<IAppNotificationService>().Show(string.Format("AppNotificationSamplePayload".GetLocalized(), AppContext.BaseDirectory));
 
         await App.GetService<IActivationService>().ActivateAsync(args);
+
+        Debug.WriteLine(args);
+        Debug.WriteLine(args.Arguments);
+        Debug.WriteLine($"Launched with the arguments: {string.Join(", ", args.Arguments)}");
+        if (args.Arguments.StartsWith("nitro:"))
+        {
+            //string url = e.Arguments.Substring(11); // Remove the protocol part
+            Debug.WriteLine(args.Arguments);
+                                                    
+        }
     }
 }
