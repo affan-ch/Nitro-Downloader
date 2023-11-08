@@ -1,0 +1,12 @@
+D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader.Core\bin\Debug\net7.0\Nitro Downloader.Core.deps.json
+D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader.Core\bin\Debug\net7.0\Nitro Downloader.Core.dll
+D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader.Core\bin\Debug\net7.0\Nitro Downloader.Core.pdb
+D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader.Core\obj\Debug\net7.0\Nitro Downloader.Core.csproj.AssemblyReference.cache
+D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader.Core\obj\Debug\net7.0\Nitro Downloader.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader.Core\obj\Debug\net7.0\Nitro Downloader.Core.AssemblyInfoInputs.cache
+D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader.Core\obj\Debug\net7.0\Nitro Downloader.Core.AssemblyInfo.cs
+D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader.Core\obj\Debug\net7.0\Nitro Downloader.Core.csproj.CoreCompileInputs.cache
+D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader.Core\obj\Debug\net7.0\Nitro Downloader.Core.dll
+D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader.Core\obj\Debug\net7.0\refint\Nitro Downloader.Core.dll
+D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader.Core\obj\Debug\net7.0\Nitro Downloader.Core.pdb
+D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader.Core\obj\Debug\net7.0\ref\Nitro Downloader.Core.dll

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "MlCdutLHc4wJsQACQ3wZOaJ4E85HYWcS3nuCncNAsLQtxq/haG8Ildtdmci9TF4OLylCoh7cnRvAcfYHRCqWmQ==",
+  "success": true,
+  "projectFilePath": "D:\\Code\\UET\\Semester 5\\SE Lab\\Project\\Nitro Downloader.Core\\Nitro Downloader.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\affan\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
