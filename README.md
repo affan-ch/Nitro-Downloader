@@ -1,8 +1,8 @@
 # Nitro Downloader
 
-Nitro Downloader is a modern Universal Windows Platform (UWP) application built using C# and XAML with WINUI3 for the UI components. It provides a powerful download manager with the ability to download videos, video thumbnails and playlists, using [yt-dlp](https://github.com/yt-dlp/yt-dlp) – an enhanced version of the popular youtube-dl utility. It supports downloading torrents and every other file types from HTTP/HTTPS links, leveraging the robust capabilities of [aria2c](https://github.com/aria2/aria2).
+Nitro Downloader is a powerful and modern download manager crafted using WinUI3 and C#, tailored to blend seamlessly with the Windows 11 user interface. It provides a powerful download manager with the ability to download videos, video thumbnails and playlists, using [yt-dlp](https://github.com/yt-dlp/yt-dlp) – an enhanced version of the popular youtube-dl utility. It supports downloading torrents and every other file types from HTTP/HTTPS links, leveraging the robust capabilities of [aria2c](https://github.com/aria2/aria2).
 
-Nitro Downloader is designed to offer an experience similar to popular download managers like Internet Download Manager (IDM), making it easy for users to access and manage their downloads with a feature-rich, modern UWP application.
+Nitro Downloader is designed to offer an experience similar to popular download managers like Internet Download Manager (IDM), making it easy for users to access and manage their downloads with a feature-rich, modern Windows 11 application.
 
 
 ## Features
@@ -11,9 +11,15 @@ Nitro Downloader is designed to offer an experience similar to popular download 
 - **Torrent Downloads**: Download torrents using the aria2c backend.
 - **Resume and Pause Downloads**: Pause and resume downloads at any time.
 - **Download Speed Control**: Adjust the download speed to optimize your network usage.
-- **System Tray Integration**: Provides a system tray icon for easy access and management.
 - **Customizable Themes**: Choose from a variety of themes to personalize your experience.
-- **Automatic Updates**: Nitro Downloader can check for and apply updates automatically.
+- **System Tray Icon**: Nitro Downloader minimizes to the system tray, providing easy access without cluttering the desktop.
+- **Background Process**: The app runs in the background, ensuring downloads continue without interrupting workflow.
+- **Modern Notifications**: Users receive stylish and interactive notifications for download progress and completion, harnessing Windows 11's notification system.
+- **Efficiency Mode**: An energy-saving feature that reduces the app's resource usage for optimal system performance.
+- **Comprehensive Download Capabilities**: Whether it's videos, thumbnails, playlists, torrents, or any other file type, Nitro Downloader can handle it all through direct links.
+- **Bulk Downloading**: The app excels in aggregating content from social media profiles such as Instagram, Twitter, Facebook, and TikTok, enabling users to download in bulk with ease.
+
+Designed for both casual users and power users, Nitro Downloader is an efficient, user-friendly, and versatile tool that enhances the downloading experience on Windows 11.
 
 ## System Requirements
 
