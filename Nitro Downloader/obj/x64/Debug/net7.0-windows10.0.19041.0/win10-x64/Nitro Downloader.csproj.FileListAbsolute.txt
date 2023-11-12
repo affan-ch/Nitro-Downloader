@@ -329,3 +329,12 @@ D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\obj\x64\Debug\net7.0-wind
 D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\mscordaccore_amd64_amd64_7.0.1223.47720.dll
 D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\H.NotifyIcon.WinUI.dll
 D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Widgets.Providers.Projection.dll
+D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\DownloadWindow.xbf
+D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\DownloadWindow.g.i.cs
+D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\DownloadWindow.g.cs
+D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\DownloadWindow.xaml
+D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\DownloadWindow.xbf
+D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Castle.Core.dll
+D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\JsonSettings.dll
+D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\JsonSettings.Autosave.dll
+D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\WinUICommunity.Core.dll

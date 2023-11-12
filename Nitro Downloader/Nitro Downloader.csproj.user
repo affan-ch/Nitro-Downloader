@@ -11,4 +11,9 @@
     <BadgeLogoSource>C:\Users\affan\Downloads\2 %281%29.png</BadgeLogoSource>
     <PackageLogoSource>C:\Users\affan\Downloads\2 %281%29.png</PackageLogoSource>
   </PropertyGroup>
+  <ItemGroup>
+    <Page Update="DownloadWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
 </Project>

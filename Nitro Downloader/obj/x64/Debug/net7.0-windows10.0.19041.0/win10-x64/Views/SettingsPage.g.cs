@@ -14,7 +14,7 @@ namespace Nitro_Downloader.Views
         global::Microsoft.UI.Xaml.Controls.Page, 
         global::Microsoft.UI.Xaml.Markup.IComponentConnector
     {
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2308")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2310")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private static class XamlBindingSetters
         {
@@ -44,7 +44,7 @@ namespace Nitro_Downloader.Views
             }
         };
 
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2308")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2310")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private class SettingsPage_obj1_Bindings :
             global::Microsoft.UI.Xaml.Markup.IDataTemplateComponent,
@@ -135,7 +135,7 @@ namespace Nitro_Downloader.Views
                         break;
                 }
             }
-                        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2308")]
+                        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2310")]
                         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
                         public global::Microsoft.UI.Xaml.Markup.IComponentConnector GetBindingConnector(int connectionId, object target) 
                         {
@@ -302,7 +302,7 @@ namespace Nitro_Downloader.Views
                 }
             }
 
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2308")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2310")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             private class SettingsPage_obj1_BindingsTracking
             {
@@ -397,7 +397,7 @@ namespace Nitro_Downloader.Views
         /// <summary>
         /// Connect()
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2308")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2310")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public void Connect(int connectionId, object target)
         {
@@ -428,7 +428,7 @@ namespace Nitro_Downloader.Views
         /// <summary>
         /// GetBindingConnector(int connectionId, object target)
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2308")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2310")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Microsoft.UI.Xaml.Markup.IComponentConnector GetBindingConnector(int connectionId, object target)
         {

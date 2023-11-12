@@ -17,7 +17,7 @@
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.17763.0" MaxVersionTested="10.0.19041.0" />
     <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17763.0" MaxVersionTested="10.0.19041.0" />
-    <PackageDependency Name="Microsoft.WindowsAppRuntime.1.4" MinVersion="4000.964.11.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
+    <PackageDependency Name="Microsoft.WindowsAppRuntime.1.4" MinVersion="4000.1010.1349.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
   </Dependencies>
   <Resources>
     <Resource Language="EN-US" />
@@ -41,13 +41,12 @@
           </com:ComServer>
         </com:Extension>
         <uap:Extension Category="windows.protocol">
-          <uap:Protocol Name="nitro">
+          <uap:Protocol Name="magnet">
             <uap:DisplayName>Nitro Downloader</uap:DisplayName>
-            <uap:Logo>a2.png</uap:Logo>
           </uap:Protocol>
         </uap:Extension>
         <uap:Extension Category="windows.protocol">
-          <uap:Protocol Name="magnet">
+          <uap:Protocol Name="nitro-downloader">
             <uap:DisplayName>Nitro Downloader</uap:DisplayName>
           </uap:Protocol>
         </uap:Extension>
@@ -71,7 +70,7 @@
     <genTemplate:Item Name="appmodel" Value="Desktop" />
   </genTemplate:Metadata>
   <build:Metadata>
-    <build:Item Name="Microsoft.UI.Xaml.Markup.Compiler.dll" Version="3.0.0.2308" />
-    <build:Item Name="makepri.exe" Version="10.0.22621.1 (WinBuild.160101.0800)" />
+    <build:Item Name="Microsoft.UI.Xaml.Markup.Compiler.dll" Version="3.0.0.2310" />
+    <build:Item Name="makepri.exe" Version="10.0.22621.755 (WinBuild.160101.0800)" />
   </build:Metadata>
 </Package>

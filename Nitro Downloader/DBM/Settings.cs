@@ -22,15 +22,13 @@ internal class Settings
         get; set;
     }
 
-
-
     public static void CheckOrCreateSettingsFile()
     {
         try
         {
             if (!Directory.Exists(SettingsFolderPath))
             {
-                DirectoryInfo directoryInfo = Directory.CreateDirectory(SettingsFolderPath);
+                var directoryInfo = Directory.CreateDirectory(SettingsFolderPath);
                 directoryInfo.Attributes = FileAttributes.Directory | FileAttributes.Hidden | FileAttributes.System;
                 Debug.WriteLine("Settings folder created");
             }
@@ -63,7 +61,7 @@ internal class Settings
             DownloadLocation = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyVideos), "Nitro Downloader");
             MaxConnections = 1;
 
-            Dictionary<string, string> defaultSettings = new Dictionary<string, string>
+            var defaultSettings = new Dictionary<string, string>
             {
                 { "DownloadLocation", DownloadLocation.ToString() },
                 { "MaxConnections", MaxConnections.ToString() }
@@ -99,6 +97,7 @@ internal class Settings
         }
     }
 
+
     public static void SetDownloadLocation(string downloadLocation)
     {
         CheckOrCreateSettingsFile();
@@ -106,7 +105,7 @@ internal class Settings
         {
             DownloadLocation = downloadLocation;
         
-            Dictionary<string, string> defaultSettings = new Dictionary<string, string>
+            var defaultSettings = new Dictionary<string, string>
             {
                 { "DownloadLocation", DownloadLocation.ToString() },
                 { "MaxConnections", MaxConnections.ToString() }
@@ -124,6 +123,7 @@ internal class Settings
             Debug.WriteLine(ex.Message);
         }
     }
+
 
     public static string GetDownloadLocation()
     {
@@ -143,6 +143,7 @@ internal class Settings
             return string.Empty;
         }
     }
+
 
 
 }

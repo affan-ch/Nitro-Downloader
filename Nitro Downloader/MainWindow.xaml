@@ -15,11 +15,10 @@
 
     <tb:TaskbarIcon
         x:Name="TrayIcon"
-        ToolTipText="ToolTip"
+        ToolTipText="Nitro Dowloader"
         IconSource="/Assets/WindowIcon.ico"
-
         
-        MenuActivation="LeftOrRightClick"
+        MenuActivation="RightClick"
         PopupActivation="DoubleClick"
 
      >
@@ -30,7 +29,7 @@
                 <MenuFlyoutItem Command="{x:Bind ExitApplicationCommand}" Text="Exit" />
             </MenuFlyout>
         </tb:TaskbarIcon.ContextFlyout>
-        
+
     </tb:TaskbarIcon>
 
     <Window.SystemBackdrop>

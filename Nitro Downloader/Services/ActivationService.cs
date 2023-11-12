@@ -7,6 +7,7 @@ using Nitro_Downloader.Contracts.Services;
 using Nitro_Downloader.Views;
 
 namespace Nitro_Downloader.Services;
+#pragma warning disable IDE0007 // var instead of explicit type
 
 public class ActivationService : IActivationService
 {
@@ -34,11 +35,19 @@ public class ActivationService : IActivationService
             App.MainWindow.Content = _shell ?? new Frame();
         }
 
+
+
+        App.MainWindow.Activate();
+
+        //H.NotifyIcon.WindowExtensions.Hide(App.MainWindow, true);
+
+
+
+
+
         // Handle activation via ActivationHandlers.
         await HandleActivationAsync(activationArgs);
 
-        // Activate the MainWindow.
-        App.MainWindow.Activate();
 
         // Execute tasks after activation.
         await StartupAsync();
@@ -64,14 +73,10 @@ public class ActivationService : IActivationService
         if(args.Kind == ExtendedActivationKind.Protocol)
         {
             var protocolArgs = args.Data as Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs;
-            Debug.WriteLine(protocolArgs.Uri);
-
-            Debug.WriteLine(args.Data);
+            Debug.WriteLine(protocolArgs!.Uri);
         }
 
         Debug.WriteLine($"Kind: {kind}");
-
-        Debug.WriteLine($"ActivationArgs: {activationArgs}");
         
     }
 

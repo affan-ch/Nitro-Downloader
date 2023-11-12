@@ -14,13 +14,13 @@
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)microsoft.windows.sdk.buildtools\10.0.22621.1\build\Microsoft.Windows.SDK.BuildTools.props" Condition="Exists('$(NuGetPackageRoot)microsoft.windows.sdk.buildtools\10.0.22621.1\build\Microsoft.Windows.SDK.BuildTools.props')" />
-    <Import Project="$(NuGetPackageRoot)microsoft.windowsappsdk\1.4.230822000\buildTransitive\Microsoft.WindowsAppSDK.props" Condition="Exists('$(NuGetPackageRoot)microsoft.windowsappsdk\1.4.230822000\buildTransitive\Microsoft.WindowsAppSDK.props')" />
+    <Import Project="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\microsoft.windows.sdk.buildtools\10.0.22621.756\buildTransitive\Microsoft.Windows.SDK.BuildTools.props" Condition="Exists('C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\microsoft.windows.sdk.buildtools\10.0.22621.756\buildTransitive\Microsoft.Windows.SDK.BuildTools.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.windowsappsdk\1.4.231008000\buildTransitive\Microsoft.WindowsAppSDK.props" Condition="Exists('$(NuGetPackageRoot)microsoft.windowsappsdk\1.4.231008000\buildTransitive\Microsoft.WindowsAppSDK.props')" />
     <Import Project="$(NuGetPackageRoot)entityframework\6.4.4\buildTransitive\netcoreapp3.0\EntityFramework.props" Condition="Exists('$(NuGetPackageRoot)entityframework\6.4.4\buildTransitive\netcoreapp3.0\EntityFramework.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.extensions.configuration.usersecrets\6.0.1\buildTransitive\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.props" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.configuration.usersecrets\6.0.1\buildTransitive\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgMicrosoft_WindowsAppSDK Condition=" '$(PkgMicrosoft_WindowsAppSDK)' == '' ">C:\Users\affan\.nuget\packages\microsoft.windowsappsdk\1.4.230822000</PkgMicrosoft_WindowsAppSDK>
+    <PkgMicrosoft_WindowsAppSDK Condition=" '$(PkgMicrosoft_WindowsAppSDK)' == '' ">C:\Users\affan\.nuget\packages\microsoft.windowsappsdk\1.4.231008000</PkgMicrosoft_WindowsAppSDK>
     <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">C:\Users\affan\.nuget\packages\entityframework\6.4.4</PkgEntityFramework>
     <PkgSystem_Data_SQLite_EF6 Condition=" '$(PkgSystem_Data_SQLite_EF6)' == '' ">C:\Users\affan\.nuget\packages\system.data.sqlite.ef6\1.0.118</PkgSystem_Data_SQLite_EF6>
     <PkgCommunityToolkit_WinUI_UI_Controls_Primitives Condition=" '$(PkgCommunityToolkit_WinUI_UI_Controls_Primitives)' == '' ">C:\Users\affan\.nuget\packages\communitytoolkit.winui.ui.controls.primitives\7.1.2</PkgCommunityToolkit_WinUI_UI_Controls_Primitives>

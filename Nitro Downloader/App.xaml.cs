@@ -1,8 +1,10 @@
 ﻿using System.Diagnostics;
+using System.Web;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.UI.Xaml;
-
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.Windows.AppLifecycle;
 using Nitro_Downloader.Activation;
 using Nitro_Downloader.Contracts.Services;
 using Nitro_Downloader.Core.Contracts.Services;
@@ -106,6 +108,35 @@ public partial class App : Application
 
     protected async override void OnLaunched(LaunchActivatedEventArgs args)
     {
+        AppActivationArguments arguments = AppInstance.GetCurrent().GetActivatedEventArgs();
+        ExtendedActivationKind kind = arguments.Kind;
+
+        if (arguments.Kind == ExtendedActivationKind.Protocol)
+        {
+            var protocolArgs = arguments.Data as Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs;
+            var uri = protocolArgs!.Uri;
+
+            Debug.WriteLine("App.xaml.cs: uri");
+            Debug.WriteLine(uri);
+
+            if (uri.Scheme == "nitro-downloader")
+            {
+                if(uri.Host == "video")
+                {
+                    var query = HttpUtility.ParseQueryString(uri.Query);
+
+                    var url = query["url"] ?? "";
+
+                    var window = new DownloadWindow(url, uri.Host);
+
+                    window.Activate();
+
+                }
+            }
+
+            return;
+        }
+
         base.OnLaunched(args);
 
         MainWindow.Closed += (sender, args) =>
@@ -119,6 +150,7 @@ public partial class App : Application
 
 
 
+
         //App.GetService<IAppNotificationService>().Show(string.Format("AppNotificationSamplePayload".GetLocalized(), AppContext.BaseDirectory));
 
         await App.GetService<IActivationService>().ActivateAsync(args);
@@ -126,12 +158,7 @@ public partial class App : Application
         Debug.WriteLine(args);
         Debug.WriteLine(args.Arguments);
         Debug.WriteLine($"Launched with the arguments: {string.Join(", ", args.Arguments)}");
-        if (args.Arguments.StartsWith("nitro:"))
-        {
-            //string url = e.Arguments.Substring(11); // Remove the protocol part
-            Debug.WriteLine(args.Arguments);
-                                                    
-        }
+        
     }
 
 

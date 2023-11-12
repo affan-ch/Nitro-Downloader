@@ -18,7 +18,7 @@ namespace Nitro_Downloader.Views
         /// <summary>
         /// Connect()
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2308")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2310")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public void Connect(int connectionId, object target)
         {
@@ -151,7 +151,7 @@ namespace Nitro_Downloader.Views
         /// <summary>
         /// GetBindingConnector(int connectionId, object target)
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2308")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 3.0.0.2310")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Microsoft.UI.Xaml.Markup.IComponentConnector GetBindingConnector(int connectionId, object target)
         {

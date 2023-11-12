@@ -13,185 +13,13 @@ using Microsoft.UI.Xaml.Media.Imaging;
 using System.Globalization;
 using Windows.Storage.AccessCache;
 using Windows.Storage.Pickers;
-using Windows.Storage;
 using Nitro_Downloader.DBM;
 using WinRT.Interop;
-using Windows.ApplicationModel.DataTransfer;
-using Windows.Storage.Provider;
-using System.Xml.Linq;
-using Nitro_Downloader.Services;
-using Windows.UI.Notifications;
-using Windows.Data.Xml.Dom;
-//using H.NotifyIcon.EfficiencyMode;
-//using H.NotifyIcon.Interop;
-//using H.NotifyIcon.Core;
 
-using Microsoft.Toolkit.Uwp.Notifications;
-//using H.NotifyIcon;
+using Nitro_Downloader.BL;
 
 namespace Nitro_Downloader.Views;
 
-public class VideoInfo
-{
-    public string? title
-    {
-        get; set;
-    }
-
-    public string? description
-    {
-        get; set;
-    }
-
-    public string? thumbnail
-    {
-        get; set;
-    }
-
-    public string? extractor_key
-    {
-        get; set;
-    }
-
-    public string? channel_url
-    {
-        get; set;
-    }
-
-
-    public long? view_count
-    {
-        get; set;
-    }
-
-    public string? webpage_url
-    {
-        get; set;
-    }
-
-    public int? like_count
-    {
-        get; set;
-    }
-
-    public int? comment_count
-    {
-        get; set;
-    }
-
-    public string? channel
-    {
-        get; set;
-    }
-
-    public int? channel_follower_count
-    {
-        get; set;
-    }
-
-    public string? upload_date
-    {
-        get; set;
-    }
-
-    public string? duration_string
-    {
-        get; set;
-    }
-
-    public string? resolution
-    {
-        get; set;
-    }
-
-    public string? ext
-    {
-        get; set;
-    }
-
-    public long? filesize_approx
-    {
-        get; set;
-    }
-
-}
-
-
-public class HelperFunctions
-{
-    public static string FormatYouTubeCounts(long views)
-    {
-        if (views < 1000)
-        {
-            return views.ToString(); // No formatting needed for less than 1,000 views
-        }
-        else if (views < 1000000)
-        {
-            var kViews = views / 1000.0;
-            if (kViews < 10)
-            {
-                return kViews.ToString("0.#") + "K";
-            }
-            else
-            {
-                return kViews.ToString("0") + "K";
-            }
-        }
-        else if (views < 1000000000)
-        {
-            var mViews = views / 1000000.0;
-            return mViews.ToString("0.#") + "M";
-        }
-        else
-        {
-            var bViews = views / 1000000000.0;
-            return bViews.ToString("0.#") + "B";
-        }
-    }
-
-    public static string FormatSize(long sizeInBytes)
-    {
-        if (sizeInBytes < 1024)
-        {
-            return $"{sizeInBytes} bytes";
-        }
-        else if (sizeInBytes < 1024 * 1024)
-        {
-            var sizeInKB = sizeInBytes / 1024.0;
-            return $"{sizeInKB:F1}KB";
-        }
-        else if (sizeInBytes < 1024 * 1024 * 1024)
-        {
-            var sizeInMB = sizeInBytes / (1024.0 * 1024.0);
-            return $"{sizeInMB:F1}MB";
-        }
-        else
-        {
-            var sizeInGB = sizeInBytes / (1024.0 * 1024.0 * 1024.0);
-            return $"{sizeInGB:F1}GB";
-        }
-    }
-
-    public static void ShowDownloadCompleteNotification(string fileName, string filePath)
-    {
-        var content = new ToastContentBuilder()
-        .AddText("Download Completed")
-        .AddText($"{fileName}")
-        .AddButton(new ToastButton("Open File", $"action=openFile&filePath={filePath}")
-        {
-            ActivationType = ToastActivationType.Background,
-        })
-        .AddButton(new ToastButton("Show in Folder", $"action=showInFolder&filePath={filePath}")
-        {
-            ActivationType = ToastActivationType.Background,
-        });
-
-        var toast = new ToastNotification(content.GetXml());
-        ToastNotificationManagerCompat.CreateToastNotifier().Show(toast);
-
-    }
-
-}
 
 public sealed partial class HomePage : Page
 {
@@ -205,30 +33,6 @@ public sealed partial class HomePage : Page
         ViewModel = App.GetService<HomeViewModel>();
         InitializeComponent();
         LocationTextBox.Text = Settings.GetDownloadLocation();
-        //EfficiencyModeUtilities.SetEfficiencyMode(true);
-
-
-        //H.NotifyIcon.Interop.IconUtilities.GetRequiredCustomIconSize(true);
-        //H.NotifyIcon.Core.TrayIconWithContextMenu trayIcon = new H.NotifyIcon.Core.TrayIconWithContextMenu();
-        //trayIcon.Icon ;
-        //trayIcon.Show();
-
-        //var trayIcon = new TaskbarIcon();
-        //trayIcon.Icon = new System.Drawing.Icon("Assets/Red.ico");
-        //trayIcon.ToolTipText = "Nitro Downloader";
-        //trayIcon.ShowNotification("Nitro Downloader", "Nitro Downloader is running in the background.");
-        //trayIcon.Visible = true;
-        //trayIcon.ShowBalloonTip("Nitro Downloader", "Nitro Downloader is running in the background.", BalloonIcon.Info);
-        //trayIcon.Icon = new System.Drawing.Icon("Assets/Red.ico");
-        //trayIcon.ToolTip = "Nitro Downloader";
-        //trayIcon.Create();
-        //trayIcon.Show();
-        //using var iconStream = H.Resources.Red_ico.AsStream();
-        //using var icon = new H.NotifyIcon.;
-        //trayIcon.UpdateIcon(icon.Handle);
-
-
-
     }
 
 
@@ -237,15 +41,11 @@ public sealed partial class HomePage : Page
 
     private async void GetInfoButton_Click(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
     {
-        var link = Link_TextBox.Text;
-
-        //var fileName = "Zara Khan Dance In Dubai. Filmfare Award Dubai";
-        //var filePath = "C:\\Users\\affan\\Downloads\\Video\\Zara Khan Dance In Dubai. Filmfare Award Dubai.mp4";
-       
+        var link = Link_TextBox.Text;       
 
         if (link.Length < 10)
         {
-            ContentDialog dialog = new ContentDialog
+            var dialog = new ContentDialog
             {
                 // XamlRoot must be set in the case of a ContentDialog running in a Desktop app
                 XamlRoot = XamlRoot,
@@ -316,7 +116,7 @@ public sealed partial class HomePage : Page
             var views = HelperFunctions.FormatYouTubeCounts((long)(videoInfo?.view_count ?? 0));
             ViewsTextBlock.Text = views;
 
-            DateTime.TryParseExact(videoInfo?.upload_date, "yyyyMMdd", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate);
+            DateTime.TryParseExact(videoInfo?.upload_date, "yyyyMMdd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var parsedDate);
 
             var formattedDate = parsedDate.ToString("MMM dd, yyyy");
 
@@ -352,7 +152,7 @@ public sealed partial class HomePage : Page
 
 
 
-            FileSizeTextBlock.Text = HelperFunctions.FormatSize(videoInfo?.filesize_approx??0);
+            FileSizeTextBlock.Text = HelperFunctions.FormatFileSize(videoInfo?.filesize_approx??0);
 
 
             Expander.Visibility = Visibility.Visible;
@@ -432,113 +232,3 @@ public sealed partial class HomePage : Page
     }
 }
 
-
-public static class YtDlpHelper
-{
-
-    public static async Task<string> DownloadVideoAsync(string link)
-    {
-        var fullPath = AppDomain.CurrentDomain.BaseDirectory.ToString();
-
-        var endIndex = fullPath.IndexOf("Nitro Downloader\\");
-        var path = fullPath[..(endIndex + "Nitro Downloader\\".Length)];
-        path += "Tools\\yt-dlp.exe";
-
-        if (!File.Exists(path))
-        {
-            throw new FileNotFoundException("yt-dlp.exe not found at the specified path.");
-        }
-
-        var downloadLocation = Settings.GetDownloadLocation();
-        var OutputFileNameTemplate = "%(title)s.%(ext)s";
-
-        var arguments = $"{link} -P {downloadLocation} -o {OutputFileNameTemplate}";
-
-        using var process = new Process();
-        process.StartInfo.FileName = path;
-        process.StartInfo.Arguments = arguments;
-        process.StartInfo.UseShellExecute = false;
-        process.StartInfo.RedirectStandardOutput = true;
-        process.StartInfo.CreateNoWindow = true;
-
-        var outputBuilder = new StringBuilder();
-
-        process.OutputDataReceived += (sender, e) =>
-        {
-            if (!string.IsNullOrEmpty(e.Data))
-            {
-                outputBuilder.AppendLine(e.Data);
-                Debug.WriteLine(e.Data);
-            }
-        };
-
-        process.Start();
-        process.BeginOutputReadLine();
-
-        await Task.Run(() =>
-        {
-            process.WaitForExit();
-        });
-
-        if (process.ExitCode == 0)
-        {
-            var jsonOutput = outputBuilder.ToString();
-            return jsonOutput;
-        }
-        else
-        {
-            throw new Exception("yt-dlp command failed.");
-        }
-    }
-
-    public static async Task<string> GetVideoInfoJsonAsync(string link)
-    {
-        var fullPath = AppDomain.CurrentDomain.BaseDirectory.ToString();
-
-        var endIndex = fullPath.IndexOf("Nitro Downloader\\");
-        var path = fullPath[..(endIndex + "Nitro Downloader\\".Length)];
-        path += "Tools\\yt-dlp.exe";
-
-        if (!File.Exists(path))
-        {
-            throw new FileNotFoundException("yt-dlp.exe not found at the specified path.");
-        }
-
-        var arguments = $"{link} --skip-download --dump-json";
-
-        using var process = new Process();
-        process.StartInfo.FileName = path;
-        process.StartInfo.Arguments = arguments;
-        process.StartInfo.UseShellExecute = false;
-        process.StartInfo.RedirectStandardOutput = true;
-        process.StartInfo.CreateNoWindow = true;
-
-        var outputBuilder = new StringBuilder();
-
-        process.OutputDataReceived += (sender, e) =>
-        {
-            if (!string.IsNullOrEmpty(e.Data))
-            {
-                outputBuilder.AppendLine(e.Data);
-            }
-        };
-
-        process.Start();
-        process.BeginOutputReadLine();
-
-        await Task.Run(() =>
-        {
-            process.WaitForExit();
-        });
-
-        if (process.ExitCode == 0)
-        {
-            var jsonOutput = outputBuilder.ToString();
-            return jsonOutput;
-        }
-        else
-        {
-            throw new Exception("yt-dlp command failed.");
-        }
-    }
-}
