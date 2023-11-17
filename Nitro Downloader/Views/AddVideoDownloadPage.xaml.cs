@@ -1,47 +1,37 @@
 ﻿using System.Diagnostics;
-using System.Runtime.Intrinsics.Arm;
-using System.Text;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using System.Text.Json;
 using Nitro_Downloader.ViewModels;
-using Windows.Foundation.Metadata;
-using Windows.UI.Core;
-using Windows.UI.Shell;
-using Windows.UI.ViewManagement;
 using Microsoft.UI.Xaml.Media.Imaging;
 using System.Globalization;
 using Windows.Storage.AccessCache;
 using Windows.Storage.Pickers;
 using Nitro_Downloader.DBM;
 using WinRT.Interop;
-
 using Nitro_Downloader.BL;
+
 
 namespace Nitro_Downloader.Views;
 
-
-public sealed partial class HomePage : Page
+public sealed partial class AddVideoDownloadPage : Page
 {
-    public HomeViewModel ViewModel
+    public AddVideoDownloadViewModel ViewModel
     {
         get;
     }
 
-    public HomePage()
+    public AddVideoDownloadPage()
     {
-        ViewModel = App.GetService<HomeViewModel>();
+        ViewModel = App.GetService<AddVideoDownloadViewModel>();
         InitializeComponent();
         LocationTextBox.Text = Settings.GetDownloadLocation();
     }
 
 
-
-  
-
     private async void GetInfoButton_Click(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
     {
-        var link = Link_TextBox.Text;       
+        var link = Link_TextBox.Text;
 
         if (link.Length < 10)
         {
@@ -71,7 +61,7 @@ public sealed partial class HomePage : Page
         GetInfoButton.Content = "Loading...";
 
 
-        
+
 
         try
         {
@@ -81,7 +71,7 @@ public sealed partial class HomePage : Page
 
             TitleTextBlock.Text = videoInfo?.title;
 
-            if (videoInfo?.thumbnail != null )
+            if (videoInfo?.thumbnail != null)
             {
                 if (videoInfo?.thumbnail.Length > 10)
                 {
@@ -101,12 +91,12 @@ public sealed partial class HomePage : Page
                 ThumbnailLink.Visibility = Visibility.Collapsed;
             }
 
-            
+
             DurationTextBlock.Text = videoInfo?.duration_string;
 
             var likes = HelperFunctions.FormatYouTubeCounts((long)(videoInfo?.like_count ?? 0));
 
-            LikesTextBlock.Text = likes ;
+            LikesTextBlock.Text = likes;
 
             var comments = HelperFunctions.FormatYouTubeCounts((long)(videoInfo?.comment_count ?? 0));
 
@@ -136,7 +126,7 @@ public sealed partial class HomePage : Page
 
             ProgressRingStackPanel.Visibility = Visibility.Collapsed;
 
-            
+
 
             GetInfoButton.Content = "Get Info";
 
@@ -152,13 +142,13 @@ public sealed partial class HomePage : Page
 
 
 
-            FileSizeTextBlock.Text = HelperFunctions.FormatFileSize(videoInfo?.filesize_approx??0);
+            FileSizeTextBlock.Text = HelperFunctions.FormatFileSize(videoInfo?.filesize_approx ?? 0);
 
 
             Expander.Visibility = Visibility.Visible;
 
 
- 
+
             //Console.WriteLine(jsonOutput);
         }
         catch (Exception ex)
@@ -230,5 +220,5 @@ public sealed partial class HomePage : Page
         HelperFunctions.ShowDownloadCompleteNotification(title, downloadLocation);
 
     }
-}
 
+}

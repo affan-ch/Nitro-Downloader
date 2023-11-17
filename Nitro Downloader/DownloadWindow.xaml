@@ -6,15 +6,14 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Nitro_Downloader"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Interactions="using:Microsoft.Xaml.Interactions.Core" xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
     mc:Ignorable="d"
-    >
+>
     
-
     <Grid>
-        <Grid x:Name="AppTitleBar"
 
-        >
+        <!-- ____________________________________WINDOW TITLE BAR START____________________________________ -->
+        <Grid x:Name="AppTitleBar">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
@@ -25,15 +24,13 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-
             <StackPanel
                 Grid.Column="0"
                 Grid.Row="0"
                 Orientation="Horizontal"
                 x:Name="titleBar"
-                Height="40"
-                
-                >
+                Height="40"   
+             >
             <Image Source="/Assets/WindowIcon.ico"
                HorizontalAlignment="Left"
                Width="16"
@@ -67,284 +64,310 @@
                     Visibility="Collapsed"
             >
                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE70D;" FontSize="10"/>
-
             </Button>
 
         </Grid>
+        <!-- ____________________________________WINDOW TITLE BAR END____________________________________ -->
+        
+        
 
-        <Grid x:Name="ProgressRingStackPanel" HorizontalAlignment="Stretch" Margin="30, 35, 30, 30" VerticalAlignment="Stretch" Width="Auto" Height="Auto">
+        <!-- Circular Loading -->
+        <Grid x:Name="ProgressRingStackPanel"
+              HorizontalAlignment="Stretch"
+              Margin="30, 35, 30, 30" 
+              VerticalAlignment="Stretch" 
+              Width="Auto" 
+              Height="Auto"
+        >
             <ProgressRing IsActive="True" Height="60" Width="60" VerticalAlignment="Center" HorizontalAlignment="Center" />
         </Grid>
 
+        
+        
+        <!-- Main Container  -->
         <ScrollViewer Margin="0, 60, 0, 0">
-        <StackPanel x:Name="BodyContainer" Margin="30, 0, 30, 30" Visibility="Collapsed">
+            <StackPanel x:Name="BodyContainer" Margin="30, 0, 30, 30" Visibility="Collapsed">
+
+                <!-- _____________________________________EXPANDER CONTAINER START_____________________________________ -->
+                <Grid Width="Auto" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Expander x:Name="Expander" Grid.Column="0" HorizontalAlignment="Stretch">
+                        <Expander.Header  >
+                            <StackPanel Margin="0 15 0 15" Padding="5, 5, 5, 15" Orientation="Horizontal" >
+
+                                <!-- Thumbnail Container -->
+                                <Border BorderBrush="Transparent" BorderThickness="1" CornerRadius="10">
+                                    <Image x:Name="ThumbnailImage" Stretch="Uniform" Height="100" Width="178" />
+                                </Border>
+
+                                <StackPanel Orientation="Vertical" >
+
+                                    <!-- Title TextBlock -->
+                                    <TextBlock x:Name="TitleTextBlock" Margin="14 5 10 2" FontWeight="Bold"/>
+
+
+                                    <!-- Channel Name TextBlock -->
+                                    <TextBlock x:Name="ChannelNameTextBlock" Margin="14 0 0 10"/>
 
 
 
-            <Grid Width="Auto" >
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+                                    <!-- ____________________________________________VIDEO DETAILS PANE START____________________________________________  -->
+                                    <Grid Width="Auto">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
 
-                <Expander x:Name="Expander" Grid.Column="0" HorizontalAlignment="Stretch">
-                    <Expander.Header  >
-                        <StackPanel Margin="0 15 0 15" Padding="5, 5, 5, 15" Orientation="Horizontal" >
-
-                            <Border BorderBrush="Transparent" BorderThickness="1" CornerRadius="10">
-                                <Image x:Name="ThumbnailImage" Stretch="Uniform" Height="100" Width="178" />
-                            </Border>
-                            <StackPanel Orientation="Vertical" >
-
-                                <!-- Title TextBlock -->
-                                <TextBlock x:Name="TitleTextBlock" Margin="14 5 10 2" FontWeight="Bold">
-            Introducing Extensions ✨ | Bard
-                                </TextBlock>
-
-                                <!-- Channel Name TextBlock -->
-                                <TextBlock x:Name="ChannelNameTextBlock" Margin="14 0 0 10">
-            Google
-                                </TextBlock>
-
-
-                                <!-- ____________________________________________WRAP PANEL START____________________________________________  -->
-                                <Grid Width="Auto">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-
-                                    </Grid.ColumnDefinitions>
-                                    
-                                    
-
-
-                                    <!-- Duration StackPanel -->
+                                        <!-- Duration StackPanel -->
                                         <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="14 0 0 0">
 
-                                        <ToolTipService.ToolTip>
-                                            <ToolTip Content="Video Duration" VerticalOffset="-50"/>
-                                        </ToolTipService.ToolTip>
+                                            <ToolTipService.ToolTip>
+                                                <ToolTip Content="Video Duration" VerticalOffset="-50"/>
+                                            </ToolTipService.ToolTip>
 
-                                        <FontIcon Glyph="&#xE823;" FontSize="17" Opacity="0.8"/>
-                                        <TextBlock x:Name="DurationTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
-                                    </StackPanel>
+                                            <FontIcon Glyph="&#xE823;" FontSize="17" Opacity="0.8"/>
+                                            <TextBlock x:Name="DurationTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
+                                        </StackPanel>
 
-                                    <!-- Resolution StackPanel -->
+                                        <!-- Resolution StackPanel -->
                                         <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="25 0 0 0">
+                                            <ToolTipService.ToolTip>
+                                                <ToolTip Content="Video Resolution" VerticalOffset="-50"/>
+                                            </ToolTipService.ToolTip>
 
-                                        <ToolTipService.ToolTip>
-                                            <ToolTip Content="Video Resolution" VerticalOffset="-50"/>
-                                        </ToolTipService.ToolTip>
+                                            <FontIcon Glyph="&#xE799;" FontSize="17" Opacity="0.8"/>
+                                            <TextBlock x:Name="ResolutionTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
+                                        </StackPanel>
 
-                                        <FontIcon Glyph="&#xE799;" FontSize="17" Opacity="0.8"/>
-                                        <TextBlock x:Name="ResolutionTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
-                                    </StackPanel>
-
-                                    <!-- Likes StackPanel -->
+                                        <!-- Likes StackPanel -->
                                         <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="30 0 0 0">
+                                            <ToolTipService.ToolTip>
+                                                <ToolTip Content="Likes" VerticalOffset="-50"/>
+                                            </ToolTipService.ToolTip>
 
-                                        <ToolTipService.ToolTip>
-                                            <ToolTip Content="Likes" VerticalOffset="-50"/>
-                                        </ToolTipService.ToolTip>
+                                            <FontIcon Glyph="&#xE8E1;" FontSize="17" Opacity="0.8"/>
+                                            <TextBlock x:Name="LikesTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
+                                        </StackPanel>
 
-                                        <FontIcon Glyph="&#xE8E1;" FontSize="17" Opacity="0.8"/>
-                                        <TextBlock x:Name="LikesTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
-                                    </StackPanel>
-
-                                    <!-- Comments StackPanel -->
+                                        <!-- Comments StackPanel -->
                                         <StackPanel Grid.Column="3" Orientation="Horizontal" Margin="30 0 0 0">
 
-                                        <ToolTipService.ToolTip>
-                                            <ToolTip Content="Comments" VerticalOffset="-50"/>
-                                        </ToolTipService.ToolTip>
+                                            <ToolTipService.ToolTip>
+                                                <ToolTip Content="Comments" VerticalOffset="-50"/>
+                                            </ToolTipService.ToolTip>
 
-                                        <FontIcon Glyph="&#xE90A;" FontSize="17" Opacity="0.8"/>
-                                        <TextBlock x:Name="CommentsTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
-                                    </StackPanel>
+                                            <FontIcon Glyph="&#xE90A;" FontSize="17" Opacity="0.8"/>
+                                            <TextBlock x:Name="CommentsTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
+                                        </StackPanel>
 
-                                    <!-- Views StackPanel -->
+                                        <!-- Views StackPanel -->
                                         <StackPanel Grid.Column="4" Orientation="Horizontal" Margin="20 0 0 0">
 
-                                        <ToolTipService.ToolTip>
-                                            <ToolTip Content="Total Views" VerticalOffset="-50"/>
-                                        </ToolTipService.ToolTip>
+                                            <ToolTipService.ToolTip>
+                                                <ToolTip Content="Total Views" VerticalOffset="-50"/>
+                                            </ToolTipService.ToolTip>
 
-                                        <FontIcon Glyph="&#xE890;" FontSize="17" Opacity="0.8"/>
-                                        <TextBlock x:Name="ViewsTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
-                                    </StackPanel>
+                                            <FontIcon Glyph="&#xE890;" FontSize="17" Opacity="0.8"/>
+                                            <TextBlock x:Name="ViewsTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
+                                        </StackPanel>
 
-                                   
+                                    </Grid>
 
 
-                                </Grid>
+                                    <Grid Margin="0 6 0 0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
 
-                                <Grid Margin="0 6 0 0">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
+                                        <!-- Website StackPanel -->
+                                        <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="14 0 0 0">
 
-                                    
+                                            <ToolTipService.ToolTip>
+                                                <ToolTip Content="Website" VerticalOffset="-50"/>
+                                            </ToolTipService.ToolTip>
 
-                                    <!-- Website StackPanel -->
-                                    <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="14 0 0 0">
+                                            <FontIcon Glyph="&#xE774;" FontSize="17" Opacity="0.8"/>
+                                            <TextBlock x:Name="WebsiteTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
+                                        </StackPanel>
 
-                                        <ToolTipService.ToolTip>
-                                            <ToolTip Content="Website" VerticalOffset="-50"/>
-                                        </ToolTipService.ToolTip>
+                                        <!-- Extension StackPanel -->
+                                        <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="10 0 0 0">
 
-                                        <FontIcon Glyph="&#xE774;" FontSize="17" Opacity="0.8"/>
-                                        <TextBlock x:Name="WebsiteTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
-                                    </StackPanel>
+                                            <ToolTipService.ToolTip>
+                                                <ToolTip Content="File Extension" VerticalOffset="-50"/>
+                                            </ToolTipService.ToolTip>
 
-                                    <!-- Extension StackPanel -->
-                                    <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="10 0 0 0">
+                                            <FontIcon Glyph="&#xE8B2;" FontSize="17" Opacity="0.8"/>
+                                            <TextBlock x:Name="ExtensionTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
+                                        </StackPanel>
 
-                                        <ToolTipService.ToolTip>
-                                            <ToolTip Content="File Extension" VerticalOffset="-50"/>
-                                        </ToolTipService.ToolTip>
+                                        <!-- File Size StackPanel -->
+                                        <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="10 0 0 0">
 
-                                        <FontIcon Glyph="&#xE8B2;" FontSize="17" Opacity="0.8"/>
-                                        <TextBlock x:Name="ExtensionTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
-                                    </StackPanel>
+                                            <ToolTipService.ToolTip>
+                                                <ToolTip Content="Approx. File Size" VerticalOffset="-50"/>
+                                            </ToolTipService.ToolTip>
 
-                                    <!-- File Size StackPanel -->
-                                    <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="10 0 0 0">
+                                            <FontIcon Glyph="&#xE9F9;" FontSize="17" Opacity="0.8"/>
+                                            <TextBlock x:Name="FileSizeTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
+                                        </StackPanel>
 
-                                        <ToolTipService.ToolTip>
-                                            <ToolTip Content="Approx. File Size" VerticalOffset="-50"/>
-                                        </ToolTipService.ToolTip>
+                                        <!-- Date Uploaded StackPanel -->
+                                        <StackPanel Grid.Column="3" Orientation="Horizontal" Margin="15 0 0 0">
 
-                                        <FontIcon Glyph="&#xE9F9;" FontSize="17" Opacity="0.8"/>
-                                        <TextBlock x:Name="FileSizeTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
-                                    </StackPanel>
+                                            <ToolTipService.ToolTip>
+                                                <ToolTip Content="Date Uploaded" VerticalOffset="-50"/>
+                                            </ToolTipService.ToolTip>
 
-                                    <!-- Date Uploaded StackPanel -->
-                                    <StackPanel Grid.Column="3" Orientation="Horizontal" Margin="15 0 0 0">
+                                            <FontIcon Glyph="&#xEC92;" FontSize="17" Opacity="0.8"/>
+                                            <TextBlock x:Name="DateUploadedTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
+                                        </StackPanel>
 
-                                        <ToolTipService.ToolTip>
-                                            <ToolTip Content="Date Uploaded" VerticalOffset="-50"/>
-                                        </ToolTipService.ToolTip>
+                                    </Grid>
 
-                                        <FontIcon Glyph="&#xEC92;" FontSize="17" Opacity="0.8"/>
-                                        <TextBlock x:Name="DateUploadedTextBlock" Margin="5 0 0 0" Opacity="0.8"/>
-                                    </StackPanel>
+                                    <!-- ____________________________________________VIDEO DETAILS PANE END____________________________________________  -->
 
-                                </Grid>
-
-                                <!-- ____________________________________________WRAP PANEL END____________________________________________  -->
-
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </Expander.Header>
+                        </Expander.Header>
 
-                    <Expander.Content>
-                        <Grid Width="Auto" >
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
+                        <Expander.Content>
+                            <Grid Width="Auto" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
 
-                            </Grid.ColumnDefinitions>
+                                <StackPanel Orientation="Horizontal" Grid.Column="0" Margin="0, 0, 30, 0">
+                                    <TextBlock VerticalAlignment="Center" Margin="0, 0, 10, 0" FontSize="15">Video Quality:</TextBlock>
+                                    <ComboBox Text="Select Quality" PlaceholderText="Select Quality" >
+                                        <x:String>1080p</x:String>
+                                        <x:String>720p</x:String>
+                                        <x:String>480p</x:String>
+                                        <x:String>360p</x:String>
+                                    </ComboBox>
+                                </StackPanel>
 
-                            <StackPanel Orientation="Horizontal" Grid.Column="0" Margin="0, 0, 30, 0">
-                                <TextBlock VerticalAlignment="Center" Margin="0, 0, 10, 0" FontSize="15">Video Quality:</TextBlock>
-                                <ComboBox Text="Select Quality" PlaceholderText="Select Quality" >
-                                    <x:String>1080p</x:String>
-                                    <x:String>720p</x:String>
-                                    <x:String>480p</x:String>
-                                    <x:String>360p</x:String>
+                                <StackPanel Orientation="Horizontal" Grid.Column="2">
+                                    <TextBlock VerticalAlignment="Center" Margin="0, 0, 10, 0" FontSize="15">Download Subtitle:</TextBlock>
+                                    <CheckBox ></CheckBox>
+                                </StackPanel>
 
-                                </ComboBox>
-                            </StackPanel>
-
-                            <StackPanel Orientation="Horizontal" Grid.Column="2">
-                                <TextBlock VerticalAlignment="Center" Margin="0, 0, 10, 0" FontSize="15">Download Subtitle:</TextBlock>
-                                <CheckBox ></CheckBox>
-                            </StackPanel>
-
-                            <StackPanel Orientation="Horizontal" Grid.Column="4">
-                                <TextBlock VerticalAlignment="Center" Margin="0, 0, 10, 0" FontSize="15">Split by Chapters:</TextBlock>
-                                <CheckBox ></CheckBox>
-                            </StackPanel>
+                                <StackPanel Orientation="Horizontal" Grid.Column="4">
+                                    <TextBlock VerticalAlignment="Center" Margin="0, 0, 10, 0" FontSize="15">Split by Chapters:</TextBlock>
+                                    <CheckBox ></CheckBox>
+                                </StackPanel>
 
 
-                        </Grid>
-                    </Expander.Content>
-                </Expander>
-            </Grid>
+                            </Grid>
+                        </Expander.Content>
+                    </Expander>
+                </Grid>
+                <!-- _____________________________________EXPANDER CONTAINER END_____________________________________ -->
 
 
 
 
-
-            <Grid Width="Auto" >
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-
-                <!-- URL TextBox -->
-                <TextBox x:Name="URL_TextBox" Header="URL" VerticalAlignment="Bottom" 
-             HorizontalAlignment="Stretch" Margin="0 10 10 10" IsReadOnly="True" Width="Auto" Grid.Column="0"/>
-
-                <!-- Open URL Button -->
-                <Button x:Name="OpenURL_Button" Click="OpenURL_Button_Click" Grid.Column="1" VerticalAlignment="Center" Margin="0, 26, 0, 0">
-                    <FontIcon Glyph="&#xE8A7;"/>
-                </Button>
-            </Grid >
-
-
-
-            <Grid Width="Auto" >
+                <!-- _____________________________________URL CONTAINER START _____________________________________ -->
+                <Grid Width="Auto" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
-                 
-                <!-- Location TextBox -->
-                <TextBox x:Name="Location_TextBox" Header="Download Location" VerticalAlignment="Bottom" 
-                         HorizontalAlignment="Stretch" Margin="0 10 10 10" IsReadOnly="True" Width="Auto" Grid.Column="0"/>
-                
-                <!-- Change Location Button -->
-                <Button x:Name="ChangeLocationButton" Click="ChangeLocationButton_ClickAsync" Grid.Column="1" VerticalAlignment="Center" Margin="0, 26, 0, 0">
-                    <FontIcon Glyph="&#xE8DA;"/>
-                </Button>
-            </Grid >
+
+                    <!-- URL TextBox -->
+                    <TextBox x:Name="URL_TextBox"
+                             Header="URL" 
+                             VerticalAlignment="Bottom" 
+                             HorizontalAlignment="Stretch"
+                             Margin="0 10 10 10"
+                             IsReadOnly="True"
+                             Width="Auto"
+                             Grid.Column="0"
+                    />
+
+                    <!-- Open URL Button -->
+                    <Button x:Name="OpenURL_Button" 
+                            Click="OpenURL_Button_Click" 
+                            Grid.Column="1" 
+                            VerticalAlignment="Center" 
+                            Margin="0, 26, 0, 0"
+                    >
+                        <FontIcon Glyph="&#xE8A7;"/>
+                    </Button>
+                </Grid>
+                <!-- _____________________________________URL CONTAINER END _____________________________________ -->
 
 
-            <Grid Width="Auto" Margin="10, 20, 10, 10" HorizontalAlignment="Center">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
 
-                <Button Grid.Column="0" Margin="0, 0, 10, 0" Width="140">
-                    Download Later
-                </Button>
 
-                <Button Grid.Column="1" Margin="0, 0, 15, 0" Width="140" Style="{StaticResource AccentButtonStyle}">
-                    Start Download
-                </Button>
+                <!-- _____________________________________DOWNLOAD LOCATION CONTAINER START _____________________________________ -->
+                <Grid Width="Auto" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
 
-                <Button Grid.Column="2" Width="140" >
-                    Cancel
-                </Button>
+                    <!-- Location TextBox -->
+                    <TextBox x:Name="Location_TextBox"
+                             Header="Download Location"
+                             VerticalAlignment="Bottom" 
+                             HorizontalAlignment="Stretch"
+                             Margin="0 10 10 10" 
+                             IsReadOnly="True"
+                             Width="Auto" 
+                             Grid.Column="0"
+                    />
 
-            </Grid>
+                    <!-- Change Location Button -->
+                    <Button x:Name="ChangeLocationButton"
+                            Click="ChangeLocationButton_ClickAsync"
+                            Grid.Column="1" 
+                            VerticalAlignment="Center" 
+                            Margin="0, 26, 0, 0"
+                    >
+                        <FontIcon Glyph="&#xE8DA;"/>
+                    </Button>
+                </Grid >
+                <!-- _____________________________________DOWNLOAD LOCATION CONTAINER END _____________________________________ -->
 
-                
-        </StackPanel>
+
+
+
+                <!-- _____________________________________ACTION BUTTONS CONTAINER START _____________________________________ -->
+                <Grid Width="Auto" 
+                      Margin="10, 20, 10, 10" 
+                      HorizontalAlignment="Center"
+                >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0" Margin="0, 0, 10, 0" Width="140" Content="Download Later" />
+
+                    <Button x:Name="StartDownload_Button" Grid.Column="1" Margin="0, 0, 15, 0" Width="140" Style="{StaticResource AccentButtonStyle}" Content="Start Download" Click="StartDownload_Button_Click" />
+
+                    <Button Grid.Column="2" Width="140" Content="Cancel" />
+                </Grid>
+                <!-- _____________________________________ACTION BUTTONS CONTAINER END _____________________________________ -->
+
+
+            </StackPanel>
         </ScrollViewer>
-
-
     </Grid>
 
     <Window.SystemBackdrop>

@@ -2,9 +2,9 @@
 
 namespace Nitro_Downloader.ViewModels;
 
-public partial class HomeViewModel : ObservableRecipient
+public partial class VideoQueuedViewModel : ObservableRecipient
 {
-    public HomeViewModel()
+    public VideoQueuedViewModel()
     {
     }
 }

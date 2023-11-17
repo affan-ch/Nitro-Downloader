@@ -4,7 +4,9 @@ MainWindow.xbf
 Styles\FontSizes.xbf
 Styles\TextBlock.xbf
 Styles\Thickness.xbf
-Views\AllDownloadsPage.xbf
-Views\HomePage.xbf
+Views\AddVideoDownloadPage.xbf
 Views\SettingsPage.xbf
 Views\ShellPage.xbf
+Views\VideoDownloadedPage.xbf
+Views\VideoDownloadingPage.xbf
+Views\VideoQueuedPage.xbf

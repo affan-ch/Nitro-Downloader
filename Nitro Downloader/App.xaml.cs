@@ -1,10 +1,12 @@
 ﻿using System.Diagnostics;
 using System.Web;
+
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.Windows.AppLifecycle;
+
 using Nitro_Downloader.Activation;
 using Nitro_Downloader.Contracts.Services;
 using Nitro_Downloader.Core.Contracts.Services;
@@ -81,12 +83,16 @@ public partial class App : Application
             services.AddSingleton<IFileService, FileService>();
 
             // Views and ViewModels
-            services.AddTransient<AllDownloadsViewModel>();
-            services.AddTransient<AllDownloadsPage>();
+            services.AddTransient<AddVideoDownloadViewModel>();
+            services.AddTransient<AddVideoDownloadPage>();
+            services.AddTransient<VideoQueuedViewModel>();
+            services.AddTransient<VideoQueuedPage>();
+            services.AddTransient<VideoDownloadedViewModel>();
+            services.AddTransient<VideoDownloadedPage>();
+            services.AddTransient<VideoDownloadingViewModel>();
+            services.AddTransient<VideoDownloadingPage>();
             services.AddTransient<SettingsViewModel>();
             services.AddTransient<SettingsPage>();
-            services.AddTransient<HomeViewModel>();
-            services.AddTransient<HomePage>();
             services.AddTransient<ShellPage>();
             services.AddTransient<ShellViewModel>();
 

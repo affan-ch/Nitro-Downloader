@@ -14,9 +14,11 @@ public class PageService : IPageService
 
     public PageService()
     {
-        Configure<HomeViewModel, HomePage>();
         Configure<SettingsViewModel, SettingsPage>();
-        Configure<AllDownloadsViewModel, AllDownloadsPage>();
+        Configure<VideoDownloadingViewModel, VideoDownloadingPage>();
+        Configure<VideoDownloadedViewModel, VideoDownloadedPage>();
+        Configure<VideoQueuedViewModel, VideoQueuedPage>();
+        Configure<AddVideoDownloadViewModel, AddVideoDownloadPage>();
     }
 
     public Type GetPageType(string key)

@@ -38,16 +38,42 @@
             
             <NavigationView.MenuItems>
  
-                <NavigationViewItem x:Uid="Shell_Home" helpers:NavigationHelper.NavigateTo="Nitro_Downloader.ViewModels.HomeViewModel">
+                <NavigationViewItem Content="Video Download" IsExpanded="True">
                     <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE80F;"/>
+                        <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE714;"/>
                     </NavigationViewItem.Icon>
+                    
+                    <NavigationViewItem.MenuItems>
+                        <NavigationViewItem x:Uid="Shell_AddVideoDownload" IsSelected="True" helpers:NavigationHelper.NavigateTo="Nitro_Downloader.ViewModels.AddVideoDownloadViewModel">
+                            <NavigationViewItem.Icon>
+                                <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xECC8;"/>
+                            </NavigationViewItem.Icon>
+                        </NavigationViewItem>
+                        
+                        <NavigationViewItem x:Uid="Shell_VideoDownloading" helpers:NavigationHelper.NavigateTo="Nitro_Downloader.ViewModels.VideoDownloadingViewModel">
+                            <NavigationViewItem.Icon>
+                                <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE8F7;"/>
+                            </NavigationViewItem.Icon>
+                        </NavigationViewItem>
+                        
+                        <NavigationViewItem x:Uid="Shell_VideoDownloaded" helpers:NavigationHelper.NavigateTo="Nitro_Downloader.ViewModels.VideoDownloadedViewModel">
+                            <NavigationViewItem.Icon>
+                                <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE896;"/>
+                            </NavigationViewItem.Icon>
+                        </NavigationViewItem>
+                        
+                        <NavigationViewItem x:Uid="Shell_VideoQueued" helpers:NavigationHelper.NavigateTo="Nitro_Downloader.ViewModels.VideoQueuedViewModel">
+                            <NavigationViewItem.Icon>
+                                <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE769;"/>
+                            </NavigationViewItem.Icon>
+                        </NavigationViewItem>
+
+                    </NavigationViewItem.MenuItems>
+                    
                 </NavigationViewItem>
-                <NavigationViewItem x:Uid="Shell_AllDownloads" helpers:NavigationHelper.NavigateTo="Nitro_Downloader.ViewModels.AllDownloadsViewModel">
-                    <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xe7c3;"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
+
+                
+
             </NavigationView.MenuItems>
             <NavigationView.HeaderTemplate>
                 <DataTemplate>

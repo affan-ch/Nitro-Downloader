@@ -172,4 +172,13 @@ public sealed partial class DownloadWindow : WindowEx
             Debug.WriteLine("An Error Occured: " + ex.Message);
         }
     }
+
+    private void StartDownload_Button_Click(object sender, RoutedEventArgs e)
+    {
+        BodyContainer.Visibility = Visibility.Collapsed;
+
+        ProgressRingStackPanel.Visibility = Visibility.Collapsed;
+
+
+    }
 }
