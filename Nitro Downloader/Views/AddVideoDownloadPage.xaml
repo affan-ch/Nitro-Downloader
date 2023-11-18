@@ -10,7 +10,8 @@
 
 	<StackPanel>
 
-		<!-- Link TextBox -->
+
+        <!-- Link TextBox -->
 		<TextBox x:Name="Link_TextBox" AutomationProperties.Name="multi-line TextBox" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True" MinWidth="400" PlaceholderText="https://www.youtube.com/watch?v=MjxGwfa5lxw" />
 
 

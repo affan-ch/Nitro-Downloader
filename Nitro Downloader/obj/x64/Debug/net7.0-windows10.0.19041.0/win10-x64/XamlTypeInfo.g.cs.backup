@@ -224,7 +224,7 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[124];
+            _typeNameTable = new string[125];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
@@ -314,43 +314,44 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
             _typeNameTable[86] = "Nitro_Downloader.ViewModels.ShellViewModel";
             _typeNameTable[87] = "Nitro_Downloader.Views.VideoDownloadedPage";
             _typeNameTable[88] = "Nitro_Downloader.ViewModels.VideoDownloadedViewModel";
-            _typeNameTable[89] = "CommunityToolkit.WinUI.UI.Controls.DataGrid";
-            _typeNameTable[90] = "CommunityToolkit.WinUI.UI.Controls.DataGridGridLinesVisibility";
-            _typeNameTable[91] = "CommunityToolkit.WinUI.UI.Controls.DataGridHeadersVisibility";
-            _typeNameTable[92] = "CommunityToolkit.WinUI.UI.Controls.DataGridSelectionMode";
-            _typeNameTable[93] = "System.Collections.ObjectModel.ObservableCollection`1<CommunityToolkit.WinUI.UI.Controls.DataGridColumn>";
-            _typeNameTable[94] = "System.Collections.ObjectModel.Collection`1<CommunityToolkit.WinUI.UI.Controls.DataGridColumn>";
-            _typeNameTable[95] = "CommunityToolkit.WinUI.UI.Controls.DataGridColumn";
-            _typeNameTable[96] = "Microsoft.UI.Xaml.Data.Binding";
-            _typeNameTable[97] = "Int32";
-            _typeNameTable[98] = "System.Nullable`1<CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection>";
-            _typeNameTable[99] = "CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection";
-            _typeNameTable[100] = "Microsoft.UI.Xaml.Visibility";
-            _typeNameTable[101] = "CommunityToolkit.WinUI.UI.Controls.DataGridLength";
-            _typeNameTable[102] = "Microsoft.UI.Xaml.Media.Brush";
-            _typeNameTable[103] = "CommunityToolkit.WinUI.UI.Controls.DataGridClipboardCopyMode";
-            _typeNameTable[104] = "Microsoft.UI.Xaml.Controls.ScrollBarVisibility";
-            _typeNameTable[105] = "Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger";
-            _typeNameTable[106] = "System.Collections.IEnumerable";
-            _typeNameTable[107] = "CommunityToolkit.WinUI.UI.Controls.DataGridRowDetailsVisibilityMode";
-            _typeNameTable[108] = "System.Collections.ObjectModel.ObservableCollection`1<Microsoft.UI.Xaml.Style>";
-            _typeNameTable[109] = "System.Collections.ObjectModel.Collection`1<Microsoft.UI.Xaml.Style>";
-            _typeNameTable[110] = "System.Collections.IList";
-            _typeNameTable[111] = "CommunityToolkit.WinUI.UI.Controls.DataGridCell";
-            _typeNameTable[112] = "CommunityToolkit.WinUI.UI.Controls.DataGridTextColumn";
-            _typeNameTable[113] = "CommunityToolkit.WinUI.UI.Controls.DataGridBoundColumn";
-            _typeNameTable[114] = "Microsoft.UI.Xaml.Media.FontFamily";
-            _typeNameTable[115] = "Windows.UI.Text.FontStyle";
-            _typeNameTable[116] = "Windows.UI.Text.FontWeight";
-            _typeNameTable[117] = "CommunityToolkit.WinUI.UI.Controls.DataGridTemplateColumn";
-            _typeNameTable[118] = "Nitro_Downloader.Views.VideoDownloadingPage";
-            _typeNameTable[119] = "Nitro_Downloader.ViewModels.VideoDownloadingViewModel";
-            _typeNameTable[120] = "Nitro_Downloader.Views.VideoQueuedPage";
-            _typeNameTable[121] = "Nitro_Downloader.ViewModels.VideoQueuedViewModel";
-            _typeNameTable[122] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
-            _typeNameTable[123] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
+            _typeNameTable[89] = "Nitro_Downloader.Views.StringToUriConverter";
+            _typeNameTable[90] = "CommunityToolkit.WinUI.UI.Controls.DataGrid";
+            _typeNameTable[91] = "CommunityToolkit.WinUI.UI.Controls.DataGridGridLinesVisibility";
+            _typeNameTable[92] = "CommunityToolkit.WinUI.UI.Controls.DataGridHeadersVisibility";
+            _typeNameTable[93] = "CommunityToolkit.WinUI.UI.Controls.DataGridSelectionMode";
+            _typeNameTable[94] = "System.Collections.ObjectModel.ObservableCollection`1<CommunityToolkit.WinUI.UI.Controls.DataGridColumn>";
+            _typeNameTable[95] = "System.Collections.ObjectModel.Collection`1<CommunityToolkit.WinUI.UI.Controls.DataGridColumn>";
+            _typeNameTable[96] = "CommunityToolkit.WinUI.UI.Controls.DataGridColumn";
+            _typeNameTable[97] = "Microsoft.UI.Xaml.Data.Binding";
+            _typeNameTable[98] = "Int32";
+            _typeNameTable[99] = "System.Nullable`1<CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection>";
+            _typeNameTable[100] = "CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection";
+            _typeNameTable[101] = "Microsoft.UI.Xaml.Visibility";
+            _typeNameTable[102] = "CommunityToolkit.WinUI.UI.Controls.DataGridLength";
+            _typeNameTable[103] = "Microsoft.UI.Xaml.Media.Brush";
+            _typeNameTable[104] = "CommunityToolkit.WinUI.UI.Controls.DataGridClipboardCopyMode";
+            _typeNameTable[105] = "Microsoft.UI.Xaml.Controls.ScrollBarVisibility";
+            _typeNameTable[106] = "Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger";
+            _typeNameTable[107] = "System.Collections.IEnumerable";
+            _typeNameTable[108] = "CommunityToolkit.WinUI.UI.Controls.DataGridRowDetailsVisibilityMode";
+            _typeNameTable[109] = "System.Collections.ObjectModel.ObservableCollection`1<Microsoft.UI.Xaml.Style>";
+            _typeNameTable[110] = "System.Collections.ObjectModel.Collection`1<Microsoft.UI.Xaml.Style>";
+            _typeNameTable[111] = "System.Collections.IList";
+            _typeNameTable[112] = "CommunityToolkit.WinUI.UI.Controls.DataGridCell";
+            _typeNameTable[113] = "CommunityToolkit.WinUI.UI.Controls.DataGridTextColumn";
+            _typeNameTable[114] = "CommunityToolkit.WinUI.UI.Controls.DataGridBoundColumn";
+            _typeNameTable[115] = "Microsoft.UI.Xaml.Media.FontFamily";
+            _typeNameTable[116] = "Windows.UI.Text.FontStyle";
+            _typeNameTable[117] = "Windows.UI.Text.FontWeight";
+            _typeNameTable[118] = "CommunityToolkit.WinUI.UI.Controls.DataGridTemplateColumn";
+            _typeNameTable[119] = "Nitro_Downloader.Views.VideoDownloadingPage";
+            _typeNameTable[120] = "Nitro_Downloader.ViewModels.VideoDownloadingViewModel";
+            _typeNameTable[121] = "Nitro_Downloader.Views.VideoQueuedPage";
+            _typeNameTable[122] = "Nitro_Downloader.ViewModels.VideoQueuedViewModel";
+            _typeNameTable[123] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
+            _typeNameTable[124] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
 
-            _typeTable = new global::System.Type[124];
+            _typeTable = new global::System.Type[125];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
@@ -442,41 +443,42 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
             _typeTable[86] = typeof(global::Nitro_Downloader.ViewModels.ShellViewModel);
             _typeTable[87] = typeof(global::Nitro_Downloader.Views.VideoDownloadedPage);
             _typeTable[88] = typeof(global::Nitro_Downloader.ViewModels.VideoDownloadedViewModel);
-            _typeTable[89] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGrid);
-            _typeTable[90] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridGridLinesVisibility);
-            _typeTable[91] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridHeadersVisibility);
-            _typeTable[92] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridSelectionMode);
-            _typeTable[93] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn>);
-            _typeTable[94] = typeof(global::System.Collections.ObjectModel.Collection<global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn>);
-            _typeTable[95] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn);
-            _typeTable[96] = typeof(global::Microsoft.UI.Xaml.Data.Binding);
-            _typeTable[97] = typeof(global::System.Int32);
-            _typeTable[98] = typeof(global::System.Nullable<global::CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection>);
-            _typeTable[99] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection);
-            _typeTable[100] = typeof(global::Microsoft.UI.Xaml.Visibility);
-            _typeTable[101] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridLength);
-            _typeTable[102] = typeof(global::Microsoft.UI.Xaml.Media.Brush);
-            _typeTable[103] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridClipboardCopyMode);
-            _typeTable[104] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollBarVisibility);
-            _typeTable[105] = typeof(global::Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger);
-            _typeTable[106] = typeof(global::System.Collections.IEnumerable);
-            _typeTable[107] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridRowDetailsVisibilityMode);
-            _typeTable[108] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Microsoft.UI.Xaml.Style>);
-            _typeTable[109] = typeof(global::System.Collections.ObjectModel.Collection<global::Microsoft.UI.Xaml.Style>);
-            _typeTable[110] = typeof(global::System.Collections.IList);
-            _typeTable[111] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridCell);
-            _typeTable[112] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridTextColumn);
-            _typeTable[113] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridBoundColumn);
-            _typeTable[114] = typeof(global::Microsoft.UI.Xaml.Media.FontFamily);
-            _typeTable[115] = typeof(global::Windows.UI.Text.FontStyle);
-            _typeTable[116] = typeof(global::Windows.UI.Text.FontWeight);
-            _typeTable[117] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridTemplateColumn);
-            _typeTable[118] = typeof(global::Nitro_Downloader.Views.VideoDownloadingPage);
-            _typeTable[119] = typeof(global::Nitro_Downloader.ViewModels.VideoDownloadingViewModel);
-            _typeTable[120] = typeof(global::Nitro_Downloader.Views.VideoQueuedPage);
-            _typeTable[121] = typeof(global::Nitro_Downloader.ViewModels.VideoQueuedViewModel);
-            _typeTable[122] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
-            _typeTable[123] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
+            _typeTable[89] = typeof(global::Nitro_Downloader.Views.StringToUriConverter);
+            _typeTable[90] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGrid);
+            _typeTable[91] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridGridLinesVisibility);
+            _typeTable[92] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridHeadersVisibility);
+            _typeTable[93] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridSelectionMode);
+            _typeTable[94] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn>);
+            _typeTable[95] = typeof(global::System.Collections.ObjectModel.Collection<global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn>);
+            _typeTable[96] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn);
+            _typeTable[97] = typeof(global::Microsoft.UI.Xaml.Data.Binding);
+            _typeTable[98] = typeof(global::System.Int32);
+            _typeTable[99] = typeof(global::System.Nullable<global::CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection>);
+            _typeTable[100] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection);
+            _typeTable[101] = typeof(global::Microsoft.UI.Xaml.Visibility);
+            _typeTable[102] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridLength);
+            _typeTable[103] = typeof(global::Microsoft.UI.Xaml.Media.Brush);
+            _typeTable[104] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridClipboardCopyMode);
+            _typeTable[105] = typeof(global::Microsoft.UI.Xaml.Controls.ScrollBarVisibility);
+            _typeTable[106] = typeof(global::Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger);
+            _typeTable[107] = typeof(global::System.Collections.IEnumerable);
+            _typeTable[108] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridRowDetailsVisibilityMode);
+            _typeTable[109] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Microsoft.UI.Xaml.Style>);
+            _typeTable[110] = typeof(global::System.Collections.ObjectModel.Collection<global::Microsoft.UI.Xaml.Style>);
+            _typeTable[111] = typeof(global::System.Collections.IList);
+            _typeTable[112] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridCell);
+            _typeTable[113] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridTextColumn);
+            _typeTable[114] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridBoundColumn);
+            _typeTable[115] = typeof(global::Microsoft.UI.Xaml.Media.FontFamily);
+            _typeTable[116] = typeof(global::Windows.UI.Text.FontStyle);
+            _typeTable[117] = typeof(global::Windows.UI.Text.FontWeight);
+            _typeTable[118] = typeof(global::CommunityToolkit.WinUI.UI.Controls.DataGridTemplateColumn);
+            _typeTable[119] = typeof(global::Nitro_Downloader.Views.VideoDownloadingPage);
+            _typeTable[120] = typeof(global::Nitro_Downloader.ViewModels.VideoDownloadingViewModel);
+            _typeTable[121] = typeof(global::Nitro_Downloader.Views.VideoQueuedPage);
+            _typeTable[122] = typeof(global::Nitro_Downloader.ViewModels.VideoQueuedViewModel);
+            _typeTable[123] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
+            _typeTable[124] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -532,19 +534,20 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
         private object Activate_81_NavigationViewHeaderBehavior() { return new global::Nitro_Downloader.Behaviors.NavigationViewHeaderBehavior(); }
         private object Activate_87_VideoDownloadedPage() { return new global::Nitro_Downloader.Views.VideoDownloadedPage(); }
         private object Activate_88_VideoDownloadedViewModel() { return new global::Nitro_Downloader.ViewModels.VideoDownloadedViewModel(); }
-        private object Activate_89_DataGrid() { return new global::CommunityToolkit.WinUI.UI.Controls.DataGrid(); }
-        private object Activate_93_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn>(); }
-        private object Activate_94_Collection() { return new global::System.Collections.ObjectModel.Collection<global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn>(); }
-        private object Activate_108_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Microsoft.UI.Xaml.Style>(); }
-        private object Activate_109_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Microsoft.UI.Xaml.Style>(); }
-        private object Activate_111_DataGridCell() { return new global::CommunityToolkit.WinUI.UI.Controls.DataGridCell(); }
-        private object Activate_112_DataGridTextColumn() { return new global::CommunityToolkit.WinUI.UI.Controls.DataGridTextColumn(); }
-        private object Activate_117_DataGridTemplateColumn() { return new global::CommunityToolkit.WinUI.UI.Controls.DataGridTemplateColumn(); }
-        private object Activate_118_VideoDownloadingPage() { return new global::Nitro_Downloader.Views.VideoDownloadingPage(); }
-        private object Activate_119_VideoDownloadingViewModel() { return new global::Nitro_Downloader.ViewModels.VideoDownloadingViewModel(); }
-        private object Activate_120_VideoQueuedPage() { return new global::Nitro_Downloader.Views.VideoQueuedPage(); }
-        private object Activate_121_VideoQueuedViewModel() { return new global::Nitro_Downloader.ViewModels.VideoQueuedViewModel(); }
-        private object Activate_122_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
+        private object Activate_89_StringToUriConverter() { return new global::Nitro_Downloader.Views.StringToUriConverter(); }
+        private object Activate_90_DataGrid() { return new global::CommunityToolkit.WinUI.UI.Controls.DataGrid(); }
+        private object Activate_94_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn>(); }
+        private object Activate_95_Collection() { return new global::System.Collections.ObjectModel.Collection<global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn>(); }
+        private object Activate_109_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Microsoft.UI.Xaml.Style>(); }
+        private object Activate_110_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Microsoft.UI.Xaml.Style>(); }
+        private object Activate_112_DataGridCell() { return new global::CommunityToolkit.WinUI.UI.Controls.DataGridCell(); }
+        private object Activate_113_DataGridTextColumn() { return new global::CommunityToolkit.WinUI.UI.Controls.DataGridTextColumn(); }
+        private object Activate_118_DataGridTemplateColumn() { return new global::CommunityToolkit.WinUI.UI.Controls.DataGridTemplateColumn(); }
+        private object Activate_119_VideoDownloadingPage() { return new global::Nitro_Downloader.Views.VideoDownloadingPage(); }
+        private object Activate_120_VideoDownloadingViewModel() { return new global::Nitro_Downloader.ViewModels.VideoDownloadingViewModel(); }
+        private object Activate_121_VideoQueuedPage() { return new global::Nitro_Downloader.Views.VideoQueuedPage(); }
+        private object Activate_122_VideoQueuedViewModel() { return new global::Nitro_Downloader.ViewModels.VideoQueuedViewModel(); }
+        private object Activate_123_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -564,31 +567,31 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
             var newItem = (global::Microsoft.UI.Xaml.DependencyObject)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_93_ObservableCollection(object instance, object item)
+        private void VectorAdd_94_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn>)instance;
             var newItem = (global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_94_Collection(object instance, object item)
+        private void VectorAdd_95_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn>)instance;
             var newItem = (global::CommunityToolkit.WinUI.UI.Controls.DataGridColumn)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_108_ObservableCollection(object instance, object item)
+        private void VectorAdd_109_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Style>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Style)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_109_Collection(object instance, object item)
+        private void VectorAdd_110_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Style>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Style)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_123_IList(object instance, object item)
+        private void VectorAdd_124_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.TreeViewNode>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)item;
@@ -1261,9 +1264,16 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 89:   //  CommunityToolkit.WinUI.UI.Controls.DataGrid
+            case 89:   //  Nitro_Downloader.Views.StringToUriConverter
+                userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_89_StringToUriConverter;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 90:   //  CommunityToolkit.WinUI.UI.Controls.DataGrid
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_89_DataGrid;
+                userType.Activator = Activate_90_DataGrid;
                 userType.AddMemberName("AutoGenerateColumns");
                 userType.AddMemberName("GridLinesVisibility");
                 userType.AddMemberName("CanUserSortColumns");
@@ -1313,7 +1323,7 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 90:   //  CommunityToolkit.WinUI.UI.Controls.DataGridGridLinesVisibility
+            case 91:   //  CommunityToolkit.WinUI.UI.Controls.DataGridGridLinesVisibility
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("None", global::CommunityToolkit.WinUI.UI.Controls.DataGridGridLinesVisibility.None);
                 userType.AddEnumValue("Horizontal", global::CommunityToolkit.WinUI.UI.Controls.DataGridGridLinesVisibility.Horizontal);
@@ -1322,7 +1332,7 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 91:   //  CommunityToolkit.WinUI.UI.Controls.DataGridHeadersVisibility
+            case 92:   //  CommunityToolkit.WinUI.UI.Controls.DataGridHeadersVisibility
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("None", global::CommunityToolkit.WinUI.UI.Controls.DataGridHeadersVisibility.None);
                 userType.AddEnumValue("Column", global::CommunityToolkit.WinUI.UI.Controls.DataGridHeadersVisibility.Column);
@@ -1331,28 +1341,28 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 92:   //  CommunityToolkit.WinUI.UI.Controls.DataGridSelectionMode
+            case 93:   //  CommunityToolkit.WinUI.UI.Controls.DataGridSelectionMode
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Extended", global::CommunityToolkit.WinUI.UI.Controls.DataGridSelectionMode.Extended);
                 userType.AddEnumValue("Single", global::CommunityToolkit.WinUI.UI.Controls.DataGridSelectionMode.Single);
                 xamlType = userType;
                 break;
 
-            case 93:   //  System.Collections.ObjectModel.ObservableCollection`1<CommunityToolkit.WinUI.UI.Controls.DataGridColumn>
+            case 94:   //  System.Collections.ObjectModel.ObservableCollection`1<CommunityToolkit.WinUI.UI.Controls.DataGridColumn>
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<CommunityToolkit.WinUI.UI.Controls.DataGridColumn>"));
-                userType.CollectionAdd = VectorAdd_93_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_94_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 94:   //  System.Collections.ObjectModel.Collection`1<CommunityToolkit.WinUI.UI.Controls.DataGridColumn>
+            case 95:   //  System.Collections.ObjectModel.Collection`1<CommunityToolkit.WinUI.UI.Controls.DataGridColumn>
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_94_Collection;
-                userType.CollectionAdd = VectorAdd_94_Collection;
+                userType.Activator = Activate_95_Collection;
+                userType.CollectionAdd = VectorAdd_95_Collection;
                 xamlType = userType;
                 break;
 
-            case 95:   //  CommunityToolkit.WinUI.UI.Controls.DataGridColumn
+            case 96:   //  CommunityToolkit.WinUI.UI.Controls.DataGridColumn
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 userType.AddMemberName("ActualWidth");
                 userType.AddMemberName("CanUserReorder");
@@ -1376,15 +1386,15 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 96:   //  Microsoft.UI.Xaml.Data.Binding
+            case 97:   //  Microsoft.UI.Xaml.Data.Binding
                 xamlType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 97:   //  Int32
+            case 98:   //  Int32
                 xamlType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 98:   //  System.Nullable`1<CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection>
+            case 99:   //  System.Nullable`1<CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection>
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetBoxedType(GetXamlTypeByName("CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection"));
                 userType.BoxInstance = userType.BoxType<global::CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection>;
@@ -1392,29 +1402,29 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 99:   //  CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection
+            case 100:   //  CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Ascending", global::CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection.Ascending);
                 userType.AddEnumValue("Descending", global::CommunityToolkit.WinUI.UI.Controls.DataGridSortDirection.Descending);
                 xamlType = userType;
                 break;
 
-            case 100:   //  Microsoft.UI.Xaml.Visibility
+            case 101:   //  Microsoft.UI.Xaml.Visibility
                 xamlType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 101:   //  CommunityToolkit.WinUI.UI.Controls.DataGridLength
+            case 102:   //  CommunityToolkit.WinUI.UI.Controls.DataGridLength
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.CreateFromStringMethod = x => (global::System.Object)global::CommunityToolkit.WinUI.UI.Controls.DataGridLength.ConvertFromString(x);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 102:   //  Microsoft.UI.Xaml.Media.Brush
+            case 103:   //  Microsoft.UI.Xaml.Media.Brush
                 xamlType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 103:   //  CommunityToolkit.WinUI.UI.Controls.DataGridClipboardCopyMode
+            case 104:   //  CommunityToolkit.WinUI.UI.Controls.DataGridClipboardCopyMode
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("None", global::CommunityToolkit.WinUI.UI.Controls.DataGridClipboardCopyMode.None);
                 userType.AddEnumValue("ExcludeHeader", global::CommunityToolkit.WinUI.UI.Controls.DataGridClipboardCopyMode.ExcludeHeader);
@@ -1422,21 +1432,21 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 104:   //  Microsoft.UI.Xaml.Controls.ScrollBarVisibility
+            case 105:   //  Microsoft.UI.Xaml.Controls.ScrollBarVisibility
                 xamlType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 105:   //  Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger
+            case 106:   //  Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger
                 xamlType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 106:   //  System.Collections.IEnumerable
+            case 107:   //  System.Collections.IEnumerable
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 107:   //  CommunityToolkit.WinUI.UI.Controls.DataGridRowDetailsVisibilityMode
+            case 108:   //  CommunityToolkit.WinUI.UI.Controls.DataGridRowDetailsVisibilityMode
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("VisibleWhenSelected", global::CommunityToolkit.WinUI.UI.Controls.DataGridRowDetailsVisibilityMode.VisibleWhenSelected);
                 userType.AddEnumValue("Visible", global::CommunityToolkit.WinUI.UI.Controls.DataGridRowDetailsVisibilityMode.Visible);
@@ -1444,36 +1454,36 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 108:   //  System.Collections.ObjectModel.ObservableCollection`1<Microsoft.UI.Xaml.Style>
+            case 109:   //  System.Collections.ObjectModel.ObservableCollection`1<Microsoft.UI.Xaml.Style>
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Microsoft.UI.Xaml.Style>"));
-                userType.CollectionAdd = VectorAdd_108_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_109_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 109:   //  System.Collections.ObjectModel.Collection`1<Microsoft.UI.Xaml.Style>
+            case 110:   //  System.Collections.ObjectModel.Collection`1<Microsoft.UI.Xaml.Style>
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_109_Collection;
-                userType.CollectionAdd = VectorAdd_109_Collection;
+                userType.Activator = Activate_110_Collection;
+                userType.CollectionAdd = VectorAdd_110_Collection;
                 xamlType = userType;
                 break;
 
-            case 110:   //  System.Collections.IList
+            case 111:   //  System.Collections.IList
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 111:   //  CommunityToolkit.WinUI.UI.Controls.DataGridCell
+            case 112:   //  CommunityToolkit.WinUI.UI.Controls.DataGridCell
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ContentControl"));
-                userType.Activator = Activate_111_DataGridCell;
+                userType.Activator = Activate_112_DataGridCell;
                 userType.AddMemberName("IsValid");
                 xamlType = userType;
                 break;
 
-            case 112:   //  CommunityToolkit.WinUI.UI.Controls.DataGridTextColumn
+            case 113:   //  CommunityToolkit.WinUI.UI.Controls.DataGridTextColumn
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.WinUI.UI.Controls.DataGridBoundColumn"));
-                userType.Activator = Activate_112_DataGridTextColumn;
+                userType.Activator = Activate_113_DataGridTextColumn;
                 userType.AddMemberName("FontFamily");
                 userType.AddMemberName("FontSize");
                 userType.AddMemberName("FontStyle");
@@ -1482,7 +1492,7 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 113:   //  CommunityToolkit.WinUI.UI.Controls.DataGridBoundColumn
+            case 114:   //  CommunityToolkit.WinUI.UI.Controls.DataGridBoundColumn
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.WinUI.UI.Controls.DataGridColumn"));
                 userType.AddMemberName("Binding");
                 userType.AddMemberName("ClipboardContentBinding");
@@ -1491,11 +1501,11 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 114:   //  Microsoft.UI.Xaml.Media.FontFamily
+            case 115:   //  Microsoft.UI.Xaml.Media.FontFamily
                 xamlType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 115:   //  Windows.UI.Text.FontStyle
+            case 116:   //  Windows.UI.Text.FontStyle
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Normal", global::Windows.UI.Text.FontStyle.Normal);
                 userType.AddEnumValue("Oblique", global::Windows.UI.Text.FontStyle.Oblique);
@@ -1503,53 +1513,53 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 116:   //  Windows.UI.Text.FontWeight
+            case 117:   //  Windows.UI.Text.FontWeight
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 117:   //  CommunityToolkit.WinUI.UI.Controls.DataGridTemplateColumn
+            case 118:   //  CommunityToolkit.WinUI.UI.Controls.DataGridTemplateColumn
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.WinUI.UI.Controls.DataGridColumn"));
-                userType.Activator = Activate_117_DataGridTemplateColumn;
+                userType.Activator = Activate_118_DataGridTemplateColumn;
                 userType.AddMemberName("CellTemplate");
                 userType.AddMemberName("CellEditingTemplate");
                 xamlType = userType;
                 break;
 
-            case 118:   //  Nitro_Downloader.Views.VideoDownloadingPage
+            case 119:   //  Nitro_Downloader.Views.VideoDownloadingPage
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_118_VideoDownloadingPage;
+                userType.Activator = Activate_119_VideoDownloadingPage;
                 userType.AddMemberName("ViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 119:   //  Nitro_Downloader.ViewModels.VideoDownloadingViewModel
+            case 120:   //  Nitro_Downloader.ViewModels.VideoDownloadingViewModel
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 120:   //  Nitro_Downloader.Views.VideoQueuedPage
+            case 121:   //  Nitro_Downloader.Views.VideoQueuedPage
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_120_VideoQueuedPage;
+                userType.Activator = Activate_121_VideoQueuedPage;
                 userType.AddMemberName("ViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 121:   //  Nitro_Downloader.ViewModels.VideoQueuedViewModel
+            case 122:   //  Nitro_Downloader.ViewModels.VideoQueuedViewModel
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 122:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
+            case 123:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_122_TreeViewNode;
+                userType.Activator = Activate_123_TreeViewNode;
                 userType.AddMemberName("Children");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Depth");
@@ -1561,9 +1571,9 @@ namespace Nitro_Downloader.Nitro_Downloader_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 123:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
+            case 124:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
                 userType = new global::Nitro_Downloader.Nitro_Downloader_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_123_IList;
+                userType.CollectionAdd = VectorAdd_124_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;

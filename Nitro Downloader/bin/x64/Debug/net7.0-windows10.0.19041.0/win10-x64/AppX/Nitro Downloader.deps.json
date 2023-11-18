@@ -10,6 +10,7 @@
       "Nitro Downloader/1.0.0": {
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.1.0",
+          "CommunityToolkit.WinUI.UI.Controls.DataGrid": "7.1.2",
           "CommunityToolkit.WinUI.UI.Controls.Primitives": "7.1.2",
           "H.NotifyIcon.WinUI": "2.0.118",
           "Microsoft.Extensions.Hosting": "6.0.1",
@@ -804,6 +805,17 @@
         },
         "runtime": {
           "lib/net5.0-windows10.0.18362/CommunityToolkit.WinUI.UI.dll": {
+            "assemblyVersion": "7.1.0.0",
+            "fileVersion": "7.1.2.1"
+          }
+        }
+      },
+      "CommunityToolkit.WinUI.UI.Controls.DataGrid/7.1.2": {
+        "dependencies": {
+          "Microsoft.WindowsAppSDK": "1.4.231008000"
+        },
+        "runtime": {
+          "lib/net5.0-windows10.0.18362/CommunityToolkit.WinUI.UI.Controls.DataGrid.dll": {
             "assemblyVersion": "7.1.0.0",
             "fileVersion": "7.1.2.1"
           }
@@ -1759,6 +1771,13 @@
       "sha512": "sha512-jF1GdEJsZX5o81ZfLjSjgC5RuYwQneuW2mdFIb7FDFzITsgqCn7mfn7BglpNiXvjExkocmAKbBgmCcbp0Nypmw==",
       "path": "communitytoolkit.winui.ui/7.1.2",
       "hashPath": "communitytoolkit.winui.ui.7.1.2.nupkg.sha512"
+    },
+    "CommunityToolkit.WinUI.UI.Controls.DataGrid/7.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-F73oYdYza8zhDwGHdXCZJJMeiDJ6nR97WPe180o7jOX3U90ZIqvU/GtYZdN3/x8DOS48t5GQG70LqxfyIGeaxw==",
+      "path": "communitytoolkit.winui.ui.controls.datagrid/7.1.2",
+      "hashPath": "communitytoolkit.winui.ui.controls.datagrid.7.1.2.nupkg.sha512"
     },
     "CommunityToolkit.WinUI.UI.Controls.Primitives/7.1.2": {
       "type": "package",

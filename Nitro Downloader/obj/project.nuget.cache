@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DLHD1Og8I1TH+pHJT5BiguOoNInmV5qoq7ck2I01BQGMrUHZDB7nNV/2AuG8YLZWB8N95k7QGn9tFSUpHJiXBg==",
+  "dgSpecHash": "TTBkCPZJ5AmVpJbKv4tTrIEaJ2KERUEeq5MWrRtuXHr3qWE5lFc8dTf4m8if3DxAe+EWOVqTXM+PdHJosUYmfw==",
   "success": true,
   "projectFilePath": "D:\\Code\\UET\\Semester 5\\SE Lab\\Project\\Nitro Downloader\\Nitro Downloader.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\affan\\.nuget\\packages\\communitytoolkit.mvvm\\8.1.0\\communitytoolkit.mvvm.8.1.0.nupkg.sha512",
     "C:\\Users\\affan\\.nuget\\packages\\communitytoolkit.winui\\7.1.2\\communitytoolkit.winui.7.1.2.nupkg.sha512",
     "C:\\Users\\affan\\.nuget\\packages\\communitytoolkit.winui.ui\\7.1.2\\communitytoolkit.winui.ui.7.1.2.nupkg.sha512",
+    "C:\\Users\\affan\\.nuget\\packages\\communitytoolkit.winui.ui.controls.datagrid\\7.1.2\\communitytoolkit.winui.ui.controls.datagrid.7.1.2.nupkg.sha512",
     "C:\\Users\\affan\\.nuget\\packages\\communitytoolkit.winui.ui.controls.primitives\\7.1.2\\communitytoolkit.winui.ui.controls.primitives.7.1.2.nupkg.sha512",
     "C:\\Users\\affan\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\affan\\.nuget\\packages\\h.generatedicons.system.drawing\\2.0.118\\h.generatedicons.system.drawing.2.0.118.nupkg.sha512",

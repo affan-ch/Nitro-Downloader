@@ -21,6 +21,12 @@ public sealed partial class AddVideoDownloadPage : Page
         get;
     }
 
+    private VideoInfo? videoInfo
+    {
+        get; set; 
+    }
+
+
     public AddVideoDownloadPage()
     {
         ViewModel = App.GetService<AddVideoDownloadViewModel>();
@@ -66,7 +72,7 @@ public sealed partial class AddVideoDownloadPage : Page
         try
         {
             var jsonOutput = await YtDlpHelper.GetVideoInfoJsonAsync(link);
-            var videoInfo = JsonSerializer.Deserialize<VideoInfo>(jsonOutput);
+            videoInfo = JsonSerializer.Deserialize<VideoInfo>(jsonOutput);
             Debug.WriteLine(videoInfo?.title);
 
             TitleTextBlock.Text = videoInfo?.title;
@@ -207,7 +213,31 @@ public sealed partial class AddVideoDownloadPage : Page
     private async void DownloadButton_Click(object sender, RoutedEventArgs e)
     {
         var link = Link_TextBox.Text;
+
+        var videoDownload = new VideoDownload()
+        {
+            FileName = TitleTextBlock.Text,
+            Status = "Downloading",
+            VideoURL = link,
+            ThumbnailURL = ThumbnailLink.Content.ToString() ?? "",
+            ChannelURL = ChannelLink.Content.ToString() ?? "",
+            Size = FileSizeTextBlock.Text,
+            Resolution = ResolutionTextBlock.Text,
+            Duration = DurationTextBlock.Text,
+            Downloaded = "0 MB",
+            TimeLeft = "Calculating...",
+            TransferRate = "Calculating...",
+            VideoDescription = videoInfo?.description ?? ""
+        };
+
+
+        Link_TextBox.Text = string.Empty;
+        Expander.Visibility = Visibility.Collapsed;
+
+        DatabaseHelper.InsertVideoDownloadIntoList(videoDownload);
+
         var output = await YtDlpHelper.DownloadVideoAsync(link);
+
 
         Debug.WriteLine("\n\n\nOutput Started");
         Debug.WriteLine(output);

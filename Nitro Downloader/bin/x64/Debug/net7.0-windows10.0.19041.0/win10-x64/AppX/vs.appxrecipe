@@ -29,21 +29,21 @@
     <AppXManifest Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-17T16:41:52.294</Modified>
+      <Modified>2023-11-18T20:16:06.329</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-11-17T16:41:51.730</Modified>
+      <Modified>2023-11-18T20:16:05.881</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Nitro Downloader.runtimeconfig.json">
       <PackagePath>Nitro Downloader.runtimeconfig.json</PackagePath>
-      <Modified>2023-11-09T07:48:27.755</Modified>
+      <Modified>2023-11-18T09:55:09.055</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Nitro Downloader.dll">
       <PackagePath>Nitro Downloader.dll</PackagePath>
-      <Modified>2023-11-17T16:35:54.974</Modified>
+      <Modified>2023-11-18T20:16:05.560</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\appsettings.json">
       <PackagePath>appsettings.json</PackagePath>
@@ -51,11 +51,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Nitro Downloader.exe</PackagePath>
-      <Modified>2023-11-17T16:35:54.999</Modified>
+      <Modified>2023-11-18T20:16:05.589</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Nitro Downloader.deps.json">
       <PackagePath>Nitro Downloader.deps.json</PackagePath>
-      <Modified>2023-11-12T06:16:10.903</Modified>
+      <Modified>2023-11-18T09:55:08.855</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.12\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -813,6 +813,10 @@
       <PackagePath>CommunityToolkit.WinUI.UI.dll</PackagePath>
       <Modified>2021-11-18T21:56:42.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\communitytoolkit.winui.ui.controls.datagrid\7.1.2\lib\net5.0-windows10.0.18362\CommunityToolkit.WinUI.UI.Controls.DataGrid.dll">
+      <PackagePath>CommunityToolkit.WinUI.UI.Controls.DataGrid.dll</PackagePath>
+      <Modified>2021-11-18T21:56:52.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\communitytoolkit.winui.ui.controls.primitives\7.1.2\lib\net5.0-windows10.0.18362\CommunityToolkit.WinUI.UI.Controls.Primitives.dll">
       <PackagePath>CommunityToolkit.WinUI.UI.Controls.Primitives.dll</PackagePath>
       <Modified>2021-11-18T21:57:02.000</Modified>
@@ -1096,6 +1100,10 @@
     <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\communitytoolkit.winui.ui\7.1.2\lib\net5.0-windows10.0.18362\CommunityToolkit.WinUI.UI.pri">
       <PackagePath>CommunityToolkit.WinUI.UI.pri</PackagePath>
       <Modified>2021-11-18T21:50:18.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\communitytoolkit.winui.ui.controls.datagrid\7.1.2\lib\net5.0-windows10.0.18362\CommunityToolkit.WinUI.UI.Controls.DataGrid.pri">
+      <PackagePath>CommunityToolkit.WinUI.UI.Controls.DataGrid.pri</PackagePath>
+      <Modified>2021-11-18T21:49:46.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\communitytoolkit.winui.ui.controls.primitives\7.1.2\lib\net5.0-windows10.0.18362\CommunityToolkit.WinUI.UI.Controls.Primitives.pri">
       <PackagePath>CommunityToolkit.WinUI.UI.Controls.Primitives.pri</PackagePath>

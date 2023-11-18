@@ -1,28 +1,19 @@
 ﻿using H.NotifyIcon.EfficiencyMode;
 using H.NotifyIcon;
-using Microsoft.UI.Xaml;
-using Newtonsoft.Json.Linq;
 using Nitro_Downloader.Helpers;
-
 using Windows.UI.ViewManagement;
-using H.NotifyIcon.Core;
 using Microsoft.UI.Windowing;
-using Microsoft.UI.Xaml.Controls.Primitives;
-using Microsoft.UI.Xaml.Controls;
-using Microsoft.UI.Xaml.Media;
-using Microsoft.UI;
-using WinRT.Interop;
 using CommunityToolkit.Mvvm.Input;
+using Nitro_Downloader.DBM;
 
 namespace Nitro_Downloader;
 
 public sealed partial class MainWindow : WindowEx
 {
-    private Microsoft.UI.Dispatching.DispatcherQueue dispatcherQueue;
+    private readonly Microsoft.UI.Dispatching.DispatcherQueue dispatcherQueue;
 
-    private UISettings settings;
+    private readonly UISettings settings;
 
-    //private bool IsContextMenuVisible;
 
     public MainWindow()
     {
@@ -45,6 +36,9 @@ public sealed partial class MainWindow : WindowEx
         TrayIcon.LeftClickCommand = new RelayCommand(ShowWindow);
 
         //H.NotifyIcon.WindowExtensions.HideInTaskbar(this);
+
+        DatabaseHelper.CreateDatabase();
+        DatabaseHelper.LoadVideoDownloadsIntoList();
 
     }
 
@@ -91,6 +85,7 @@ public sealed partial class MainWindow : WindowEx
     [RelayCommand]
     public void ExitApplication()
     {
+        DatabaseHelper.StoreListInDatabase();
         App.HandleClosedEvents = false;
         TrayIcon.Dispose();
         App.MainWindow?.Close();

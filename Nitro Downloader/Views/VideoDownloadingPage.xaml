@@ -4,9 +4,189 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls">
 
-    <Grid x:Name="ContentArea">
-        
-    </Grid>
+
+    <ScrollViewer>
+        <StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="12 0 12 12" HorizontalAlignment="Center">
+
+                <AppBarButton Icon="Play" Label="Resume" ></AppBarButton>
+
+                <AppBarButton Icon="Pause" Label="Pause" ></AppBarButton>
+
+                <AppBarButton Icon="Delete" Label="Delete"></AppBarButton>
+
+            </StackPanel>
+
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Margin="0 0 0 40" MinHeight="300">
+                <controls:DataGrid x:Name="dataGrid" 
+                                   AutoGenerateColumns="False" 
+                                   GridLinesVisibility="Horizontal" 
+                                   CanUserSortColumns="False" 
+                                   CanUserReorderColumns="False" 
+                                   IsReadOnly="True" 
+                                   HeadersVisibility="Column" 
+                                   SelectionMode="Extended">
+
+                    <controls:DataGrid.Resources>
+                        <SolidColorBrush x:Key="DataGridColumnHeaderBackgroundColor" Color="Transparent" />
+
+                        <Style TargetType="controls:DataGridCell">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="controls:DataGridCell">
+                                        <Grid Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Left" />
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            
+                        </Style>
+                    </controls:DataGrid.Resources>
+                    
+
+                    <controls:DataGrid.Columns>
+
+                        <!--<controls:DataGridTextColumn Header="#" Binding="{Binding Id}" />-->
+                        <controls:DataGridTextColumn Header="File Name" Binding="{Binding FileName}" Width="250" />
+                        <controls:DataGridTextColumn Header="Status" Binding="{Binding Status}" />
+                        <controls:DataGridTextColumn Header="Size" Binding="{Binding Size}" />
+                        <controls:DataGridTextColumn Header="Duration" Binding="{Binding Duration}" />
+                        <controls:DataGridTextColumn Header="Resolution" Binding="{Binding Resolution}" />
+                        <controls:DataGridTextColumn Header="Downloaded" Binding="{Binding Downloaded}" />
+                        <controls:DataGridTextColumn Header="Time Left" Binding="{Binding TimeLeft}" />
+                        <controls:DataGridTextColumn Header="Transfer Rate" Binding="{Binding TransferRate}" />
+
+                        
+                        
+                        <!-- Video URL Column -->
+                        <controls:DataGridTemplateColumn Header="Video URL">
+                            <controls:DataGridTemplateColumn.CellStyle>
+                                <Style TargetType="controls:DataGridCell">
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="controls:DataGridCell">
+                                                <Grid Background="{TemplateBinding Background}">
+                                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                </Grid>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </controls:DataGridTemplateColumn.CellStyle>
+
+                            <controls:DataGridTemplateColumn.CellTemplate>
+                                
+                                <DataTemplate>
+                                    
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="Auto">
+                                        <HyperlinkButton NavigateUri="{Binding VideoURL}" Margin="4 3 2 3" ToolTipService.ToolTip="Open Link" ToolTipService.Placement="Bottom">
+                                            <FontIcon Glyph="&#xE8A7;" />
+                                        </HyperlinkButton>
+
+                                        <!--<HyperlinkButton Margin="0 3 2 3" ToolTipService.ToolTip="Copy Link" ToolTipService.Placement="Bottom">-->
+                                            <!--<FontIcon Glyph="&#xE8C8;" />-->
+                                        <!--</HyperlinkButton>-->
+                                        
+                                    </StackPanel>
+                                </DataTemplate>
+                            </controls:DataGridTemplateColumn.CellTemplate>
+                        </controls:DataGridTemplateColumn>
+
+                        
+                        
+                        <!-- Channel URL Column -->
+                        <controls:DataGridTemplateColumn Header="Channel URL">
+                            <controls:DataGridTemplateColumn.CellStyle>
+                                <Style TargetType="controls:DataGridCell">
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="controls:DataGridCell">
+                                                <Grid Background="{TemplateBinding Background}">
+                                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                </Grid>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </controls:DataGridTemplateColumn.CellStyle>
+                            <controls:DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="Auto">
+                                        <HyperlinkButton NavigateUri="{Binding ChannelURL}" Margin="4 3 2 3" ToolTipService.ToolTip="Open Link" ToolTipService.Placement="Bottom">
+                                            <FontIcon Glyph="&#xE8A7;" />
+                                        </HyperlinkButton>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </controls:DataGridTemplateColumn.CellTemplate>
+                        </controls:DataGridTemplateColumn>
+
+                        
+                        <!-- Thumbnail URL -->
+                        <controls:DataGridTemplateColumn Header="Thumbnail URL">
+                            <controls:DataGridTemplateColumn.CellStyle>
+                                <Style TargetType="controls:DataGridCell">
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="controls:DataGridCell">
+                                                <Grid Background="{TemplateBinding Background}">
+                                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                </Grid>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </controls:DataGridTemplateColumn.CellStyle>
+                            <controls:DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="Auto">
+                                        <HyperlinkButton NavigateUri="{Binding ThumbnailURL}" Margin="4 3 2 3" ToolTipService.ToolTip="Open Link" ToolTipService.Placement="Bottom">
+                                            <FontIcon Glyph="&#xE8A7;" />
+                                        </HyperlinkButton>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </controls:DataGridTemplateColumn.CellTemplate>
+                        </controls:DataGridTemplateColumn>
+
+
+                        <!-- Video Description -->
+                        <controls:DataGridTemplateColumn Header="Video Description">
+                            <controls:DataGridTemplateColumn.CellStyle>
+                                <Style TargetType="controls:DataGridCell">
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="controls:DataGridCell">
+                                                <Grid Background="{TemplateBinding Background}">
+                                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                                </Grid>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </controls:DataGridTemplateColumn.CellStyle>
+                            <controls:DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="Auto">
+
+                                        <HyperlinkButton Click="DescriptionHyperlinkButton_Click" Tag="{Binding VideoDescription}" Margin="4 3 2 3" ToolTipService.ToolTip="View Description" ToolTipService.Placement="Bottom">
+                                            <FontIcon Glyph="&#xE78B;" />
+                                        </HyperlinkButton>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </controls:DataGridTemplateColumn.CellTemplate>
+                        </controls:DataGridTemplateColumn>
+
+                    </controls:DataGrid.Columns>
+
+                </controls:DataGrid>
+            </ScrollViewer>
+
+        </StackPanel>
+    </ScrollViewer>
+
+
 </Page>

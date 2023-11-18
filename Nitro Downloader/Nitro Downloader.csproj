@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
+    <PackageReference Include="CommunityToolkit.WinUI.UI.Controls.DataGrid" Version="7.1.2" />
     <PackageReference Include="CommunityToolkit.WinUI.UI.Controls.Primitives" Version="7.1.2" />
     <PackageReference Include="H.NotifyIcon.WinUI" Version="2.0.118" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
