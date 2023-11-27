@@ -23,7 +23,7 @@
             </StackPanel>
 
             <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Margin="0 0 0 40" MinHeight="300">
-                <controls:DataGrid x:Name="dataGrid" 
+                <controls:DataGrid x:ConnectionId='2' x:Name="dataGrid" 
                                    AutoGenerateColumns="False" 
                                    GridLinesVisibility="Horizontal" 
                                    CanUserSortColumns="False" 
@@ -189,7 +189,7 @@
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="Auto">
 
-                                        <HyperlinkButton Click="DescriptionHyperlinkButton_Click" Tag="{Binding VideoDescription}" Margin="4 3 2 3" ToolTipService.ToolTip="View Description" ToolTipService.Placement="Bottom">
+                                        <HyperlinkButton x:ConnectionId='8'                                          Tag="{Binding VideoDescription}" Margin="4 3 2 3" ToolTipService.ToolTip="View Description" ToolTipService.Placement="Bottom">
                                             <FontIcon Glyph="&#xE78B;" />
                                         </HyperlinkButton>
                                     </StackPanel>
@@ -207,3 +207,4 @@
 
 
 </Page>
+

@@ -8,7 +8,7 @@ namespace Nitro_Downloader.BL;
 public static class YtDlpHelper
 {
 
-    public static async Task<string> DownloadVideoAsync(string link)
+    public static async Task<string?> DownloadVideoAsync(string link)
     {
         var fullPath = AppDomain.CurrentDomain.BaseDirectory.ToString();
 
@@ -59,11 +59,11 @@ public static class YtDlpHelper
         }
         else
         {
-            throw new Exception("yt-dlp command failed.");
+            return null;
         }
     }
 
-    public static async Task<string> GetVideoInfoJsonAsync(string link)
+    public static async Task<string?> GetVideoInfoJsonAsync(string link)
     {
         var fullPath = AppDomain.CurrentDomain.BaseDirectory.ToString();
 
@@ -78,39 +78,54 @@ public static class YtDlpHelper
 
         var arguments = $"{link} --skip-download --dump-json";
 
-        using var process = new Process();
-        process.StartInfo.FileName = path;
-        process.StartInfo.Arguments = arguments;
-        process.StartInfo.UseShellExecute = false;
-        process.StartInfo.RedirectStandardOutput = true;
-        process.StartInfo.CreateNoWindow = true;
+        try 
+        { 
+            using var process = new Process();
+            process.StartInfo.FileName = path;
+            process.StartInfo.Arguments = arguments;
+            process.StartInfo.UseShellExecute = false;
+            process.StartInfo.RedirectStandardOutput = true;
+            process.StartInfo.CreateNoWindow = true;
 
-        var outputBuilder = new StringBuilder();
+            var outputBuilder = new StringBuilder();
 
-        process.OutputDataReceived += (sender, e) =>
-        {
-            if (!string.IsNullOrEmpty(e.Data))
+            process.OutputDataReceived += (sender, e) =>
             {
-                outputBuilder.AppendLine(e.Data);
+                if (!string.IsNullOrEmpty(e.Data))
+                {
+                    outputBuilder.AppendLine(e.Data);
+                }
+            };
+
+            process.Start();
+            process.BeginOutputReadLine();
+
+            await Task.Run(() =>
+            {
+                process.WaitForExit();
+            });
+
+            if (process.ExitCode == 0)
+            {
+                try
+                {
+                    var jsonOutput = outputBuilder.ToString();
+                    return jsonOutput;
+                }
+                catch (Exception)
+                {
+                    return null;
+                }
+            
             }
-        };
-
-        process.Start();
-        process.BeginOutputReadLine();
-
-        await Task.Run(() =>
-        {
-            process.WaitForExit();
-        });
-
-        if (process.ExitCode == 0)
-        {
-            var jsonOutput = outputBuilder.ToString();
-            return jsonOutput;
+            else
+            {
+                return null;
+            }
         }
-        else
+        catch (Exception)
         {
-            throw new Exception("yt-dlp command failed.");
+            return null;
         }
     }
 

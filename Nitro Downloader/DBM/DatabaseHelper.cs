@@ -1,4 +1,5 @@
 ﻿using System.Data.SQLite;
+using System.Diagnostics;
 
 namespace Nitro_Downloader.DBM;
 
@@ -12,8 +13,10 @@ internal class DatabaseHelper
 
     private static readonly string CreateVideoDownloadsTableQuery = @"CREATE TABLE IF NOT EXISTS [VideoDownloads] (Id INTEGER PRIMARY KEY AUTOINCREMENT, FileName TEXT, Status TEXT, Size TEXT, Duration TEXT, Resolution TEXT, Downloaded TEXT, TimeLeft TEXT, TransferRate TEXT, VideoURL TEXT, ChannelURL TEXT, ThumbnailURL TEXT, VideoDescription TEXT)";
 
-    private static readonly List<VideoDownload> VideoDownloadsList = new();
+    //private static readonly List<VideoDownload> VideoDownloadsList = new();
+    private static readonly ObservableList<VideoDownload> VideoDownloadsList = new();
 
+    
 
     public static void CreateDatabase()
     {
@@ -61,7 +64,7 @@ internal class DatabaseHelper
         VideoDownloadsList.Add(videoDownload);
     }
 
-    public static List<VideoDownload> GetVideoDownloads()
+    public static ObservableList<VideoDownload> GetVideoDownloads()
     {
         return VideoDownloadsList;
     }
@@ -99,9 +102,51 @@ internal class DatabaseHelper
     public static void UpdateVideoDownloadInList(VideoDownload videoDownload)
     {
         var index = VideoDownloadsList.FindIndex(v => v.Id == videoDownload.Id);
-        VideoDownloadsList[index] = videoDownload;
+        if (index != -1)
+        {
+            VideoDownloadsList.Update(index, videoDownload);
+        }
+        
     }
 }
+
+public class ObservableList<VideoDownload> : List<VideoDownload>
+{
+    public event EventHandler? OnChanged;
+
+    public new void Add(VideoDownload item)
+    {
+        base.Add(item);
+        OnListChanged();
+    }
+
+    public new void Remove(VideoDownload item)
+    {
+        base.Remove(item);
+        OnListChanged();
+    }
+
+    public new void Insert(int index, VideoDownload item)
+    {
+        base.Insert(index, item);
+        OnListChanged();
+    }
+
+    public void Update(int index, VideoDownload item)
+    {
+        base[index] = item;
+        OnListChanged();
+    }
+
+
+    public virtual void OnListChanged()
+    {
+        OnChanged?.Invoke(this, EventArgs.Empty);
+        Debug.WriteLine("List changed");
+    }
+}
+
+
 
 public class VideoDownload
 {

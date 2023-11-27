@@ -10,7 +10,10 @@ using Windows.Storage.Pickers;
 using Nitro_Downloader.DBM;
 using WinRT.Interop;
 using Nitro_Downloader.BL;
-
+using System.Text;
+using System.Text.RegularExpressions;
+using Windows.UI.Notifications;
+using Microsoft.Toolkit.Uwp.Notifications;
 
 namespace Nitro_Downloader.Views;
 
@@ -32,6 +35,7 @@ public sealed partial class AddVideoDownloadPage : Page
         ViewModel = App.GetService<AddVideoDownloadViewModel>();
         InitializeComponent();
         LocationTextBox.Text = Settings.GetDownloadLocation();
+        FooterContainer.Visibility = Visibility.Collapsed;
     }
 
 
@@ -72,8 +76,29 @@ public sealed partial class AddVideoDownloadPage : Page
         try
         {
             var jsonOutput = await YtDlpHelper.GetVideoInfoJsonAsync(link);
+            
+            if(jsonOutput == null)
+            {
+                var builder = new ToastContentBuilder()
+                .AddText("Error while processing link!")
+                .AddText("Please check the download link and try again.");
+
+                // Create the toast notification
+                var toast = new ToastNotification(builder.GetToastContent().GetXml());
+
+                // Show the toast notification
+                ToastNotificationManager.CreateToastNotifier().Show(toast);
+
+                GetInfoButton.Content = "Get Info";
+                ProgressRingStackPanel.Visibility = Visibility.Collapsed;
+                Link_TextBox.Text = "";
+
+                return;
+            }
             videoInfo = JsonSerializer.Deserialize<VideoInfo>(jsonOutput);
             Debug.WriteLine(videoInfo?.title);
+
+            FooterContainer.Visibility = Visibility.Visible;
 
             TitleTextBlock.Text = videoInfo?.title;
 
@@ -136,14 +161,51 @@ public sealed partial class AddVideoDownloadPage : Page
 
             GetInfoButton.Content = "Get Info";
 
-            VideoLink.NavigateUri = new Uri(videoInfo?.webpage_url ?? "");
-            VideoLink.Content = videoInfo?.webpage_url ?? "";
+            if(videoInfo?.webpage_url != null && videoInfo?.webpage_url != string.Empty)
+            {
+                VideoLink.Visibility = Visibility.Visible;
+                VideoLinkTextBlock.Visibility = Visibility.Visible;
 
-            ChannelLink.NavigateUri = new Uri(videoInfo?.channel_url ?? "");
-            ChannelLink.Content = videoInfo?.channel_url ?? "";
+                VideoLink.NavigateUri = new Uri(videoInfo?.webpage_url!);
+                //VideoLink.Content = videoInfo?.webpage_url!;
+            }
+            else
+            {
+                VideoLink.Visibility = Visibility.Collapsed;
+                VideoLinkTextBlock.Visibility = Visibility.Collapsed;
+            }
 
-            ThumbnailLink.NavigateUri = new Uri(videoInfo?.thumbnail ?? "");
-            ThumbnailLink.Content = videoInfo?.thumbnail ?? "";
+
+            
+            if(videoInfo?.channel_url != null && videoInfo?.channel_url != string.Empty)
+            {
+                ChannelLink.Visibility = Visibility.Visible;
+                ChannelLinkTextBlock.Visibility = Visibility.Visible;
+
+                ChannelLink.NavigateUri = new Uri(videoInfo?.channel_url!);
+                //ChannelLink.Content = videoInfo?.channel_url!;
+            }
+            else
+            {
+                ChannelLink.Visibility = Visibility.Collapsed;
+                ChannelLinkTextBlock.Visibility = Visibility.Collapsed;
+            }
+
+
+            if(videoInfo?.thumbnail != null && videoInfo?.thumbnail != string.Empty)
+            {
+                ThumbnailLink.Visibility = Visibility.Visible;
+                ThumbnailTextBlock.Visibility = Visibility.Visible;
+
+                ThumbnailLink.NavigateUri = new Uri(videoInfo?.thumbnail!);
+                //ThumbnailLink.Content = videoInfo?.thumbnail!;
+            }
+            else
+            {
+                ThumbnailLink.Visibility = Visibility.Collapsed;
+                ThumbnailTextBlock.Visibility = Visibility.Collapsed;
+            }
+            
 
 
 
@@ -214,17 +276,27 @@ public sealed partial class AddVideoDownloadPage : Page
     {
         var link = Link_TextBox.Text;
 
+        var list = DatabaseHelper.GetVideoDownloads();
+        var maxId = list.Max(x => x.Id);
+        if (maxId == null || maxId == string.Empty)
+        {
+           maxId = "0";
+        }
+        var newMaxId = (int.Parse(maxId) + 1).ToString();
+        Debug.WriteLine("Max Id:" + newMaxId);
+
         var videoDownload = new VideoDownload()
         {
+            Id = newMaxId,
             FileName = TitleTextBlock.Text,
             Status = "Downloading",
             VideoURL = link,
-            ThumbnailURL = ThumbnailLink.Content.ToString() ?? "",
-            ChannelURL = ChannelLink.Content.ToString() ?? "",
+            ThumbnailURL = ThumbnailLink.NavigateUri.ToString() ?? "",
+            ChannelURL = ChannelLink.NavigateUri.ToString() ?? "",
             Size = FileSizeTextBlock.Text,
             Resolution = ResolutionTextBlock.Text,
             Duration = DurationTextBlock.Text,
-            Downloaded = "0 MB",
+            Downloaded = "Starting...",
             TimeLeft = "Calculating...",
             TransferRate = "Calculating...",
             VideoDescription = videoInfo?.description ?? ""
@@ -236,17 +308,111 @@ public sealed partial class AddVideoDownloadPage : Page
 
         DatabaseHelper.InsertVideoDownloadIntoList(videoDownload);
 
-        var output = await YtDlpHelper.DownloadVideoAsync(link);
+        //var output = await YtDlpHelper.DownloadVideoAsync(link);
 
+        var fullPath = AppDomain.CurrentDomain.BaseDirectory.ToString();
 
-        Debug.WriteLine("\n\n\nOutput Started");
-        Debug.WriteLine(output);
-        Debug.WriteLine("\n\n\nOutput Ended");
+        //var endIndex = fullPath.IndexOf("Nitro Downloader\\");
+        //var path = fullPath[..(endIndex + "Nitro Downloader\\".Length)];
+        //path += "Tools\\yt-dlp.exe";
+        var path = "C:\\tools\\yt-dlp.exe";
 
-        var title = TitleTextBlock.Text;
+        if (!File.Exists(path))
+        {
+            throw new FileNotFoundException("yt-dlp.exe not found at the specified path.");
+        }
 
         var downloadLocation = Settings.GetDownloadLocation();
+        var OutputFileNameTemplate = "%(title)s.%(ext)s";
 
+        var arguments = $"{link} -P {downloadLocation} -o {OutputFileNameTemplate}";
+
+        using var process = new Process();
+        process.StartInfo.FileName = path;
+        process.StartInfo.Arguments = arguments;
+        process.StartInfo.UseShellExecute = false;
+        process.StartInfo.RedirectStandardOutput = true;
+        process.StartInfo.CreateNoWindow = true;
+
+        var outputBuilder = new StringBuilder();
+
+        process.OutputDataReceived +=  (sender, e) =>
+        {
+            if (!string.IsNullOrEmpty(e.Data))
+            {
+                outputBuilder.AppendLine(e.Data);
+
+                var pattern = @"\[download\]\s.*\sof\s.*\sin\s.*\sat\s.*";
+                var pattern2 = @"\[download\]\s.*\sof\s.*\sat\s.*\sETA\s.*";
+
+                if (Regex.IsMatch(e.Data, pattern2))
+                {
+                    var startIndex = e.Data.IndexOf("[download]") + "[download]".Length;
+                    var endIndex = e.Data.IndexOf("%", startIndex);
+                    if (startIndex >= 0 && endIndex >= 0)
+                    {
+                        var percentageString = e.Data.Substring(startIndex, endIndex - startIndex).Trim();
+                        if (float.TryParse(percentageString, out var percentage))
+                        {
+                            Debug.WriteLine("Download Percentage: " + percentage + "%");
+                            videoDownload.Downloaded = percentage.ToString() + "%";
+
+                            // Extracting transfer rate
+                            var rateIndex = e.Data.LastIndexOf("at") + "at".Length;
+                            if (rateIndex >= 0)
+                            {
+                                var rateString = e.Data[rateIndex..].Trim();
+                                var rate = rateString.Split(" ")[0];
+                                Debug.WriteLine("Transfer Rate: " + rate);
+                                videoDownload.TransferRate = rate;
+                            }
+
+                            // Extracting time left
+                            var timeIndex = e.Data.LastIndexOf("ETA") + "ETA".Length;
+                            var timeLeftString = e.Data[timeIndex..].Trim();
+                            Debug.WriteLine("Time Left: " + timeLeftString);
+
+                            videoDownload.TimeLeft = timeLeftString;
+                            
+                            DatabaseHelper.UpdateVideoDownloadInList(videoDownload);
+                        }
+                    }
+                }
+                else if(Regex.IsMatch(e.Data, pattern))
+                {
+                    
+                }
+            }
+        };
+
+        process.Start();
+        process.BeginOutputReadLine();
+
+        await Task.Run(() =>
+        {
+            process.WaitForExit();
+        });
+
+        if (process.ExitCode == 0)
+        {
+            var jsonOutput = outputBuilder.ToString();
+            
+        }
+        else
+        {
+            videoDownload.Status = "Error";
+            DatabaseHelper.UpdateVideoDownloadInList(videoDownload);
+            return;
+        }
+
+
+        videoDownload.Status = "Downloaded";
+        videoDownload.Downloaded = "100%";
+        videoDownload.TimeLeft = "--";
+        videoDownload.TransferRate = "--";
+        DatabaseHelper.UpdateVideoDownloadInList(videoDownload);
+
+        var title = TitleTextBlock.Text;
         HelperFunctions.ShowDownloadCompleteNotification(title, downloadLocation);
 
     }

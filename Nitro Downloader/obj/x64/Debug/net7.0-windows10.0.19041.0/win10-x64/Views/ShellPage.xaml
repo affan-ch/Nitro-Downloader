@@ -1,4 +1,4 @@
-﻿<Page
+﻿<Page x:ConnectionId='1'
     x:Class="Nitro_Downloader.Views.ShellPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -7,10 +7,10 @@
     xmlns:helpers="using:Nitro_Downloader.Helpers"
     xmlns:behaviors="using:Nitro_Downloader.Behaviors"
     xmlns:i="using:Microsoft.Xaml.Interactivity"
-    Loaded="OnLoaded">
+                     >
 
     <Grid>
-        <Grid x:Name="AppTitleBar"
+        <Grid x:ConnectionId='2' x:Name="AppTitleBar"
               Canvas.ZIndex="1"
               Height="{Binding ElementName=NavigationViewControl, Path=CompactPaneLength}"
               IsHitTestVisible="True"
@@ -19,22 +19,22 @@
                    HorizontalAlignment="Left"
                    Width="16"
                    Height="16" />
-            <TextBlock x:Name="AppTitleBarText"
+            <TextBlock x:ConnectionId='10' x:Name="AppTitleBarText"
                        VerticalAlignment="Center"
                        TextWrapping="NoWrap"
                        Style="{StaticResource CaptionTextBlockStyle}"
                        Margin="28,0,0,0"/>
         </Grid>
-        <NavigationView
+        <NavigationView x:ConnectionId='3'
             x:Name="NavigationViewControl"
             Canvas.ZIndex="0"
             IsBackButtonVisible="Visible"
-            IsBackEnabled="{x:Bind ViewModel.IsBackEnabled, Mode=OneWay}"
-            SelectedItem="{x:Bind ViewModel.Selected, Mode=OneWay}"
+                                                                         
+                                                                   
             IsSettingsVisible="True"
             ExpandedModeThresholdWidth="1280"
-            DisplayModeChanged="NavigationViewControl_DisplayModeChanged"
-            Header="{x:Bind ((ContentControl)ViewModel.Selected).Content, Mode=OneWay}">
+                                                                         
+                                                                                       >
             
             <NavigationView.MenuItems>
  
@@ -56,7 +56,7 @@
                             </NavigationViewItem.Icon>
 
                             <NavigationViewItem.InfoBadge>
-                                <InfoBadge x:Name="downloadingCount_InfoBadge" Value="0" Visibility="Collapsed"/>
+                                <InfoBadge x:ConnectionId='5' x:Name="downloadingCount_InfoBadge" Value="0" Visibility="Collapsed"/>
                             </NavigationViewItem.InfoBadge>
 
                         </NavigationViewItem>
@@ -67,7 +67,7 @@
                             </NavigationViewItem.Icon>
 
                             <NavigationViewItem.InfoBadge>
-                                <InfoBadge x:Name="downloadedCount_InfoBadge" Value="0" Visibility="Collapsed"/>
+                                <InfoBadge x:ConnectionId='4' x:Name="downloadedCount_InfoBadge" Value="0" Visibility="Collapsed"/>
                             </NavigationViewItem.InfoBadge>
                         </NavigationViewItem>
                         
@@ -95,8 +95,8 @@
             </NavigationView.HeaderTemplate>
             
             <i:Interaction.Behaviors>
-                <behaviors:NavigationViewHeaderBehavior
-                    DefaultHeader="{x:Bind ((ContentControl)ViewModel.Selected).Content, Mode=OneWay}">
+                <behaviors:NavigationViewHeaderBehavior x:ConnectionId='7'
+                                                                                                      >
                     <behaviors:NavigationViewHeaderBehavior.DefaultHeaderTemplate>
                         <DataTemplate>
                             <Grid>
@@ -111,8 +111,9 @@
             
             
             <Grid Margin="{StaticResource NavigationViewPageContentMargin}">
-                <Frame x:Name="NavigationFrame" />
+                <Frame x:ConnectionId='9' x:Name="NavigationFrame" />
             </Grid>
         </NavigationView>
     </Grid>
 </Page>
+

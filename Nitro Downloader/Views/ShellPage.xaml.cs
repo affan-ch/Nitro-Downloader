@@ -4,6 +4,7 @@ using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 
 using Nitro_Downloader.Contracts.Services;
+using Nitro_Downloader.DBM;
 using Nitro_Downloader.Helpers;
 using Nitro_Downloader.ViewModels;
 
@@ -31,6 +32,42 @@ public sealed partial class ShellPage : Page
         App.MainWindow.SetTitleBar(AppTitleBar);
         App.MainWindow.Activated += MainWindow_Activated;
         AppTitleBarText.Text = "AppDisplayName".GetLocalized();
+
+        RefreshNumbers(null, null);
+
+        var timer = new DispatcherTimer();
+        timer.Tick += RefreshNumbers;
+        timer.Interval = TimeSpan.FromSeconds(2);
+        timer.Start();
+    }
+
+    private void RefreshNumbers(object? sender, object? e)
+    {
+        var list = DatabaseHelper.GetVideoDownloads();
+        var downloadingListCount = list.Where(item => item.Status == "Downloading").Count();
+        var downloadedListCount = list.Where(item => item.Status == "Downloaded").Count();
+
+        if (downloadingListCount > 0)
+        {
+            downloadingCount_InfoBadge.Value = downloadingListCount;
+            downloadingCount_InfoBadge.Visibility = Visibility.Visible;
+        }
+        else
+        {
+            downloadingCount_InfoBadge.Visibility = Visibility.Collapsed;
+            downloadingCount_InfoBadge.Value = 0;
+        }
+
+        if (downloadedListCount > 0)
+        {
+            downloadedCount_InfoBadge.Value = downloadedListCount;
+            downloadedCount_InfoBadge.Visibility = Visibility.Visible;
+        }
+        else
+        {
+            downloadedCount_InfoBadge.Visibility = Visibility.Collapsed;
+            downloadedCount_InfoBadge.Value = 0;
+        }
     }
 
     private void OnLoaded(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
