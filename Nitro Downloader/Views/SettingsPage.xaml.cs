@@ -1,11 +1,8 @@
 ﻿using Microsoft.UI.Xaml.Controls;
-using Nitro_Downloader.Helpers;
 using Nitro_Downloader.ViewModels;
 using Windows.Storage.AccessCache;
 using Windows.Storage.Pickers;
 using WinRT.Interop;
-using Microsoft.Windows.ApplicationModel.Resources;
-using Newtonsoft.Json.Linq;
 using Nitro_Downloader.DBM;
 
 namespace Nitro_Downloader.Views;

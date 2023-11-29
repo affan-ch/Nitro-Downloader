@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using System.Globalization;
 using System.Text.Json;
+using Microsoft.Toolkit.Uwp.Notifications;
 using Microsoft.UI;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Media;
@@ -9,7 +10,7 @@ using Nitro_Downloader.BL;
 using Nitro_Downloader.DBM;
 using Windows.Storage.AccessCache;
 using Windows.Storage.Pickers;
-using Windows.UI;
+using Windows.UI.Notifications;
 using WinRT.Interop;
 
 namespace Nitro_Downloader;
@@ -110,6 +111,22 @@ public sealed partial class DownloadWindow : WindowEx
         try
         {
             var jsonOutput = await YtDlpHelper.GetVideoInfoJsonAsync(link);
+            if(jsonOutput == null)
+            {
+                var builder = new ToastContentBuilder()
+                .AddText("Error while processing link!")
+                .AddText("Please check the download link and try again.");
+
+                // Create the toast notification
+                var toast = new ToastNotification(builder.GetToastContent().GetXml());
+
+                // Show the toast notification
+                ToastNotificationManager.CreateToastNotifier().Show(toast);
+
+                ProgressRingStackPanel.Visibility = Visibility.Collapsed;
+                BodyContainer.Visibility = Visibility.Collapsed;
+                return;
+            }
             var videoInfo = JsonSerializer.Deserialize<VideoInfo>(jsonOutput);
             Debug.WriteLine(videoInfo?.title);
 
@@ -156,7 +173,6 @@ public sealed partial class DownloadWindow : WindowEx
             var extension = videoInfo?.ext ?? "?";
 
             ExtensionTextBlock.Text = extension.ToUpper();
-
 
 
             FileSizeTextBlock.Text = HelperFunctions.FormatFileSize(videoInfo?.filesize_approx ?? 0);

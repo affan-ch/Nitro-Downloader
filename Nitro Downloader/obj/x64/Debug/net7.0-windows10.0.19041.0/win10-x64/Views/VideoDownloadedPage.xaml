@@ -87,7 +87,11 @@
                                 <DataTemplate>
 
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="Auto">
-                                        <HyperlinkButton NavigateUri="{Binding VideoURL}" Margin="4 3 2 3" ToolTipService.ToolTip="Open Link" ToolTipService.Placement="Bottom">
+                                        <HyperlinkButton NavigateUri="{Binding VideoURL, Converter={StaticResource StringToUriConverter}}"
+                                                         Visibility="{Binding VideoURL, Converter={StaticResource VisibilityConverter}}" 
+                                                         Margin="4 3 2 3" 
+                                                         ToolTipService.ToolTip="Open Link" 
+                                                         ToolTipService.Placement="Bottom">
                                             <FontIcon Glyph="&#xE8A7;" />
                                         </HyperlinkButton>
 
@@ -187,7 +191,11 @@
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="Auto">
 
-                                        <HyperlinkButton x:ConnectionId='8'                                          Tag="{Binding VideoDescription}" Margin="4 3 2 3" ToolTipService.ToolTip="View Description" ToolTipService.Placement="Bottom">
+                                        <HyperlinkButton x:ConnectionId='8'                                          
+                                                         Tag="{Binding VideoDescription}" 
+                                                         Margin="4 3 2 3" 
+                                                         ToolTipService.ToolTip="View Description" 
+                                                         ToolTipService.Placement="Bottom">
                                             <FontIcon Glyph="&#xE78B;" />
                                         </HyperlinkButton>
                                     </StackPanel>

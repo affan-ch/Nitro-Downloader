@@ -12,8 +12,7 @@ using WinRT.Interop;
 using Nitro_Downloader.BL;
 using System.Text;
 using System.Text.RegularExpressions;
-using Windows.UI.Notifications;
-using Microsoft.Toolkit.Uwp.Notifications;
+using Nitro_Downloader.DL;
 
 namespace Nitro_Downloader.Views;
 
@@ -24,7 +23,7 @@ public sealed partial class AddVideoDownloadPage : Page
         get;
     }
 
-    private VideoInfo? videoInfo
+    private VideoInfo? VideoInfo
     {
         get; set; 
     }
@@ -79,15 +78,7 @@ public sealed partial class AddVideoDownloadPage : Page
             
             if(jsonOutput == null)
             {
-                var builder = new ToastContentBuilder()
-                .AddText("Error while processing link!")
-                .AddText("Please check the download link and try again.");
-
-                // Create the toast notification
-                var toast = new ToastNotification(builder.GetToastContent().GetXml());
-
-                // Show the toast notification
-                ToastNotificationManager.CreateToastNotifier().Show(toast);
+                HelperFunctions.ShowToastNotification("Error while processing link!", "Please check the download link and try again.");
 
                 GetInfoButton.Content = "Get Info";
                 ProgressRingStackPanel.Visibility = Visibility.Collapsed;
@@ -95,18 +86,18 @@ public sealed partial class AddVideoDownloadPage : Page
 
                 return;
             }
-            videoInfo = JsonSerializer.Deserialize<VideoInfo>(jsonOutput);
-            Debug.WriteLine(videoInfo?.title);
+            VideoInfo = JsonSerializer.Deserialize<VideoInfo>(jsonOutput);
+            Debug.WriteLine(VideoInfo?.title);
 
             FooterContainer.Visibility = Visibility.Visible;
 
-            TitleTextBlock.Text = videoInfo?.title;
+            TitleTextBlock.Text = VideoInfo?.title;
 
-            if (videoInfo?.thumbnail != null)
+            if (VideoInfo?.thumbnail != null)
             {
-                if (videoInfo?.thumbnail.Length > 10)
+                if (VideoInfo?.thumbnail.Length > 10)
                 {
-                    Microsoft.UI.Xaml.Media.ImageSource imageSource = new BitmapImage(new Uri(videoInfo?.thumbnail ?? "https://www.youtube.com/"));
+                    Microsoft.UI.Xaml.Media.ImageSource imageSource = new BitmapImage(new Uri(VideoInfo?.thumbnail ?? "https://www.youtube.com/"));
 
                     ThumbnailImage.Source = imageSource;
                 }
@@ -123,33 +114,33 @@ public sealed partial class AddVideoDownloadPage : Page
             }
 
 
-            DurationTextBlock.Text = videoInfo?.duration_string;
+            DurationTextBlock.Text = VideoInfo?.duration_string;
 
-            var likes = HelperFunctions.FormatYouTubeCounts((long)(videoInfo?.like_count ?? 0));
+            var likes = HelperFunctions.FormatYouTubeCounts((long)(VideoInfo?.like_count ?? 0));
 
             LikesTextBlock.Text = likes;
 
-            var comments = HelperFunctions.FormatYouTubeCounts((long)(videoInfo?.comment_count ?? 0));
+            var comments = HelperFunctions.FormatYouTubeCounts((long)(VideoInfo?.comment_count ?? 0));
 
             CommentsTextBlock.Text = comments;
 
 
-            var views = HelperFunctions.FormatYouTubeCounts((long)(videoInfo?.view_count ?? 0));
+            var views = HelperFunctions.FormatYouTubeCounts((long)(VideoInfo?.view_count ?? 0));
             ViewsTextBlock.Text = views;
 
-            DateTime.TryParseExact(videoInfo?.upload_date, "yyyyMMdd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var parsedDate);
+            DateTime.TryParseExact(VideoInfo?.upload_date, "yyyyMMdd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var parsedDate);
 
             var formattedDate = parsedDate.ToString("MMM dd, yyyy");
 
-            ResolutionTextBlock.Text = videoInfo?.resolution;
+            ResolutionTextBlock.Text = VideoInfo?.resolution;
 
             DateUploadedTextBlock.Text = formattedDate;
 
-            ChannelNameTextBlock.Text = videoInfo?.channel;
+            ChannelNameTextBlock.Text = VideoInfo?.channel;
 
-            WebsiteTextBlock.Text = videoInfo?.extractor_key;
+            WebsiteTextBlock.Text = VideoInfo?.extractor_key;
 
-            var extension = videoInfo?.ext ?? "?";
+            var extension = VideoInfo?.ext ?? "?";
 
             ExtensionTextBlock.Text = extension.ToUpper();
 
@@ -161,12 +152,12 @@ public sealed partial class AddVideoDownloadPage : Page
 
             GetInfoButton.Content = "Get Info";
 
-            if(videoInfo?.webpage_url != null && videoInfo?.webpage_url != string.Empty)
+            if(VideoInfo?.webpage_url != null && VideoInfo?.webpage_url != string.Empty)
             {
                 VideoLink.Visibility = Visibility.Visible;
                 VideoLinkTextBlock.Visibility = Visibility.Visible;
 
-                VideoLink.NavigateUri = new Uri(videoInfo?.webpage_url!);
+                VideoLink.NavigateUri = new Uri(VideoInfo?.webpage_url!);
                 //VideoLink.Content = videoInfo?.webpage_url!;
             }
             else
@@ -177,12 +168,12 @@ public sealed partial class AddVideoDownloadPage : Page
 
 
             
-            if(videoInfo?.channel_url != null && videoInfo?.channel_url != string.Empty)
+            if(VideoInfo?.channel_url != null && VideoInfo?.channel_url != string.Empty)
             {
                 ChannelLink.Visibility = Visibility.Visible;
                 ChannelLinkTextBlock.Visibility = Visibility.Visible;
 
-                ChannelLink.NavigateUri = new Uri(videoInfo?.channel_url!);
+                ChannelLink.NavigateUri = new Uri(VideoInfo?.channel_url!);
                 //ChannelLink.Content = videoInfo?.channel_url!;
             }
             else
@@ -192,12 +183,12 @@ public sealed partial class AddVideoDownloadPage : Page
             }
 
 
-            if(videoInfo?.thumbnail != null && videoInfo?.thumbnail != string.Empty)
+            if(VideoInfo?.thumbnail != null && VideoInfo?.thumbnail != string.Empty)
             {
                 ThumbnailLink.Visibility = Visibility.Visible;
                 ThumbnailTextBlock.Visibility = Visibility.Visible;
 
-                ThumbnailLink.NavigateUri = new Uri(videoInfo?.thumbnail!);
+                ThumbnailLink.NavigateUri = new Uri(VideoInfo?.thumbnail!);
                 //ThumbnailLink.Content = videoInfo?.thumbnail!;
             }
             else
@@ -210,7 +201,7 @@ public sealed partial class AddVideoDownloadPage : Page
 
 
 
-            FileSizeTextBlock.Text = HelperFunctions.FormatFileSize(videoInfo?.filesize_approx ?? 0);
+            FileSizeTextBlock.Text = HelperFunctions.FormatFileSize(VideoInfo?.filesize_approx ?? 0);
 
 
             Expander.Visibility = Visibility.Visible;
@@ -276,7 +267,7 @@ public sealed partial class AddVideoDownloadPage : Page
     {
         var link = Link_TextBox.Text;
 
-        var list = DatabaseHelper.GetVideoDownloads();
+        var list = VideoDownloadDL.GetVideoDownloadsList();
         var maxId = list.Max(x => x.Id);
         if (maxId == null || maxId == string.Empty)
         {
@@ -285,28 +276,29 @@ public sealed partial class AddVideoDownloadPage : Page
         var newMaxId = (int.Parse(maxId) + 1).ToString();
         Debug.WriteLine("Max Id:" + newMaxId);
 
-        var videoDownload = new VideoDownload()
-        {
-            Id = newMaxId,
-            FileName = TitleTextBlock.Text,
-            Status = "Downloading",
-            VideoURL = link,
-            ThumbnailURL = ThumbnailLink.NavigateUri.ToString() ?? "",
-            ChannelURL = ChannelLink.NavigateUri.ToString() ?? "",
-            Size = FileSizeTextBlock.Text,
-            Resolution = ResolutionTextBlock.Text,
-            Duration = DurationTextBlock.Text,
-            Downloaded = "Starting...",
-            TimeLeft = "Calculating...",
-            TransferRate = "Calculating...",
-            VideoDescription = videoInfo?.description ?? ""
-        };
+        var videoDownload = new VideoDownload(
+            Id: newMaxId,
+            FileName: TitleTextBlock.Text,
+            Status: "Downloading",
+            VideoURL: link,
+            ThumbnailURL: ThumbnailLink.NavigateUri.ToString() ?? "",
+            ChannelURL: ChannelLink.NavigateUri.ToString() ?? "",
+            Size: FileSizeTextBlock.Text,
+            Resolution: ResolutionTextBlock.Text,
+            Duration: DurationTextBlock.Text,
+            Downloaded: "Starting...",
+            TimeLeft: "Calculating...",
+            TransferRate: "Calculating...",
+            VideoDescription: VideoInfo?.description ?? "",
+            DateAdded: DateTime.Now.ToString(),
+            DateModified: DateTime.Now.ToString()
+        );
 
 
         Link_TextBox.Text = string.Empty;
         Expander.Visibility = Visibility.Collapsed;
 
-        DatabaseHelper.InsertVideoDownloadIntoList(videoDownload);
+        VideoDownloadDL.InsertVideoDownloadIntoList(videoDownload);
 
         //var output = await YtDlpHelper.DownloadVideoAsync(link);
 
@@ -334,6 +326,10 @@ public sealed partial class AddVideoDownloadPage : Page
         process.StartInfo.RedirectStandardOutput = true;
         process.StartInfo.CreateNoWindow = true;
 
+        // Show Notification
+        HelperFunctions.ShowToastNotification("Download Added!", "Your download has been started. Check downloading page for progress.");
+
+
         var outputBuilder = new StringBuilder();
 
         process.OutputDataReceived +=  (sender, e) =>
@@ -351,6 +347,8 @@ public sealed partial class AddVideoDownloadPage : Page
                     var endIndex = e.Data.IndexOf("%", startIndex);
                     if (startIndex >= 0 && endIndex >= 0)
                     {
+
+                       
                         var percentageString = e.Data.Substring(startIndex, endIndex - startIndex).Trim();
                         if (float.TryParse(percentageString, out var percentage))
                         {
@@ -374,7 +372,7 @@ public sealed partial class AddVideoDownloadPage : Page
 
                             videoDownload.TimeLeft = timeLeftString;
                             
-                            DatabaseHelper.UpdateVideoDownloadInList(videoDownload);
+                            VideoDownloadDL.UpdateVideoDownloadInList(videoDownload);
                         }
                     }
                 }
@@ -401,7 +399,7 @@ public sealed partial class AddVideoDownloadPage : Page
         else
         {
             videoDownload.Status = "Error";
-            DatabaseHelper.UpdateVideoDownloadInList(videoDownload);
+            VideoDownloadDL.UpdateVideoDownloadInList(videoDownload);
             return;
         }
 
@@ -410,7 +408,7 @@ public sealed partial class AddVideoDownloadPage : Page
         videoDownload.Downloaded = "100%";
         videoDownload.TimeLeft = "--";
         videoDownload.TransferRate = "--";
-        DatabaseHelper.UpdateVideoDownloadInList(videoDownload);
+        VideoDownloadDL.UpdateVideoDownloadInList(videoDownload);
 
         var title = TitleTextBlock.Text;
         HelperFunctions.ShowDownloadCompleteNotification(title, downloadLocation);

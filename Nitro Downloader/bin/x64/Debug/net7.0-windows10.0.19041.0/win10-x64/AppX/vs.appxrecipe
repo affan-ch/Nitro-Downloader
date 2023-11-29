@@ -8,7 +8,7 @@
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Debug|x64</SolutionConfiguration>
     <PackageArchitecture>x64</PackageArchitecture>
-    <PackageIdentityName>3fad94ff-a6f6-4111-935f-1233ede93540</PackageIdentityName>
+    <PackageIdentityName>24392ITFusionLabs.NitroDownloader</PackageIdentityName>
     <PackageIdentityPublisher>CN=affan</PackageIdentityPublisher>
     <IntermediateOutputPath>D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
@@ -18,32 +18,32 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
-    <RegisteredManifestChecksum>89BB36A5484492EDEA7672470F8866FD3760A48C07E5F58CB60C5AD358549A22</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>3fad94ff-a6f6-4111-935f-1233ede93540_1.0.0.0_x64__pp12gsb6swr4e</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>3fad94ff-a6f6-4111-935f-1233ede93540_pp12gsb6swr4e!App</RegisteredUserModeAppID>
-    <RegisteredPackageID>3fad94ff-a6f6-4111-935f-1233ede93540</RegisteredPackageID>
+    <RegisteredManifestChecksum>B2A15F14778C96575457E0215BD4572B43504F818AAEFCD35205AAA0DCA7E0A9</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>24392ITFusionLabs.NitroDownloader_1.0.3.0_x64__pp12gsb6swr4e</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>24392ITFusionLabs.NitroDownloader_pp12gsb6swr4e!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>24392ITFusionLabs.NitroDownloader</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=affan</RegisteredPackagePublisher>
-    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <RegisteredVersion>1.0.3.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-27T19:10:41.897</Modified>
+      <Modified>2023-11-29T18:53:37.775</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-11-27T18:41:57.408</Modified>
+      <Modified>2023-11-29T18:19:35.140</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Nitro Downloader.runtimeconfig.json">
       <PackagePath>Nitro Downloader.runtimeconfig.json</PackagePath>
-      <Modified>2023-11-18T09:55:09.055</Modified>
+      <Modified>2023-11-29T18:53:36.281</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Nitro Downloader.dll">
       <PackagePath>Nitro Downloader.dll</PackagePath>
-      <Modified>2023-11-27T19:10:39.784</Modified>
+      <Modified>2023-11-29T18:53:34.664</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\appsettings.json">
       <PackagePath>appsettings.json</PackagePath>
@@ -51,11 +51,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Nitro Downloader.exe</PackagePath>
-      <Modified>2023-11-27T19:10:39.896</Modified>
+      <Modified>2023-11-29T18:53:34.779</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Nitro Downloader.deps.json">
       <PackagePath>Nitro Downloader.deps.json</PackagePath>
-      <Modified>2023-11-18T09:55:08.855</Modified>
+      <Modified>2023-11-29T18:53:35.919</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.12\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -793,10 +793,6 @@
       <PackagePath>WinRT.Runtime.dll</PackagePath>
       <Modified>2023-06-09T20:10:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\castle.core\5.1.1\lib\net6.0\Castle.Core.dll">
-      <PackagePath>Castle.Core.dll</PackagePath>
-      <Modified>2022-12-30T09:16:54.000</Modified>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\communitytoolkit.common\7.1.2\lib\net5.0\CommunityToolkit.Common.dll">
       <PackagePath>CommunityToolkit.Common.dll</PackagePath>
       <Modified>2021-11-18T21:56:24.000</Modified>
@@ -1017,14 +1013,6 @@
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
       <Modified>2022-11-24T02:10:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\nucs.jsonsettings\2.0.2\lib\netstandard2.0\JsonSettings.dll">
-      <PackagePath>JsonSettings.dll</PackagePath>
-      <Modified>2023-04-05T04:47:14.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\nucs.jsonsettings.autosave\2.0.2\lib\netstandard2.0\JsonSettings.Autosave.dll">
-      <PackagePath>JsonSettings.Autosave.dll</PackagePath>
-      <Modified>2023-04-05T04:47:14.000</Modified>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\stub.system.data.sqlite.core.netstandard\1.0.118\lib\netstandard2.1\System.Data.SQLite.dll">
       <PackagePath>System.Data.SQLite.dll</PackagePath>
       <Modified>2023-06-10T21:02:42.000</Modified>
@@ -1069,10 +1057,6 @@
       <PackagePath>System.Windows.Extensions.dll</PackagePath>
       <Modified>2019-11-15T08:54:30.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\winuicommunity.core\5.3.1\lib\net7.0-windows10.0.19041\WinUICommunity.Core.dll">
-      <PackagePath>WinUICommunity.Core.dll</PackagePath>
-      <Modified>2023-10-12T21:50:28.000</Modified>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\winuiex\2.2.0\lib\net6.0-windows10.0.18362\WinUIEx.dll">
       <PackagePath>WinUIEx.dll</PackagePath>
       <Modified>2023-05-10T22:25:20.000</Modified>
@@ -1089,9 +1073,9 @@
       <PackagePath>SQLite.Interop.dll</PackagePath>
       <Modified>2023-06-10T20:57:54.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader.Core\bin\Debug\net7.0\Nitro Downloader.Core.dll">
+    <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader.Core\bin\x64\Debug\net7.0\Nitro Downloader.Core.dll">
       <PackagePath>Nitro Downloader.Core.dll</PackagePath>
-      <Modified>2023-11-06T07:38:06.353</Modified>
+      <Modified>2023-11-29T16:20:19.700</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\communitytoolkit.winui\7.1.2\lib\net5.0-windows10.0.18362\CommunityToolkit.WinUI.pri">
       <PackagePath>CommunityToolkit.WinUI.pri</PackagePath>
@@ -1121,53 +1105,49 @@
       <PackagePath>Microsoft.Xaml.Interactivity.pri</PackagePath>
       <Modified>2022-09-29T14:11:22.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\winuicommunity.core\5.3.1\lib\net7.0-windows10.0.19041\WinUICommunity.Core.pri">
-      <PackagePath>WinUICommunity.Core.pri</PackagePath>
-      <Modified>2023-10-12T21:50:28.000</Modified>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\affan\.nuget\packages\winuiex\2.2.0\lib\net6.0-windows10.0.18362\WinUIEx.pri">
       <PackagePath>WinUIEx.pri</PackagePath>
       <Modified>2023-05-10T22:25:22.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\BadgeLogo.scale-100.png">
       <PackagePath>Assets\BadgeLogo.scale-100.png</PackagePath>
-      <Modified>2023-11-12T06:15:24.050</Modified>
+      <Modified>2023-11-29T15:19:03.584</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\BadgeLogo.scale-125.png">
       <PackagePath>Assets\BadgeLogo.scale-125.png</PackagePath>
-      <Modified>2023-11-12T06:15:24.056</Modified>
+      <Modified>2023-11-29T15:19:03.592</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\BadgeLogo.scale-150.png">
       <PackagePath>Assets\BadgeLogo.scale-150.png</PackagePath>
-      <Modified>2023-11-12T06:15:24.062</Modified>
+      <Modified>2023-11-29T15:19:03.600</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\BadgeLogo.scale-200.png">
       <PackagePath>Assets\BadgeLogo.scale-200.png</PackagePath>
-      <Modified>2023-11-12T06:15:24.069</Modified>
+      <Modified>2023-11-29T15:19:03.611</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\BadgeLogo.scale-400.png">
       <PackagePath>Assets\BadgeLogo.scale-400.png</PackagePath>
-      <Modified>2023-11-12T06:15:24.081</Modified>
+      <Modified>2023-11-29T15:19:03.632</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.075</Modified>
+      <Modified>2023-11-29T15:19:01.684</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\LargeTile.scale-125.png">
       <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.098</Modified>
+      <Modified>2023-11-29T15:19:01.723</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\LargeTile.scale-150.png">
       <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.128</Modified>
+      <Modified>2023-11-29T15:19:01.773</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.176</Modified>
+      <Modified>2023-11-29T15:19:01.845</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.342</Modified>
+      <Modified>2023-11-29T15:19:02.092</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -1175,191 +1155,191 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
-      <Modified>2023-11-12T06:15:22.660</Modified>
+      <Modified>2023-11-29T15:19:01.077</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\SmallTile.scale-125.png">
       <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
-      <Modified>2023-11-12T06:15:22.666</Modified>
+      <Modified>2023-11-29T15:19:01.096</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\SmallTile.scale-150.png">
       <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
-      <Modified>2023-11-12T06:15:22.673</Modified>
+      <Modified>2023-11-29T15:19:01.116</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
-      <Modified>2023-11-12T06:15:22.681</Modified>
+      <Modified>2023-11-29T15:19:01.136</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
-      <Modified>2023-11-12T06:15:22.696</Modified>
+      <Modified>2023-11-29T15:19:01.169</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.511</Modified>
+      <Modified>2023-11-29T15:19:02.530</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\SplashScreen.scale-125.png">
       <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.546</Modified>
+      <Modified>2023-11-29T15:19:02.608</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\SplashScreen.scale-150.png">
       <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.635</Modified>
+      <Modified>2023-11-29T15:19:02.724</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.716</Modified>
+      <Modified>2023-11-29T15:19:02.962</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
-      <Modified>2023-11-12T06:15:24.017</Modified>
+      <Modified>2023-11-29T15:19:03.574</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
-      <Modified>2023-11-12T06:15:22.754</Modified>
+      <Modified>2023-11-29T15:19:01.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Square150x150Logo.scale-125.png">
       <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
-      <Modified>2023-11-12T06:15:22.776</Modified>
+      <Modified>2023-11-29T15:19:01.198</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Square150x150Logo.scale-150.png">
       <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
-      <Modified>2023-11-12T06:15:22.787</Modified>
+      <Modified>2023-11-29T15:19:01.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
-      <Modified>2023-11-12T06:15:22.802</Modified>
+      <Modified>2023-11-29T15:19:01.255</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
-      <Modified>2023-11-12T06:15:22.861</Modified>
+      <Modified>2023-11-29T15:19:01.363</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.452</Modified>
+      <Modified>2023-11-29T15:19:02.309</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.457</Modified>
+      <Modified>2023-11-29T15:19:02.321</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.485</Modified>
+      <Modified>2023-11-29T15:19:02.472</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.462</Modified>
+      <Modified>2023-11-29T15:19:02.330</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.466</Modified>
+      <Modified>2023-11-29T15:19:02.424</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.414</Modified>
+      <Modified>2023-11-29T15:19:02.233</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.446</Modified>
+      <Modified>2023-11-29T15:19:02.297</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.424</Modified>
+      <Modified>2023-11-29T15:19:02.249</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.429</Modified>
+      <Modified>2023-11-29T15:19:02.261</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.347</Modified>
+      <Modified>2023-11-29T15:19:02.100</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Square44x44Logo.scale-125.png">
       <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.352</Modified>
+      <Modified>2023-11-29T15:19:02.108</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Square44x44Logo.scale-150.png">
       <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.358</Modified>
+      <Modified>2023-11-29T15:19:02.120</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.364</Modified>
+      <Modified>2023-11-29T15:19:02.132</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.375</Modified>
+      <Modified>2023-11-29T15:19:02.155</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Square44x44Logo.targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.379</Modified>
+      <Modified>2023-11-29T15:19:02.165</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Square44x44Logo.targetsize-24.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.384</Modified>
+      <Modified>2023-11-29T15:19:02.175</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.419</Modified>
+      <Modified>2023-11-29T15:19:02.240</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Square44x44Logo.targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.409</Modified>
+      <Modified>2023-11-29T15:19:02.223</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Square44x44Logo.targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.389</Modified>
+      <Modified>2023-11-29T15:19:02.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.393</Modified>
+      <Modified>2023-11-29T15:19:02.194</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\StoreLogo.backup.png">
       <PackagePath>Assets\StoreLogo.backup.png</PackagePath>
-      <Modified>2023-09-14T07:44:16.929</Modified>
+      <Modified>2023-11-29T17:54:41.251</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
-      <Modified>2023-11-12T06:15:24.087</Modified>
+      <Modified>2023-11-29T15:19:03.642</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\StoreLogo.scale-125.png">
       <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
-      <Modified>2023-11-12T06:15:24.092</Modified>
+      <Modified>2023-11-29T15:19:03.654</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\StoreLogo.scale-150.png">
       <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
-      <Modified>2023-11-12T06:15:24.097</Modified>
+      <Modified>2023-11-29T15:19:03.665</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\StoreLogo.scale-200.png">
       <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
-      <Modified>2023-11-12T06:15:24.104</Modified>
+      <Modified>2023-11-29T15:19:03.680</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\StoreLogo.scale-400.png">
       <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
-      <Modified>2023-11-12T06:15:24.116</Modified>
+      <Modified>2023-11-29T15:19:03.707</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
-      <Modified>2023-11-12T06:15:22.876</Modified>
+      <Modified>2023-11-29T15:19:01.396</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Wide310x150Logo.scale-125.png">
       <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
-      <Modified>2023-11-12T06:15:22.888</Modified>
+      <Modified>2023-11-29T15:19:01.435</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Wide310x150Logo.scale-150.png">
       <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
-      <Modified>2023-11-12T06:15:22.904</Modified>
+      <Modified>2023-11-29T15:19:01.470</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
-      <Modified>2023-11-12T06:15:22.975</Modified>
+      <Modified>2023-11-29T15:19:01.509</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
-      <Modified>2023-11-12T06:15:23.060</Modified>
+      <Modified>2023-11-29T15:19:01.658</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Assets\WindowIcon.ico">
       <PackagePath>Assets\WindowIcon.ico</PackagePath>
-      <Modified>2023-09-14T07:44:16.038</Modified>
+      <Modified>2023-11-29T15:25:27.615</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

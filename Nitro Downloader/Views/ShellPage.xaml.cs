@@ -2,9 +2,8 @@
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
-
 using Nitro_Downloader.Contracts.Services;
-using Nitro_Downloader.DBM;
+using Nitro_Downloader.DL;
 using Nitro_Downloader.Helpers;
 using Nitro_Downloader.ViewModels;
 
@@ -43,7 +42,7 @@ public sealed partial class ShellPage : Page
 
     private void RefreshNumbers(object? sender, object? e)
     {
-        var list = DatabaseHelper.GetVideoDownloads();
+        var list = VideoDownloadDL.GetVideoDownloadsList();
         var downloadingListCount = list.Where(item => item.Status == "Downloading").Count();
         var downloadedListCount = list.Where(item => item.Status == "Downloaded").Count();
 

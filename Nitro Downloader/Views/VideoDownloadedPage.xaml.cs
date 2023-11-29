@@ -1,9 +1,7 @@
 ﻿using Microsoft.UI.Xaml;
-using System.Diagnostics;
 using Microsoft.UI.Xaml.Controls;
-
 using Nitro_Downloader.ViewModels;
-using Nitro_Downloader.DBM;
+using Nitro_Downloader.DL;
 
 namespace Nitro_Downloader.Views;
 
@@ -19,33 +17,12 @@ public sealed partial class VideoDownloadedPage : Page
         ViewModel = App.GetService<VideoDownloadedViewModel>();
         InitializeComponent();
 
-        var list = DatabaseHelper.GetVideoDownloads();
+        var list = VideoDownloadDL.GetVideoDownloadsList();
         var downloadedList = list.Where(item => item.Status == "Downloaded").ToList();
         dataGrid.ItemsSource = downloadedList;
 
-        list.OnChanged += List_OnChanged;
-
-
-        //var timer = new DispatcherTimer();
-        //timer.Tick += RefreshGrid;
-        //timer.Interval = TimeSpan.FromSeconds(3);
-        //timer.Start();
+ 
     }
-
-    private void List_OnChanged(object? sender, EventArgs e)
-    {
-        Debug.WriteLine("Refreshing downloaded grid");
-        var list = DatabaseHelper.GetVideoDownloads();
-        var downloadedList = list.Where(item => item.Status == "Downloaded").ToList();
-        dataGrid.ItemsSource = downloadedList;
-    }
-
-    //private void RefreshGrid(object? sender, object e)
-    //{
-    //    var list = DatabaseHelper.GetVideoDownloads();
-    //    var downloadedList = list.Where(item => item.Status == "Downloaded").ToList();
-    //    dataGrid.ItemsSource = downloadedList;
-    //}
 
     private async void DescriptionHyperlinkButton_Click(object sender, RoutedEventArgs e)
     {

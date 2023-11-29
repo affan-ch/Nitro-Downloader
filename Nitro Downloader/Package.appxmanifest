@@ -12,15 +12,15 @@
   IgnorableNamespaces="uap rescap genTemplate iot">
 
   <Identity
-    Name="3fad94ff-a6f6-4111-935f-1233ede93540"
-    Publisher="CN=affan"
-    Version="1.0.0.0" />
+    Name="24392ITFusionLabs.NitroDownloader"
+    Publisher="CN=300AEB39-68AA-453D-BB6A-028D164FDEA0"
+    Version="1.0.3.0" />
     
-  <mp:PhoneIdentity PhoneProductId="3fad94ff-a6f6-4111-935f-1233ede93540" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="811fc73d-90f0-4d44-9bfa-faa00830d1bf" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
     
   <Properties>
     <DisplayName>Nitro Downloader</DisplayName>
-    <PublisherDisplayName>affan</PublisherDisplayName>
+    <PublisherDisplayName>IT Fusion Labs</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -38,11 +38,10 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="$targetentrypoint$">
       <uap:VisualElements
-        DisplayName="ms-resource:AppDisplayName"
+        DisplayName="Nitro Downloader"
         Description="ms-resource:AppDescription"
-        BackgroundColor="#000000"
         Square150x150Logo="Assets\Square150x150Logo.png"
-        Square44x44Logo="Assets\Square44x44Logo.png">
+        Square44x44Logo="Assets\Square44x44Logo.png" BackgroundColor="#E04B26">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"  Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
         <uap:LockScreen BadgeLogo="Assets\BadgeLogo.png" Notification="badgeAndTileText"/>
@@ -74,20 +73,22 @@
   </Applications>
 
   <Capabilities>
-    <rescap:Capability Name="runFullTrust" />
+	  <rescap:Capability Name="runFullTrust" />
     <uap:Capability Name="videosLibrary"/>
     <iot:Capability Name="systemManagement"/>
     <uap:Capability Name="picturesLibrary"/>
     <uap:Capability Name="musicLibrary"/>
     <Capability Name="internetClientServer"/>
+	  
+	  
   </Capabilities>
 
-  <genTemplate:Metadata>
-    <genTemplate:Item Name="generator" Value="Template Studio"/>
-    <genTemplate:Item Name="wizardVersion" Version="v5.4" />
-    <genTemplate:Item Name="projectType" Value="NavView" />
-    <genTemplate:Item Name="framework" Value="MVVMToolkit" />
-    <genTemplate:Item Name="platform" Value="WinUI" />
-    <genTemplate:Item Name="appmodel" Value="Desktop" />
-  </genTemplate:Metadata>
+	<genTemplate:Metadata>
+		<genTemplate:Item Name="generator" Value="Template Studio"/>
+		<genTemplate:Item Name="wizardVersion" Version="v5.4" />
+		<genTemplate:Item Name="projectType" Value="NavView" />
+		<genTemplate:Item Name="framework" Value="MVVMToolkit" />
+		<genTemplate:Item Name="platform" Value="WinUI" />
+		<genTemplate:Item Name="appmodel" Value="Desktop" />
+	</genTemplate:Metadata>
 </Package>

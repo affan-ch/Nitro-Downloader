@@ -149,10 +149,6 @@
               "target": "Package",
               "version": "[1.0.118, )"
             },
-            "WinUICommunity.Core": {
-              "target": "Package",
-              "version": "[5.3.1, )"
-            },
             "WinUIEx": {
               "target": "Package",
               "version": "[2.2.0, )"

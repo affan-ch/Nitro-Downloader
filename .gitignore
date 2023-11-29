@@ -1,0 +1,11 @@
+Nitro Downloader/bin/
+Nitro Downloader/obj/
+Nitro Downloader/.vs
+
+Nitro Downloader.Core/bin/
+Nitro Downloader.Core/obj/
+
+NitroDownloaderPackage/bin/
+NitroDownloaderPackage/obj/
+NitroDownloaderPackage/AppPackages
+

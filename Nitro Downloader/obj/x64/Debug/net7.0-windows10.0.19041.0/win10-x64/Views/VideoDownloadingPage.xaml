@@ -88,7 +88,11 @@
                                 <DataTemplate>
                                     
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="Auto">
-                                        <HyperlinkButton NavigateUri="{Binding VideoURL}" Margin="4 3 2 3" ToolTipService.ToolTip="Open Link" ToolTipService.Placement="Bottom">
+                                        <HyperlinkButton NavigateUri="{Binding VideoURL, Converter={StaticResource StringToUriConverter}}"
+                                                         Visibility="{Binding VideoURL, Converter={StaticResource VisibilityConverter}}" 
+                                                         Margin="4 3 2 3" 
+                                                         ToolTipService.ToolTip="Open Link" 
+                                                         ToolTipService.Placement="Bottom">
                                             <FontIcon Glyph="&#xE8A7;" />
                                         </HyperlinkButton>
 
@@ -120,19 +124,19 @@
                                 </Style>
                             </controls:DataGridTemplateColumn.CellStyle>
                             <controls:DataGridTemplateColumn.CellTemplate>
-                            
-                            <DataTemplate>
-                                    
-                                        <HyperlinkButton 
-                                            NavigateUri="{Binding ChannelURL, Converter={StaticResource StringToUriConverter}}"
-                                            Visibility="{Binding ChannelURL, Converter={StaticResource VisibilityConverter}}"
-                                            HorizontalAlignment="Center"
-                                            Margin="4 3 2 3" 
-                                            ToolTipService.ToolTip="Open Link" 
-                                            ToolTipService.Placement="Bottom">
-                                            <FontIcon Glyph="&#xE8A7;" />
-                                        </HyperlinkButton>
-                                    
+
+                                <DataTemplate>
+
+                                    <HyperlinkButton 
+                                        NavigateUri="{Binding ChannelURL, Converter={StaticResource StringToUriConverter}}"
+                                        Visibility="{Binding ChannelURL, Converter={StaticResource VisibilityConverter}}"
+                                        HorizontalAlignment="Center"
+                                        Margin="4 3 2 3" 
+                                        ToolTipService.ToolTip="Open Link" 
+                                        ToolTipService.Placement="Bottom">
+                                        <FontIcon Glyph="&#xE8A7;" />
+                                    </HyperlinkButton>
+
                                 </DataTemplate>
                             </controls:DataGridTemplateColumn.CellTemplate>
                         </controls:DataGridTemplateColumn>

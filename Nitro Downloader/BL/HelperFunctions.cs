@@ -80,6 +80,16 @@ public class HelperFunctions
     }
 
 
+    public static void ShowToastNotification(string title, string subtitle)
+    {
+        var builder = new ToastContentBuilder()
+                .AddText(title)
+                .AddText(subtitle);
+
+        var toast = new ToastNotification(builder.GetToastContent().GetXml());
+        ToastNotificationManager.CreateToastNotifier().Show(toast);
+    }
+
 }
 
 

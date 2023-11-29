@@ -18,7 +18,7 @@
                 <TextBlock x:Uid="Settings_Theme" />
 
                 <StackPanel Margin="{StaticResource XSmallTopMargin}">
-                    <RadioButton x:ConnectionId='4'
+                    <RadioButton x:ConnectionId='6'
                         x:Uid="Settings_Theme_Light"
                                                                        
                                                                                                                                                              
@@ -28,7 +28,7 @@
                             <xaml:ElementTheme>Light</xaml:ElementTheme>
                         </RadioButton.CommandParameter>
                     </RadioButton>
-                    <RadioButton x:ConnectionId='5'
+                    <RadioButton x:ConnectionId='7'
                         x:Uid="Settings_Theme_Dark"
                                                                        
                                                                                                                                                             
@@ -38,7 +38,7 @@
                             <xaml:ElementTheme>Dark</xaml:ElementTheme>
                         </RadioButton.CommandParameter>
                     </RadioButton>
-                    <RadioButton x:ConnectionId='6'
+                    <RadioButton x:ConnectionId='8'
                         x:Uid="Settings_Theme_Default"
                                                                        
                                                                                                                                                                
@@ -49,6 +49,16 @@
                         </RadioButton.CommandParameter>
                     </RadioButton>
                 </StackPanel>
+            </StackPanel>
+
+            <!-- Default Download Location -->
+            <TextBlock Text="Default Download Location" Style="{ThemeResource SubtitleTextBlockStyle}"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 20">
+                <TextBox x:ConnectionId='4' x:Name="LocationTextBox" Width="350" Margin="0 11 0 0" IsReadOnly="True"/>
+                <Button x:ConnectionId='5' x:Name="ChangeLocationButton"                                         Margin="10 0 0 0" VerticalAlignment="Bottom">
+                    <FontIcon Glyph="&#xE8DA;"/>
+                </Button>
             </StackPanel>
 
             <TextBlock x:Uid="Settings_About" Style="{ThemeResource SubtitleTextBlockStyle}" />

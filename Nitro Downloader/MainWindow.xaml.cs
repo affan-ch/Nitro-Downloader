@@ -5,6 +5,7 @@ using Windows.UI.ViewManagement;
 using Microsoft.UI.Windowing;
 using CommunityToolkit.Mvvm.Input;
 using Nitro_Downloader.DBM;
+using Nitro_Downloader.DL;
 
 namespace Nitro_Downloader;
 
@@ -38,7 +39,7 @@ public sealed partial class MainWindow : WindowEx
         //H.NotifyIcon.WindowExtensions.HideInTaskbar(this);
 
         DatabaseHelper.CreateDatabase();
-        DatabaseHelper.LoadVideoDownloadsIntoList();
+        VideoDownloadDL.LoadVideoDownloadsIntoList(DatabaseHelper.ConnectionString);
 
     }
 
@@ -85,7 +86,7 @@ public sealed partial class MainWindow : WindowEx
     [RelayCommand]
     public void ExitApplication()
     {
-        DatabaseHelper.StoreListInDatabase();
+        //DatabaseHelper.StoreListInDatabase();
         App.HandleClosedEvents = false;
         TrayIcon.Dispose();
         App.MainWindow?.Close();

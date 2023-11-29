@@ -7,11 +7,11 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="3fad94ff-a6f6-4111-935f-1233ede93540" Publisher="CN=affan" Version="1.0.0.0" ProcessorArchitecture="x64" />
-  <mp:PhoneIdentity PhoneProductId="3fad94ff-a6f6-4111-935f-1233ede93540" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="24392ITFusionLabs.NitroDownloader" Publisher="CN=affan" Version="1.0.3.0" ProcessorArchitecture="x64" />
+  <mp:PhoneIdentity PhoneProductId="811fc73d-90f0-4d44-9bfa-faa00830d1bf" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Nitro Downloader</DisplayName>
-    <PublisherDisplayName>affan</PublisherDisplayName>
+    <PublisherDisplayName>IT Fusion Labs</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
@@ -24,7 +24,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="Nitro Downloader.exe" EntryPoint="Windows.FullTrustApplication">
-      <uap:VisualElements DisplayName="ms-resource:AppDisplayName" Description="ms-resource:AppDescription" BackgroundColor="#000000" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png">
+      <uap:VisualElements DisplayName="Nitro Downloader" Description="ms-resource:AppDescription" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" BackgroundColor="#E04B26">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png" />
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
         <uap:LockScreen BadgeLogo="Assets\BadgeLogo.png" Notification="badgeAndTileText" />
@@ -71,6 +71,6 @@
   </genTemplate:Metadata>
   <build:Metadata>
     <build:Item Name="Microsoft.UI.Xaml.Markup.Compiler.dll" Version="3.0.0.2310" />
-    <build:Item Name="makepri.exe" Version="10.0.22621.755 (WinBuild.160101.0800)" />
+    <build:Item Name="makepri.exe" Version="10.0.22621.1 (WinBuild.160101.0800)" />
   </build:Metadata>
 </Package>

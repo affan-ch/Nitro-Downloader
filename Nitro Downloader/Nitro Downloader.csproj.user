@@ -1,15 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Source>C:\Users\affan\Downloads\lightning.png</Source>
-    <SmallTileSource>C:\Users\affan\Downloads\lightning.png</SmallTileSource>
-    <MediumTileSource>C:\Users\affan\Downloads\lightning.png</MediumTileSource>
-    <WideTileSource>C:\Users\affan\Downloads\lightning.png</WideTileSource>
-    <LargeTileSource>C:\Users\affan\Downloads\lightning.png</LargeTileSource>
-    <AppIconSource>C:\Users\affan\Downloads\lightning.png</AppIconSource>
-    <SplashScreenSource>C:\Users\affan\Downloads\lightning.png</SplashScreenSource>
-    <BadgeLogoSource>C:\Users\affan\Downloads\lightning.png</BadgeLogoSource>
-    <PackageLogoSource>C:\Users\affan\Downloads\lightning.png</PackageLogoSource>
+    <Source>C:\Users\affan\Downloads\allvideodownloader_104443.png</Source>
+    <SmallTileSource>C:\Users\affan\Downloads\allvideodownloader_104443.png</SmallTileSource>
+    <MediumTileSource>C:\Users\affan\Downloads\allvideodownloader_104443.png</MediumTileSource>
+    <WideTileSource>C:\Users\affan\Downloads\allvideodownloader_104443.png</WideTileSource>
+    <LargeTileSource>C:\Users\affan\Downloads\allvideodownloader_104443.png</LargeTileSource>
+    <AppIconSource>C:\Users\affan\Downloads\allvideodownloader_104443.png</AppIconSource>
+    <SplashScreenSource>C:\Users\affan\Downloads\allvideodownloader_104443.png</SplashScreenSource>
+    <BadgeLogoSource>C:\Users\affan\Downloads\allvideodownloader_104443.png</BadgeLogoSource>
+    <PackageLogoSource>C:\Users\affan\Downloads\allvideodownloader_104443.png</PackageLogoSource>
+    <_LastSelectedProfileId>D:\Code\UET\Semester 5\SE Lab\Project\Nitro Downloader\Properties\PublishProfiles\win10-x86.pubxml</_LastSelectedProfileId>
+    <UapAppxPackageBuildMode>StoreAndSideload</UapAppxPackageBuildMode>
+    <AppxShowAllApps>False</AppxShowAllApps>
+    <AppxBuildConfigurationSelection>x86|x64|arm64</AppxBuildConfigurationSelection>
+    <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
   </PropertyGroup>
   <ItemGroup>
     <Page Update="DownloadWindow.xaml">
